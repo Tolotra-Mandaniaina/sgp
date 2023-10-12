@@ -1,0 +1,18 @@
+{% extends 'base.html.twig' %}
+{% block title %}New Person{% endblock %}
+
+{% block body %}
+    <h1>Create new Person</h1>
+      {{ form_start(form) }}
+                    {{ form_row(form.province) }}
+                    {{ form_row(form.region) }}
+                    {{ form_row(form.district) }}
+                    {{ form_row(form.commune) }}
+        <button type="submit" class="btn btn-primary">Ajout</button>
+    {{ form_end(form) }}
+{% endblock %}
+
+{% block javascripts %}
+            {{ parent() }}
+      <script type="text/javascript" src="{{ asset('js/locality.js') }}"></script>
+{% endblock %}
