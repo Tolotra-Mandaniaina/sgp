@@ -1,24 +1,25 @@
 {% extends 'base.html.twig' %}
-{% block title %}New Person{% endblock %}
+
+{% block title %}Edit UserSimple{% endblock %}
 
 {% block body %}
-
-<div class="container">
-    <h1>Create new Person</h1>
+   <div class="container">
+    <h1>edit Person</h1>
       {{ form_start(form) }}
+                    {{ form_row(form.nom) }}
+                    {{ form_row(form.prenom) }}
                     {{ form_row(form.province) }}
                     {{ form_row(form.region) }}
                     {{ form_row(form.district) }}
                     {{ form_row(form.commune) }}
-        <button type="submit" class="btn btn-primary">Ajout</button>
+        <button type="submit" class="btn btn-primary">Editer</button>
     {{ form_end(form) }}
 
 </div>
-
 
 {% endblock %}
 
 {% block javascripts %}
             {{ parent() }}
-      <script type="text/javascript" src="{{ asset('js/locality.js') }}"></script>
+      <script type="text/javascript" src="{{ asset('js/user.js') }}"></script>
 {% endblock %}

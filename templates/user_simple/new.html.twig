@@ -1,11 +1,13 @@
 {% extends 'base.html.twig' %}
-{% block title %}New Person{% endblock %}
+
+{% block title %}New UserSimple{% endblock %}
 
 {% block body %}
-
-<div class="container">
+    <div class="container">
     <h1>Create new Person</h1>
       {{ form_start(form) }}
+                    {{ form_row(form.nom) }}
+                    {{ form_row(form.prenom) }}
                     {{ form_row(form.province) }}
                     {{ form_row(form.region) }}
                     {{ form_row(form.district) }}
@@ -13,12 +15,14 @@
         <button type="submit" class="btn btn-primary">Ajout</button>
     {{ form_end(form) }}
 
-</div>
 
 
+
+    <a href="{{ path('app_user_simple_index') }}">back to list</a>
+
+        </div>
 {% endblock %}
-
 {% block javascripts %}
             {{ parent() }}
-      <script type="text/javascript" src="{{ asset('js/locality.js') }}"></script>
+      <script type="text/javascript" src="{{ asset('js/user.js') }}"></script>
 {% endblock %}

@@ -1,0 +1,46 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}UserSimple index{% endblock %}
+
+{% block body %}
+<div class="container">
+    <h1>UserSimple index</h1>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Nom</th>
+                <th>Prenom</th>
+                <th>Commune</th>
+                <th>actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for user_simple in user_simples %}
+            <tr>
+                <td>{{ user_simple.id }}</td>
+                <td>{{ user_simple.nom }}</td>
+                <td>{{ user_simple.prenom }}</td>
+                <td>{{ user_simple.commune }}</td>
+
+                <td>
+                    <a href="{{ path('app_user_simple_show', {'id': user_simple.id}) }}">show</a>
+                    <a href="{{ path('app_user_simple_edit', {'id': user_simple.id}) }}">edit</a>
+                </td>
+            </tr>
+           
+        {% else %}
+            <tr>
+                <td colspan="4">no records found</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <a href="{{ path('app_user_simple_new') }}">Create new</a>
+
+    
+</div>
+    
+{% endblock %}
