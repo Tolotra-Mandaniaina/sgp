@@ -3,28 +3,44 @@
 {% block title %}UserSimple{% endblock %}
 
 {% block body %}
+<div class="container">
     <h1>UserSimple</h1>
 
-    <table class="table">
+    <table class="table table-bordered">
         <tbody>
             <tr>
-                <th>Id</th>
+                <th class="table-light">Id</th>
                 <td>{{ user_simple.id }}</td>
             </tr>
             <tr>
-                <th>Nom</th>
+                <th class="table-light">Nom</th>
                 <td>{{ user_simple.nom }}</td>
             </tr>
             <tr>
-                <th>Prenom</th>
+                <th class="table-light">Prénom</th>
                 <td>{{ user_simple.prenom }}</td>
+            </tr>
+            <tr>
+                <th class="table-light">Commune</th>
+                <td>{{ user_simple.commune }}</td>
+            </tr>
+            <tr>
+                <th class="table-light">District</th>
+                <td>{{ user_simple.commune.district }}</td>
+            </tr>
+            <tr>
+                <th class="table-light">Région</th>
+                <td>{{ user_simple.commune.district.region }}</td>
+            </tr>
+            <tr>
+                <th class="table-light">Province</th>
+                <td>{{ user_simple.commune.district.region.province }}</td>
             </tr>
         </tbody>
     </table>
 
-    <a href="{{ path('app_user_simple_index') }}">back to list</a>
-
-    <a href="{{ path('app_user_simple_edit', {'id': user_simple.id}) }}">edit</a>
-
+    <a href="{{ path('app_user_simple_index') }}" class="btn btn-secondary">Back to List</a>
+    <a href="{{ path('app_user_simple_edit', {'id': user_simple.id}) }}" class="btn btn-primary">Edit</a>
     {{ include('user_simple/_delete_form.html.twig') }}
+</div>
 {% endblock %}

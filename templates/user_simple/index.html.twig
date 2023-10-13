@@ -6,14 +6,14 @@
 <div class="container">
     <h1>UserSimple index</h1>
 
-    <table class="table">
-        <thead>
+    <table class="table table-striped table-bordered">
+        <thead class="thead-dark">
             <tr>
                 <th>Id</th>
                 <th>Nom</th>
-                <th>Prenom</th>
+                <th>Prénom</th>
                 <th>Commune</th>
-                <th>actions</th>
+                <th>Actions</th>
             </tr>
         </thead>
         <tbody>
@@ -25,22 +25,18 @@
                 <td>{{ user_simple.commune }}</td>
 
                 <td>
-                    <a href="{{ path('app_user_simple_show', {'id': user_simple.id}) }}">show</a>
-                    <a href="{{ path('app_user_simple_edit', {'id': user_simple.id}) }}">edit</a>
+                    <a href="{{ path('app_user_simple_show', {'id': user_simple.id}) }}" class="btn btn-success">Show</a>
+                    <a href="{{ path('app_user_simple_edit', {'id': user_simple.id}) }}" class="btn btn-primary">Edit</a>
                 </td>
             </tr>
-           
         {% else %}
             <tr>
-                <td colspan="4">no records found</td>
+                <td colspan="5">No records found</td>
             </tr>
         {% endfor %}
         </tbody>
     </table>
 
-    <a href="{{ path('app_user_simple_new') }}">Create new</a>
-
-    
+    <a href="{{ path('app_user_simple_new') }}" class="btn btn-success">Create New</a>
 </div>
-    
 {% endblock %}

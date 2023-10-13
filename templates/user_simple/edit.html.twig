@@ -3,23 +3,44 @@
 {% block title %}Edit UserSimple{% endblock %}
 
 {% block body %}
-   <div class="container">
-    <h1>edit Person</h1>
-      {{ form_start(form) }}
-                    {{ form_row(form.nom) }}
-                    {{ form_row(form.prenom) }}
-                    {{ form_row(form.province) }}
-                    {{ form_row(form.region) }}
-                    {{ form_row(form.district) }}
-                    {{ form_row(form.commune) }}
-        <button type="submit" class="btn btn-primary">Editer</button>
-    {{ form_end(form) }}
+    <div class="container">
+        <h1>Edit Person</h1>
 
-</div>
+        {{ form_start(form, {'attr': {'class': 'my-form'}}) }}
 
+        <div class="row">
+            <div class="col-md-6">
+                <div class="form-group">
+                    {{ form_row(form.nom, {'attr': {'class': 'form-control'}}) }}
+                </div>
+                <div class="form-group">
+                    {{ form_row(form.prenom, {'attr': {'class': 'form-control'}}) }}
+                </div>
+                <div class="form-group">
+                    {{ form_row(form.province, {'attr': {'class': 'form-control'}}) }}
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="form-group">
+                    {{ form_row(form.region, {'attr': {'class': 'form-control'}}) }}
+                </div>
+                <div class="form-group">
+                    {{ form_row(form.district, {'attr': {'class': 'form-control'}}) }}
+                </div>
+                <div class="form-group">
+                    {{ form_row(form.commune, {'attr': {'class': 'form-control'}}) }}
+                </div>
+            </div>
+        </div>
+
+        <button type="submit" class="btn btn-primary">Edit</button>
+        <a href="{{ path('app_user_simple_index') }}" class="btn btn-secondary">Back to List</a>
+
+        {{ form_end(form) }}
+    </div>
 {% endblock %}
 
 {% block javascripts %}
-            {{ parent() }}
-      <script type="text/javascript" src="{{ asset('js/user.js') }}"></script>
+    {{ parent() }}
+    <script type="text/javascript" src="{{ asset('js/user.js') }}"></script>
 {% endblock %}
