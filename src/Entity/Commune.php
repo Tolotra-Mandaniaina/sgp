@@ -24,9 +24,13 @@ class Commune
     #[ORM\OneToMany(mappedBy: 'commune', targetEntity: UserSimple::class)]
     private Collection $userSimples;
 
+    #[ORM\OneToMany(mappedBy: 'commune', targetEntity: User::class)]
+    private Collection $users;
+
     public function __construct()
     {
         $this->userSimples = new ArrayCollection();
+        $this->users = new ArrayCollection();
     }
 
     public function getId(): ?int
@@ -86,6 +90,36 @@ class Commune
             // set the owning side to null (unless already changed)
             if ($userSimple->getCommune() === $this) {
                 $userSimple->setCommune(null);
+            }
+        }
+
+        return $this;
+    }
+
+    /**
+     * @return Collection<int, User>
+     */
+    public function getUsers(): Collection
+    {
+        return $this->users;
+    }
+
+    public function addUser(User $user): static
+    {
+        if (!$this->users->contains($user)) {
+            $this->users->add($user);
+            $user->setCommune($this);
+        }
+
+        return $this;
+    }
+
+    public function removeUser(User $user): static
+    {
+        if ($this->users->removeElement($user)) {
+            // set the owning side to null (unless already changed)
+            if ($user->getCommune() === $this) {
+                $user->setCommune(null);
             }
         }
 
