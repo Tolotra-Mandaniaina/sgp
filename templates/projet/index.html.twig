@@ -1,0 +1,80 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Projet index{% endblock %}
+
+{% block body %}
+    <h1>Projet index</h1>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Date_soumission</th>
+                <th>Projet_no</th>
+                <th>Fonds</th>
+                <th>Phase</th>
+                <th>Paysage</th>
+                <th>Année</th>
+                <th>Statut_projet</th>
+                <th>Date_debut_propose</th>
+                <th>Dure_prevu</th>
+                <th>Titre_projet</th>
+                <th>Action_principale_projet</th>
+                <th>Lieu_implantation</th>
+                <th>Nom_local_communaute_beneficiaire</th>
+                <th>Fokontany</th>
+                <th>Nom_organisation</th>
+                <th>Annee_creation</th>
+                <th>Nombre_membre</th>
+                <th>Adresse_physique</th>
+                <th>Telephone</th>
+                <th>Email</th>
+                <th>Nom_signataire</th>
+                <th>Fonction_signataire</th>
+                <th>Nom_contact</th>
+                <th>Fonction_contact</th>
+                <th>actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for projet in projets %}
+            <tr>
+                <td>{{ projet.id }}</td>
+                <td>{{ projet.dateSoumission ? projet.dateSoumission|date('Y-m-d') : '' }}</td>
+                <td>{{ projet.projetNo }}</td>
+                <td>{{ projet.fonds }}</td>
+                <td>{{ projet.phase }}</td>
+                <td>{{ projet.paysage }}</td>
+                <td>{{ projet.statutProjet }}</td>
+                <td>{{ projet.dateDebutPropose }}</td>
+                <td>{{ projet.durePrevu }}</td>
+                <td>{{ projet.titreProjet }}</td>
+                <td>{{ projet.actionPrincipaleProjet }}</td>
+                <td>{{ projet.lieuImplantation }}</td>
+                <td>{{ projet.nomLocalCommunauteBeneficiaire }}</td>
+                <td>{{ projet.fokontany }}</td>
+                <td>{{ projet.nomOrganisation }}</td>
+                <td>{{ projet.anneeCreation }}</td>
+                <td>{{ projet.nombreMembre }}</td>
+                <td>{{ projet.adressePhysique }}</td>
+                <td>{{ projet.telephone }}</td>
+                <td>{{ projet.email }}</td>
+                <td>{{ projet.nomSignataire }}</td>
+                <td>{{ projet.fonctionSignataire }}</td>
+                <td>{{ projet.nomContact }}</td>
+                <td>{{ projet.fonctionContact }}</td>
+                <td>
+                    <a href="{{ path('app_projet_show', {'id': projet.id}) }}">show</a>
+                    <a href="{{ path('app_projet_edit', {'id': projet.id}) }}">edit</a>
+                </td>
+            </tr>
+        {% else %}
+            <tr>
+                <td colspan="26">no records found</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <a href="{{ path('app_projet_new') }}">Create new</a>
+{% endblock %}

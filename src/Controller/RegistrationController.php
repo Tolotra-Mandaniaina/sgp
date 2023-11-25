@@ -3,6 +3,8 @@
 namespace App\Controller;
 
 use App\Entity\User;
+use App\Repository\UserRepository;
+
 use App\Form\RegistrationFormType;
 use Doctrine\ORM\EntityManagerInterface;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
@@ -33,11 +35,20 @@ class RegistrationController extends AbstractController
             $entityManager->flush();
             // do anything else you need here, like send an email
 
-            return $this->redirectToRoute('app_user_simple_index');
+            return $this->redirectToRoute('app_register_index');
         }
 
         return $this->render('registration/register.html.twig', [
             'registrationForm' => $form->createView(),
         ]);
     }
+
+    #[Route('/liste/user', name: 'app_register_index', methods: ['GET'])]
+    public function index(UserRepository $userRepository): Response
+    {
+        return $this->render('registration/index.html.twig', [
+            'user' => $userRepository->findAll(),
+        ]);
+    }
+
 }

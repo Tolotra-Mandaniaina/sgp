@@ -1,0 +1,126 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Projet{% endblock %}
+
+{% block body %}
+    <h1>Projet</h1>
+
+    <table class="table">
+        <tbody>
+            <tr>
+                <th>Id</th>
+                <td>{{ projet.id }}</td>
+            </tr>
+            <tr>
+                <th>Date_soumission</th>
+                <td>{{ projet.dateSoumission ? projet.dateSoumission|date('Y-m-d') : '' }}</td>
+            </tr>
+            <tr>
+                <th>Projet_no</th>
+                <td>{{ projet.projetNo }}</td>
+            </tr>
+            <tr>
+                <th>Fonds</th>
+                <td>{{ projet.fonds }}</td>
+            </tr>
+            <tr>
+                <th>Phase</th>
+                <td>{{ projet.phase }}</td>
+            </tr>
+            <tr>
+                <th>Paysage</th>
+                <td>{{ projet.paysage }}</td>
+            </tr>
+            
+            <tr>
+                <th>Statut_projet</th>
+                <td>{{ projet.statutProjet }}</td>
+            </tr>
+            <tr>
+                <th>Date_debut_propose</th>
+                <td>{{ projet.dateDebutPropose }}</td>
+            </tr>
+            <tr>
+                <th>Dure_prevu</th>
+                <td>{{ projet.durePrevu }}</td>
+            </tr>
+            <tr>
+                <th>Titre_projet</th>
+                <td>{{ projet.titreProjet }}</td>
+            </tr>
+            <tr>
+                <th>Action_principale_projet</th>
+                <td>{{ projet.actionPrincipaleProjet }}</td>
+            </tr>
+            <tr>
+                <th>Lieu_implantation</th>
+                <td>{{ projet.lieuImplantation }}</td>
+            </tr>
+            <tr>
+                <th>Nom_local_communaute_beneficiaire</th>
+                <td>{{ projet.nomLocalCommunauteBeneficiaire }}</td>
+            </tr>
+            <tr>
+                <th>Fokontany</th>
+                <td>{{ projet.fokontany }}</td>
+            </tr>
+            <tr>
+                <th>Nom_organisation</th>
+                <td>{{ projet.nomOrganisation }}</td>
+            </tr>
+            <tr>
+                <th>Annee_creation</th>
+                <td>{{ projet.anneeCreation }}</td>
+            </tr>
+            <tr>
+                <th>Nombre_membre</th>
+                <td>{{ projet.nombreMembre }}</td>
+            </tr>
+            <tr>
+                <th>Adresse_physique</th>
+                <td>{{ projet.adressePhysique }}</td>
+            </tr>
+            <tr>
+                <th>Telephone</th>
+                <td>{{ projet.telephone }}</td>
+            </tr>
+            <tr>
+                <th>Email</th>
+                <td>{{ projet.email }}</td>
+            </tr>
+            <tr>
+                <th>Nom_signataire</th>
+                <td>{{ projet.nomSignataire }}</td>
+            </tr>
+            <tr>
+                <th>Fonction_signataire</th>
+                <td>{{ projet.fonctionSignataire }}</td>
+            </tr>
+            <tr>
+                <th>Nom_contact</th>
+                <td>{{ projet.nomContact }}</td>
+            </tr>
+            <tr>
+                <th>Fonction_contact</th>
+                <td>{{ projet.fonctionContact }}</td>
+            </tr>
+
+            <tr>
+                <th>file manager</th>
+                <td>
+          
+            {% for apport in projet.apport %}
+                 {{ apport.piecejustificative }}
+            {% endfor %}
+                                
+                </td>
+            </tr>
+        </tbody>
+    </table>
+
+    <a href="{{ path('app_projet_index') }}">back to list</a>
+
+    <a href="{{ path('app_projet_edit', {'id': projet.id}) }}">edit</a>
+
+    {{ include('projet/_delete_form.html.twig') }}
+{% endblock %}
