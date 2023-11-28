@@ -1,0 +1,62 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Identification Projet{% endblock %}
+
+{% block body %}
+    <title>IdentificationProjet index</title>
+</head>
+<body>
+
+<div class="container">
+    <h1>Identification Projet</h1>
+
+    <table id="table_id" class="table table-bordered table-hover">
+        <thead>
+            <tr>
+                <th>_id</th>
+                <th>Titre du projet</th>
+                <th>Région d'intervention</th>
+                <th>Projet n°</th>
+                <th>Phases</th>
+                <th>Paysages</th>
+                <th>Statut du projet</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for identification_projet in identification_projets %}
+                <tr>
+                    <td>{{ identification_projet._id }}</td>
+                    <td>{{ identification_projet.A1 }}</td>
+                    <td>{{ identification_projet.A5 }}</td>
+                    <td>{{ identification_projet.A10 }}</td>
+                    <td>{{ identification_projet.A12 }}</td>
+                    <td>{{ identification_projet.A13 }}</td>
+                    <td>{{ identification_projet.A16 }}</td>
+                    <td class="actions">
+                        <a href="{{ path('app_identification_projet_edit', {'id': identification_projet.id}) }}" class="btn btn-sm btn-success">Voir et Editer</a>
+                    </td>
+                </tr>
+            {% else %}
+                <tr>
+                    <td colspan="8" class="no-records">No records found</td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</div>
+
+    {# <a href="{{ path('app_identification_projet_new') }}">Create new</a> #} 
+{% endblock %}
+
+{% block javascripts %}
+  <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+  <script src="https://cdn.datatables.net/1.10.25/js/jquery.dataTables.min.js"></script>
+  
+<script type="text/javascript">
+    $(document).ready( function () {
+        $('#table_id').DataTable();
+    });
+</script>
+
+{% endblock %}

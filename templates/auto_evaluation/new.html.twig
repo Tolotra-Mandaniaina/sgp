@@ -1,0 +1,142 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}New AutoEvaluation{% endblock %}
+
+{% block body %}
+    <h1>Create new AutoEvaluation</h1>
+
+       {{ form_start(form) }}
+    <div class="container">
+
+    <H4>A- IDENTIFICATION</H4>
+
+  <div class="form-group">
+        {{ form_row(form.A1, {'attr': {'class': 'form-control'}}) }}
+    </div>
+    <div class="form-group">
+        {{ form_row(form.A10, {'attr': {'class': 'form-control'}}) }}
+    </div>
+    <div class="form-group">
+        {{ form_row(form.A34, {'attr': {'class': 'form-control'}}) }}
+    </div>
+    <div class="form-group">
+        {{ form_row(form.A35, {'attr': {'class': 'form-control'}}) }}
+    </div>
+    <div class="form-group">
+        {{ form_row(form.A36, {'attr': {'class': 'form-control'}}) }}
+    </div>
+    <div class="form-group">
+        {{ form_row(form.A37, {'attr': {'class': 'form-control'}}) }}
+    </div>
+    <div class="form-group">
+        {{ form_row(form.A38, {'attr': {'class': 'form-control'}}) }}
+    </div>
+    <div class="form-group">
+        {{ form_row(form.A39, {'attr': {'class': 'form-control'}}) }}
+    </div>
+    </BR>
+
+    <H5>Succès (qualitatifs et quantitatifs avec indicateurs)</H5>
+    <div class="form-group">
+        {{ form_row(form.B1, {'attr': {'class': 'form-control'}}) }}
+    </div>
+    <div class="form-group">
+        {{ form_row(form.B2, {'attr': {'class': 'form-control'}}) }}
+    </div>
+    <div class="form-group">
+        {{ form_row(form.B3, {'attr': {'class': 'form-control'}}) }}
+    </div>
+    <div class="form-group">
+        {{ form_row(form.B4, {'attr': {'class': 'form-control'}}) }}
+    </div>
+    </BR>
+
+    <H5>Echecs (qualitatifs et quantitatifs avec indicateurs)</H5>
+    <div class="form-group">
+        {{ form_row(form.B5, {'attr': {'class': 'form-control'}}) }}
+    </div>
+    <div class="form-group">
+        {{ form_row(form.B6, {'attr': {'class': 'form-control'}}) }}
+    </div>
+    <div class="form-group">
+        {{ form_row(form.B7, {'attr': {'class': 'form-control'}}) }}
+    </div>
+    <div class="form-group">
+        {{ form_row(form.B8, {'attr': {'class': 'form-control'}}) }}
+    </div>
+    <div class="form-group">
+        {{ form_row(form.B9, {'attr': {'class': 'form-control'}}) }}
+    </div>
+    <div class="form-group">
+        {{ form_row(form.B10, {'attr': {'class': 'form-control'}}) }}
+    </div>
+    <div class="form-group">
+        {{ form_row(form.B11, {'attr': {'class': 'form-control'}}) }}
+    </div>
+    <div class="form-group">
+        {{ form_row(form.B12, {'attr': {'class': 'form-control'}}) }}
+    </div>
+    <div class="form-group">
+        {{ form_row(form.B13, {'attr': {'class': 'form-control'}}) }}
+    </div>
+    <div class="form-group">
+        {{ form_row(form.B14, {'attr': {'class': 'form-control'}}) }}
+    </div>
+    <BR></BR>
+
+    <H5>Obstacles (qualitatifs et quantitatifs avec indicateurs)</H5>
+    <div class="form-group">
+        {{ form_row(form.B15, {'attr': {'class': 'form-control'}}) }}
+    </div>
+    <div class="form-group">
+        {{ form_row(form.B16, {'attr': {'class': 'form-control'}}) }}
+    </div>
+    <div class="form-group">
+        {{ form_row(form.B17, {'attr': {'class': 'form-control'}}) }}
+    </div>
+
+    <H5>Auto-évaluation et contrôle</H5>
+    <div class="form-group">
+        {{ form_row(form.B18, {'attr': {'class': 'form-control'}}) }}
+    </div>
+    <div class="form-group">
+        {{ form_row(form.B19, {'attr': {'class': 'form-control'}}) }}
+    </div>
+    <div class="form-group">
+        {{ form_row(form.B20, {'attr': {'class': 'form-control'}}) }}
+    </div>
+    <div class="form-group">
+        {{ form_row(form.B21, {'attr': {'class': 'form-control'}}) }}
+    </div>
+    <div class="form-group">
+        {{ form_row(form.B22, {'attr': {'class': 'form-control'}}) }}
+    </div>
+    <div class="form-group">
+        {{ form_row(form.B23, {'attr': {'class': 'form-control'}}) }}
+    </div>
+    </BR>
+
+    <H5>Interprétation de l'indicateur</H5>
+    <div class="form-group">
+        {{ form_row(form.B24, {'attr': {'class': 'form-control'}}) }}
+    </div>
+    <div class="form-group">
+        {{ form_row(form.B25, {'attr': {'class': 'form-control'}}) }}
+    </div>
+    <div class="form-group">
+        {{ form_row(form.B26, {'attr': {'class': 'form-control'}}) }}
+    </div>
+    </BR>
+    
+    <H5>Coût du SE&KC</H5>
+    <div class="form-group">
+        {{ form_row(form.B27, {'attr': {'class': 'form-control'}}) }}
+    </div>
+
+     <button class="btn">{{ button_label|default('Save') }}</button>
+
+        {{ form_end(form) }}
+
+
+    <a href="{{ path('app_auto_evaluation_index') }}">back to list</a>
+{% endblock %}

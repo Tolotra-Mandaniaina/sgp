@@ -1,0 +1,60 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}SuiviEvaluation index{% endblock %}
+
+{% block body %}
+   
+    <h1>Suivi Evaluation</h1>
+
+    <table id="table_id"  class="table table-bordered table-hover">
+        <thead>
+            <tr>
+                <th>Titre du projet</th>
+                <th>Projet No.</th>
+                <th>Fonds</th>
+                <th>Phases</th>
+                <th>Paysages</th>
+                <th>Domaine d'intervention</th>
+                <th>Année de remplissage de l'outils</th>
+                <th>Numero trimestre</th>
+                <th>actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for suivi_evaluation in suivi_evaluations %}
+            <tr>
+                <td>{{ suivi_evaluation.A1 }}</td>
+                <td>{{ suivi_evaluation.A10 }}</td>
+                <td>{{ suivi_evaluation.A11 }}</td>
+                <td>{{ suivi_evaluation.A12 }}</td>
+                <td>{{ suivi_evaluation.A13 }}</td>
+                <td>{{ suivi_evaluation.A19 }}</td>
+                <td>{{ suivi_evaluation.A33 }}</td>
+                <td>{{ suivi_evaluation.A34 }}</td>
+               
+                <td>
+                  {#  <a href="{{ path('app_suivi_evaluation_show', {'id': suivi_evaluation.id}) }}">show</a> #}
+                    <a href="{{ path('app_suivi_evaluation_edit', {'id': suivi_evaluation.id}) }}" class="btn btn-sm btn-success">Voir et Editer</a>
+                </td>
+            </tr>
+        {% else %}
+            <tr>
+                <td colspan="182">no records found</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+  {#  <a href="{{ path('app_suivi_evaluation_new') }}">Create new</a>  #}
+{% endblock %}
+{% block javascripts %}
+  <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+  <script src="https://cdn.datatables.net/1.10.25/js/jquery.dataTables.min.js"></script>
+  
+<script type="text/javascript">
+    $(document).ready( function () {
+        $('#table_id').DataTable();
+    });
+</script>
+
+{% endblock %}

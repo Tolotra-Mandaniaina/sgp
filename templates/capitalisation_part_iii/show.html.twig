@@ -1,0 +1,106 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}CapitalisationPartIII{% endblock %}
+
+{% block body %}
+    <h1>CapitalisationPartIII</h1>
+
+    <table class="table">
+        <tbody>
+            <tr>
+                <th>Id</th>
+                <td>{{ capitalisation_part_i_i_i.id }}</td>
+            </tr>
+            <tr>
+                <th>_id</th>
+                <td>{{ capitalisation_part_i_i_i.id }}</td>
+            </tr>
+            <tr>
+                <th>Formhub_uuid</th>
+                <td>{{ capitalisation_part_i_i_i.formhubUuid }}</td>
+            </tr>
+            <tr>
+                <th>Start</th>
+                <td>{{ capitalisation_part_i_i_i.start }}</td>
+            </tr>
+            <tr>
+                <th>End</th>
+                <td>{{ capitalisation_part_i_i_i.end }}</td>
+            </tr>
+            <tr>
+                <th>Today</th>
+                <td>{{ capitalisation_part_i_i_i.today }}</td>
+            </tr>
+            <tr>
+                <th>Deviceid</th>
+                <td>{{ capitalisation_part_i_i_i.deviceid }}</td>
+            </tr>
+            <tr>
+                <th>A1</th>
+                <td>{{ capitalisation_part_i_i_i.A1 }}</td>
+            </tr>
+            <tr>
+                <th>A10</th>
+                <td>{{ capitalisation_part_i_i_i.A10 }}</td>
+            </tr>
+            <tr>
+                <th>A11</th>
+                <td>{{ capitalisation_part_i_i_i.A11 }}</td>
+            </tr>
+            <tr>
+                <th>A12</th>
+                <td>{{ capitalisation_part_i_i_i.A12 }}</td>
+            </tr>
+            <tr>
+                <th>A13</th>
+                <td>{{ capitalisation_part_i_i_i.A13 }}</td>
+            </tr>
+            <tr>
+                <th>A19</th>
+                <td>{{ capitalisation_part_i_i_i.A19 }}</td>
+            </tr>
+            <tr>
+                <th>A33</th>
+                <td>{{ capitalisation_part_i_i_i.A33 }}</td>
+            </tr>
+            <tr>
+                <th>A34</th>
+                <td>{{ capitalisation_part_i_i_i.A34 }}</td>
+            </tr>
+            <tr>
+                <th>L1_1</th>
+                <td>{{ capitalisation_part_i_i_i.L11 }}</td>
+            </tr>
+            <tr>
+                <th>L10_1</th>
+                <td>{{ capitalisation_part_i_i_i.L101 }}</td>
+            </tr>
+            <tr>
+                <th>L10_2</th>
+                <td>{{ capitalisation_part_i_i_i.L102 }}</td>
+            </tr>
+            <tr>
+                <th>L10_3</th>
+                <td>{{ capitalisation_part_i_i_i.L103 }}</td>
+            </tr>
+            <tr>
+                <th>L10_4</th>
+                <td>{{ capitalisation_part_i_i_i.L104 }}</td>
+            </tr>
+            <tr>
+                <th>L10_5</th>
+                <td>{{ capitalisation_part_i_i_i.L105 }}</td>
+            </tr>
+            <tr>
+                <th>L10_6</th>
+                <td>{{ capitalisation_part_i_i_i.L106 }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <a href="{{ path('app_capitalisation_part_i_i_i_index') }}">back to list</a>
+
+    <a href="{{ path('app_capitalisation_part_i_i_i_edit', {'id': capitalisation_part_i_i_i.id}) }}">edit</a>
+
+    {{ include('capitalisation_part_iii/_delete_form.html.twig') }}
+{% endblock %}

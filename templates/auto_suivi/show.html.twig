@@ -1,0 +1,134 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}AutoSuivi{% endblock %}
+
+{% block body %}
+    <h1>AutoSuivi</h1>
+
+    <table class="table">
+        <tbody>
+            <tr>
+                <th>Id</th>
+                <td>{{ auto_suivi.id }}</td>
+            </tr>
+            <tr>
+                <th>_id</th>
+                <td>{{ auto_suivi._id }}</td>
+            </tr>
+            <tr>
+                <th>Formhub_uuid</th>
+                <td>{{ auto_suivi.formhubUuid }}</td>
+            </tr>
+            <tr>
+                <th>Start</th>
+                <td>{{ auto_suivi.start }}</td>
+            </tr>
+            <tr>
+                <th>End</th>
+                <td>{{ auto_suivi.end }}</td>
+            </tr>
+            <tr>
+                <th>Today</th>
+                <td>{{ auto_suivi.today }}</td>
+            </tr>
+            <tr>
+                <th>Deviceid</th>
+                <td>{{ auto_suivi.deviceid }}</td>
+            </tr>
+            <tr>
+                <th>A1</th>
+                <td>{{ auto_suivi.A1 }}</td>
+            </tr>
+            <tr>
+                <th>A10</th>
+                <td>{{ auto_suivi.A10 }}</td>
+            </tr>
+            <tr>
+                <th>A34</th>
+                <td>{{ auto_suivi.A34 }}</td>
+            </tr>
+            <tr>
+                <th>A35</th>
+                <td>{{ auto_suivi.A35 }}</td>
+            </tr>
+            <tr>
+                <th>A36</th>
+                <td>{{ auto_suivi.A36 }}</td>
+            </tr>
+            <tr>
+                <th>A37</th>
+                <td>{{ auto_suivi.A37 }}</td>
+            </tr>
+            <tr>
+                <th>A38</th>
+                <td>{{ auto_suivi.A38 }}</td>
+            </tr>
+            <tr>
+                <th>A39</th>
+                <td>{{ auto_suivi.A39 }}</td>
+            </tr>
+            <tr>
+                <th>B1</th>
+                <td>{{ auto_suivi.B1 }}</td>
+            </tr>
+            <tr>
+                <th>B2</th>
+                <td>{{ auto_suivi.B2 }}</td>
+            </tr>
+            <tr>
+                <th>B3</th>
+                <td>{{ auto_suivi.B3 }}</td>
+            </tr>
+            <tr>
+                <th>B4</th>
+                <td>{{ auto_suivi.B4 }}</td>
+            </tr>
+            <tr>
+                <th>B12</th>
+                <td>{{ auto_suivi.B12 }}</td>
+            </tr>
+            <tr>
+                <th>B13</th>
+                <td>{{ auto_suivi.B13 }}</td>
+            </tr>
+            <tr>
+                <th>B14</th>
+                <td>{{ auto_suivi.B14 }}</td>
+            </tr>
+            <tr>
+                <th>B15</th>
+                <td>{{ auto_suivi.B15 }}</td>
+            </tr>
+            <tr>
+                <th>B16</th>
+                <td>{{ auto_suivi.B16 }}</td>
+            </tr>
+            <tr>
+                <th>B16_autre</th>
+                <td>{{ auto_suivi.B16Autre }}</td>
+            </tr>
+            <tr>
+                <th>B17</th>
+                <td>{{ auto_suivi.B17 }}</td>
+            </tr>
+            <tr>
+                <th>B17_autre</th>
+                <td>{{ auto_suivi.B17Autre }}</td>
+            </tr>
+            <tr>
+                <th>B18</th>
+                <td>{{ auto_suivi.B18 }}</td>
+            </tr>
+            <tr>
+                <th>B18_autre</th>
+                <td>{{ auto_suivi.B18Autre }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <a href="{{ path('app_auto_suivi_index') }}">back to list</a>
+
+    <a href="{{ path('app_auto_suivi_edit', {'id': auto_suivi.id}) }}">edit</a>
+
+    {{ include('auto_suivi/_delete_form.html.twig') }}
+{% endblock %}

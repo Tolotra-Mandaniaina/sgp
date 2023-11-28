@@ -1,0 +1,13 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Edit CapitalisationPartII{% endblock %}
+
+{% block body %}
+    <h1>Edit CapitalisationPartII</h1>
+
+    {{ include('capitalisation_part_ii/_form.html.twig', {'button_label': 'Update'}) }}
+
+    <a href="{{ path('app_capitalisation_part_i_i_index') }}">back to list</a>
+
+    {{ include('capitalisation_part_ii/_delete_form.html.twig') }}
+{% endblock %}

@@ -34,30 +34,6 @@ class SuiviEvaluation
     #[ORM\Column(name:"A1", length: 255, nullable: true)]
     private ?string $A1 = null;
 
-    #[ORM\Column(name:"A2",length: 255, nullable: true)]
-    private ?string $A2 = null;
-
-    #[ORM\Column(name:"A3",length: 255, nullable: true)]
-    private ?string $A3 = null;
-
-    #[ORM\Column(name:"A4",length: 255, nullable: true)]
-    private ?string $A4 = null;
-
-    #[ORM\Column(name:"A5",length: 50, nullable: true)]
-    private ?string $A5 = null;
-
-    #[ORM\Column(name:"A6",length: 50, nullable: true)]
-    private ?string $A6 = null;
-
-    #[ORM\Column(name:"A7",length: 50, nullable: true)]
-    private ?string $A7 = null;
-
-    #[ORM\Column(name:"A8",length: 50, nullable: true)]
-    private ?string $A8 = null;
-
-    #[ORM\Column(name:"A9",length: 12, nullable: true)]
-    private ?string $A9 = null;
-
     #[ORM\Column(name:"A10",length: 50, nullable: true)]
     private ?string $A10 = null;
 
@@ -70,62 +46,14 @@ class SuiviEvaluation
     #[ORM\Column(name:"A13",length: 15, nullable: true)]
     private ?string $A13 = null;
 
-    #[ORM\Column(name:"A14",length: 15, nullable: true)]
-    private ?string $A14 = null;
-
-    #[ORM\Column(name:"A15",length: 12, nullable: true)]
-    private ?string $A15 = null;
-
-    #[ORM\Column(name:"A16",length: 50, nullable: true)]
-    private ?string $A16 = null;
-
-    #[ORM\Column(name:"A17",length: 12, nullable: true)]
-    private ?string $A17 = null;
-
-    #[ORM\Column(name:"A18", nullable: true)]
-    private ?int $A18 = null;
-
     #[ORM\Column(name:"A19",length: 255, nullable: true)]
     private ?string $A19 = null;
 
-    #[ORM\Column(name:"A20",length: 255, nullable: true)]
-    private ?string $A20 = null;
+    #[ORM\Column(name:"A33",length: 255, nullable: true)]
+    private ?string $A33 = null;
 
-    #[ORM\Column(name:"A21",length: 10, nullable: true)]
-    private ?string $A21 = null;
-
-    #[ORM\Column(name:"A22",length: 255, nullable: true)]
-    private ?string $A22 = null;
-
-    #[ORM\Column(name:"A23",length: 12, nullable: true)]
-    private ?string $A23 = null;
-
-    #[ORM\Column(name:"A24", nullable: true)]
-    private ?int $A24 = null;
-
-    #[ORM\Column(name:"A25",length: 255, nullable: true)]
-    private ?string $A25 = null;
-
-    #[ORM\Column(name:"A26",length: 255, nullable: true)]
-    private ?string $A26 = null;
-
-    #[ORM\Column(name:"A27",length: 255, nullable: true)]
-    private ?string $A27 = null;
-
-    #[ORM\Column(name:"A28",length: 255, nullable: true)]
-    private ?string $A28 = null;
-
-    #[ORM\Column(name:"A29",length: 255, nullable: true)]
-    private ?string $A29 = null;
-
-    #[ORM\Column(name:"A30",length: 255, nullable: true)]
-    private ?string $A30 = null;
-
-    #[ORM\Column(name:"A31",length: 255, nullable: true)]
-    private ?string $A31 = null;
-
-    #[ORM\Column(name:"A32",length: 255, nullable: true)]
-    private ?string $A32 = null;
+    #[ORM\Column(name:"A34",length: 255, nullable: true)]
+    private ?string $A34 = null;
 
     #[ORM\Column(name:"B1", nullable: true)]
     private ?int $B1 = null;
@@ -640,102 +568,6 @@ class SuiviEvaluation
         return $this;
     }
 
-    public function getA2(): ?string
-    {
-        return $this->A2;
-    }
-
-    public function setA2(?string $A2): static
-    {
-        $this->A2 = $A2;
-
-        return $this;
-    }
-
-    public function getA3(): ?string
-    {
-        return $this->A3;
-    }
-
-    public function setA3(?string $A3): static
-    {
-        $this->A3 = $A3;
-
-        return $this;
-    }
-
-    public function getA4(): ?string
-    {
-        return $this->A4;
-    }
-
-    public function setA4(?string $A4): static
-    {
-        $this->A4 = $A4;
-
-        return $this;
-    }
-
-    public function getA5(): ?string
-    {
-        return $this->A5;
-    }
-
-    public function setA5(?string $A5): static
-    {
-        $this->A5 = $A5;
-
-        return $this;
-    }
-
-    public function getA6(): ?string
-    {
-        return $this->A6;
-    }
-
-    public function setA6(?string $A6): static
-    {
-        $this->A6 = $A6;
-
-        return $this;
-    }
-
-    public function getA7(): ?string
-    {
-        return $this->A7;
-    }
-
-    public function setA7(?string $A7): static
-    {
-        $this->A7 = $A7;
-
-        return $this;
-    }
-
-    public function getA8(): ?string
-    {
-        return $this->A8;
-    }
-
-    public function setA8(?string $A8): static
-    {
-        $this->A8 = $A8;
-
-        return $this;
-    }
-
-    public function getA9(): ?string
-    {
-        return $this->A9;
-    }
-
-    public function setA9(?string $A9): static
-    {
-        $this->A9 = $A9;
-
-        return $this;
-    }
-
     public function getA10(): ?string
     {
         return $this->A10;
@@ -784,65 +616,6 @@ class SuiviEvaluation
         return $this;
     }
 
-    public function getA14(): ?string
-    {
-        return $this->A14;
-    }
-
-    public function setA14(?string $A14): static
-    {
-        $this->A14 = $A14;
-
-        return $this;
-    }
-
-    public function getA15(): ?string
-    {
-        return $this->A15;
-    }
-
-    public function setA15(?string $A15): static
-    {
-        $this->A15 = $A15;
-
-        return $this;
-    }
-
-    public function getA16(): ?string
-    {
-        return $this->A16;
-    }
-
-    public function setA16(?string $A16): static
-    {
-        $this->A16 = $A16;
-
-        return $this;
-    }
-
-    public function getA17(): ?string
-    {
-        return $this->A17;
-    }
-
-    public function setA17(?string $A17): static
-    {
-        $this->A17 = $A17;
-
-        return $this;
-    }
-
-    public function getA18(): ?int
-    {
-        return $this->A18;
-    }
-
-    public function setA18(?int $A18): static
-    {
-        $this->A18 = $A18;
-
-        return $this;
-    }
 
     public function getA19(): ?string
     {
@@ -856,158 +629,28 @@ class SuiviEvaluation
         return $this;
     }
    
-    public function getA20(): ?string
+  
+
+    public function getA33(): ?string
     {
-        return $this->A20;
+        return $this->A33;
     }
 
-    public function setA20(?string $A20): static
+    public function setA33(?string $A33): static
     {
-        $this->A20 = $A20;
+        $this->A33 = $A33;
 
         return $this;
     }
 
-    public function getA21(): ?string
+    public function getA34(): ?string
     {
-        return $this->A21;
+        return $this->A34;
     }
 
-    public function setA21(?string $A21): static
+    public function setA34(?string $A34): static
     {
-        $this->A21 = $A21;
-
-        return $this;
-    }
-
-    public function getA22(): ?string
-    {
-        return $this->A22;
-    }
-
-    public function setA22(?string $A22): static
-    {
-        $this->A22 = $A22;
-
-        return $this;
-    }
-
-    public function getA23(): ?string
-    {
-        return $this->A23;
-    }
-
-    public function setA23(?string $A23): static
-    {
-        $this->A23 = $A23;
-
-        return $this;
-    }
-
-    public function getA24(): ?int
-    {
-        return $this->A24;
-    }
-
-    public function setA24(?int $A24): static
-    {
-        $this->A24 = $A24;
-
-        return $this;
-    }
-
-    public function getA25(): ?string
-    {
-        return $this->A25;
-    }
-
-    public function setA25(?string $A25): static
-    {
-        $this->A25 = $A25;
-
-        return $this;
-    }
-
-    public function getA26(): ?string
-    {
-        return $this->A26;
-    }
-
-    public function setA26(?string $A26): static
-    {
-        $this->A26 = $A26;
-
-        return $this;
-    }
-
-    public function getA27(): ?string
-    {
-        return $this->A27;
-    }
-
-    public function setA27(?string $A27): static
-    {
-        $this->A27 = $A27;
-
-        return $this;
-    }
-
-    public function getA28(): ?string
-    {
-        return $this->A28;
-    }
-
-    public function setA28(?string $A28): static
-    {
-        $this->A28 = $A28;
-
-        return $this;
-    }
-
-    public function getA29(): ?string
-    {
-        return $this->A29;
-    }
-
-    public function setA29(?string $A29): static
-    {
-        $this->A29 = $A29;
-
-        return $this;
-    }
-
-    public function getA30(): ?string
-    {
-        return $this->A30;
-    }
-
-    public function setA30(?string $A30): static
-    {
-        $this->A30 = $A30;
-
-        return $this;
-    }
-
-    public function getA31(): ?string
-    {
-        return $this->A31;
-    }
-
-    public function setA31(?string $A31): static
-    {
-        $this->A31 = $A31;
-
-        return $this;
-    }
-
-    public function getA32(): ?string
-    {
-        return $this->A32;
-    }
-
-    public function setA32(?string $A32): static
-    {
-        $this->A32 = $A32;
+        $this->A34 = $A34;
 
         return $this;
     }

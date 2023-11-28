@@ -1,0 +1,96 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Edit AutoSuivi{% endblock %}
+
+{% block body %}
+    <h1>Edit AutoSuivi</h1>
+
+
+         {{ form_start(form) }}
+    <div class="container">
+
+    <H4>A- IDENTIFICATION</H4>
+
+    <div class="form-group">
+        {{ form_row(form.A1, {'attr': {'class': 'form-control'}}) }}
+    </div>
+    <div class="form-group">
+        {{ form_row(form.A10, {'attr': {'class': 'form-control'}}) }}
+    </div>
+    <div class="form-group">
+        {{ form_row(form.A34, {'attr': {'class': 'form-control'}}) }}
+    </div>
+    <div class="form-group">
+        {{ form_row(form.A35, {'attr': {'class': 'form-control'}}) }}
+    </div>
+    <div class="form-group">
+        {{ form_row(form.A36, {'attr': {'class': 'form-control'}}) }}
+    </div>
+    <div class="form-group">
+        {{ form_row(form.A37, {'attr': {'class': 'form-control'}}) }}
+    </div>
+    <div class="form-group">
+        {{ form_row(form.A38, {'attr': {'class': 'form-control'}}) }}
+    </div>
+    <div class="form-group">
+        {{ form_row(form.A39, {'attr': {'class': 'form-control'}}) }}
+    </div>
+    <BR>
+
+    <H5> Suivi technique de l'exécution et de réalisation du projet</H5>
+    <div class="form-group">
+        {{ form_row(form.B1, {'attr': {'class': 'form-control'}}) }}
+    </div>
+    <div class="form-group">
+        {{ form_row(form.B2, {'attr': {'class': 'form-control'}}) }}
+    </div>
+    <div class="form-group">
+        {{ form_row(form.B3, {'attr': {'class': 'form-control'}}) }}
+    </div>
+    <div class="form-group">
+        {{ form_row(form.B4, {'attr': {'class': 'form-control'}}) }}
+    </div>
+    <div class="form-group">
+        {{ form_row(form.B12, {'attr': {'class': 'form-control'}}) }}
+    </div>
+    <div class="form-group">
+        {{ form_row(form.B13, {'attr': {'class': 'form-control'}}) }}
+    </div>
+    <div class="form-group">
+        {{ form_row(form.B14, {'attr': {'class': 'form-control'}}) }}
+    </div>
+
+    <H5>Provenance données</H5>
+    <div class="form-group">
+        {{ form_row(form.B15, {'attr': {'class': 'form-control'}}) }}
+    </div>
+    <div class="form-group">
+        {{ form_row(form.B16, {'attr': {'class': 'form-control'}}) }}
+    </div>
+    <div class="form-group">
+        {{ form_row(form.B16_autre, {'attr': {'class': 'form-control'}}) }}
+    </div>
+    <div class="form-group">
+        {{ form_row(form.B17, {'attr': {'class': 'form-control'}}) }}
+    </div>
+    <div class="form-group">
+        {{ form_row(form.B17_autre, {'attr': {'class': 'form-control'}}) }}
+    </div>
+
+    <H5>Visualisation des suivis</H5>
+    <div class="form-group">
+        {{ form_row(form.B18, {'attr': {'class': 'form-control'}}) }}
+    </div>
+    <div class="form-group">
+        {{ form_row(form.B18_autre, {'attr': {'class': 'form-control'}}) }}
+    </div>
+
+      <button class="btn">{{ button_label|default('Save') }}</button>
+
+        {{ form_end(form) }}
+
+
+    <a href="{{ path('app_auto_suivi_index') }}">back to list</a>
+
+    {{ include('auto_suivi/_delete_form.html.twig') }}
+{% endblock %}

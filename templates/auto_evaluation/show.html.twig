@@ -1,0 +1,186 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}AutoEvaluation{% endblock %}
+
+{% block body %}
+    <h1>AutoEvaluation</h1>
+
+    <table class="table">
+        <tbody>
+            <tr>
+                <th>Id</th>
+                <td>{{ auto_evaluation.id }}</td>
+            </tr>
+            <tr>
+                <th>_id</th>
+                <td>{{ auto_evaluation.id }}</td>
+            </tr>
+            <tr>
+                <th>Formhub_uuid</th>
+                <td>{{ auto_evaluation.formhubUuid }}</td>
+            </tr>
+            <tr>
+                <th>Start</th>
+                <td>{{ auto_evaluation.start }}</td>
+            </tr>
+            <tr>
+                <th>End</th>
+                <td>{{ auto_evaluation.end }}</td>
+            </tr>
+            <tr>
+                <th>Today</th>
+                <td>{{ auto_evaluation.today }}</td>
+            </tr>
+            <tr>
+                <th>Deviceid</th>
+                <td>{{ auto_evaluation.deviceid }}</td>
+            </tr>
+            <tr>
+                <th>A1</th>
+                <td>{{ auto_evaluation.A1 }}</td>
+            </tr>
+            <tr>
+                <th>A10</th>
+                <td>{{ auto_evaluation.A10 }}</td>
+            </tr>
+            <tr>
+                <th>A34</th>
+                <td>{{ auto_evaluation.A34 }}</td>
+            </tr>
+            <tr>
+                <th>A35</th>
+                <td>{{ auto_evaluation.A35 }}</td>
+            </tr>
+            <tr>
+                <th>A36</th>
+                <td>{{ auto_evaluation.A36 }}</td>
+            </tr>
+            <tr>
+                <th>A37</th>
+                <td>{{ auto_evaluation.A37 }}</td>
+            </tr>
+            <tr>
+                <th>A38</th>
+                <td>{{ auto_evaluation.A38 }}</td>
+            </tr>
+            <tr>
+                <th>A39</th>
+                <td>{{ auto_evaluation.A39 }}</td>
+            </tr>
+            <tr>
+                <th>B1</th>
+                <td>{{ auto_evaluation.B1 }}</td>
+            </tr>
+            <tr>
+                <th>B2</th>
+                <td>{{ auto_evaluation.B2 }}</td>
+            </tr>
+            <tr>
+                <th>B3</th>
+                <td>{{ auto_evaluation.B3 }}</td>
+            </tr>
+            <tr>
+                <th>B4</th>
+                <td>{{ auto_evaluation.B4 }}</td>
+            </tr>
+            <tr>
+                <th>B5</th>
+                <td>{{ auto_evaluation.B5 }}</td>
+            </tr>
+            <tr>
+                <th>B6</th>
+                <td>{{ auto_evaluation.B6 }}</td>
+            </tr>
+            <tr>
+                <th>B7</th>
+                <td>{{ auto_evaluation.B7 }}</td>
+            </tr>
+            <tr>
+                <th>B8</th>
+                <td>{{ auto_evaluation.B8 }}</td>
+            </tr>
+            <tr>
+                <th>B9</th>
+                <td>{{ auto_evaluation.B9 }}</td>
+            </tr>
+            <tr>
+                <th>B10</th>
+                <td>{{ auto_evaluation.B10 }}</td>
+            </tr>
+            <tr>
+                <th>B11</th>
+                <td>{{ auto_evaluation.B11 }}</td>
+            </tr>
+            <tr>
+                <th>B12</th>
+                <td>{{ auto_evaluation.B12 }}</td>
+            </tr>
+            <tr>
+                <th>B13</th>
+                <td>{{ auto_evaluation.B13 }}</td>
+            </tr>
+            <tr>
+                <th>B14</th>
+                <td>{{ auto_evaluation.B14 }}</td>
+            </tr>
+            <tr>
+                <th>B15</th>
+                <td>{{ auto_evaluation.B15 }}</td>
+            </tr>
+            <tr>
+                <th>B16</th>
+                <td>{{ auto_evaluation.B16 }}</td>
+            </tr>
+            <tr>
+                <th>B17</th>
+                <td>{{ auto_evaluation.B17 }}</td>
+            </tr>
+            <tr>
+                <th>B18</th>
+                <td>{{ auto_evaluation.B18 }}</td>
+            </tr>
+            <tr>
+                <th>B19</th>
+                <td>{{ auto_evaluation.B19 }}</td>
+            </tr>
+            <tr>
+                <th>B20</th>
+                <td>{{ auto_evaluation.B20 }}</td>
+            </tr>
+            <tr>
+                <th>B21</th>
+                <td>{{ auto_evaluation.B21 }}</td>
+            </tr>
+            <tr>
+                <th>B22</th>
+                <td>{{ auto_evaluation.B22 }}</td>
+            </tr>
+            <tr>
+                <th>B23</th>
+                <td>{{ auto_evaluation.B23 }}</td>
+            </tr>
+            <tr>
+                <th>B24</th>
+                <td>{{ auto_evaluation.B24 }}</td>
+            </tr>
+            <tr>
+                <th>B25</th>
+                <td>{{ auto_evaluation.B25 }}</td>
+            </tr>
+            <tr>
+                <th>B26</th>
+                <td>{{ auto_evaluation.B26 }}</td>
+            </tr>
+            <tr>
+                <th>B27</th>
+                <td>{{ auto_evaluation.B27 }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <a href="{{ path('app_auto_evaluation_index') }}">back to list</a>
+
+    <a href="{{ path('app_auto_evaluation_edit', {'id': auto_evaluation.id}) }}">edit</a>
+
+    {{ include('auto_evaluation/_delete_form.html.twig') }}
+{% endblock %}

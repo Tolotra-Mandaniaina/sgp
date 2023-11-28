@@ -2,6 +2,8 @@
 
 namespace App\Controller\Admin;
 use App\Entity\Projet;
+use App\Entity\IdentificationProjet;
+
 
 use EasyCorp\Bundle\EasyAdminBundle\Config\Dashboard;
 use EasyCorp\Bundle\EasyAdminBundle\Config\MenuItem;

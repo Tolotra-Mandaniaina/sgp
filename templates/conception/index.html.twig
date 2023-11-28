@@ -1,0 +1,56 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Conception index{% endblock %}
+
+{% block body %}
+    <h1>Conception index</h1>
+
+    <table id="table_id" class="table table-bordered table-hover">
+        <thead>
+            <tr>
+                <th>Séance</th>
+                <th>Date de séance</th>
+                <th>Avant ou après de la séance?</th>
+                <th>Nom de l'organisation</th>
+                <th>Nom du contact</th>
+                <th>Numéro téléphone</th>
+                <th>Email</th>
+                <th>actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for conception in conceptions %}
+            <tr>
+                <td>{{ conception.A1 }}</td>
+                <td>{{ conception.A2 }}</td>
+                <td>{{ conception.A3 }}</td>
+                <td>{{ conception.A4 }}</td>
+                <td>{{ conception.A5 }}</td>
+                <td>{{ conception.A6 }}</td>
+                <td>{{ conception.A7 }}</td>
+                <td>
+                {#    <a href="{{ path('app_conception_show', {'id': conception.id}) }}">show</a> #}
+                    <a href="{{ path('app_conception_edit', {'id': conception.id}) }}" class="btn btn-sm btn-success">Voir et Editer</a>
+                </td>
+            </tr>
+        {% else %}
+            <tr>
+                <td colspan="100">no records found</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    {# <a href="{{ path('app_conception_new') }}">Create new</a>  #}
+{% endblock %}
+{% block javascripts %}
+  <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+  <script src="https://cdn.datatables.net/1.10.25/js/jquery.dataTables.min.js"></script>
+  
+<script type="text/javascript">
+    $(document).ready( function () {
+        $('#table_id').DataTable();
+    });
+</script>
+
+{% endblock %}

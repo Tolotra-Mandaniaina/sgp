@@ -13,7 +13,7 @@ class IdentificationProjet
     #[ORM\Column]
     private ?int $id = null;
 
-    #[ORM\Column(length: 255, nullable: true)]
+    #[ORM\Column(length: 255, nullable: true,name: "_id")]
     private ?string $_id = null;
 
     #[ORM\Column(length: 255, nullable: true)]
@@ -196,7 +196,12 @@ class IdentificationProjet
         return $this->id;
     }
 
-    public function setId(?string $_id): static
+    public function get_id(): ?string
+    {
+        return $this->_id;
+    }
+
+    public function set_id(?string $_id): static
     {
         $this->_id = $_id;
 
@@ -875,4 +880,9 @@ class IdentificationProjet
 
         return $this;
     }
+     // Ajoutez cette méthode
+     public function __toString()
+     {
+         return $this->_id;
+     }
 }

@@ -1,0 +1,49 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}CapitalisationPartIII index{% endblock %}
+
+{% block body %}
+    <h1>CapitalisationPartIII index</h1>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Titre du projet</th>
+                <th>Projet No</th>
+                <th>Fonds</th>
+                <th>Phases</th>
+                <th>Paysages</th>
+                <th>Domaine d'intervention</th>
+                <th>Année de remplissage de l'outils</th>
+                <th>Numero trimestre</th>
+                <th>actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for capitalisation_part_i_i_i in capitalisation_part_i_i_is %}
+            <tr>
+                <td>{{ capitalisation_part_i_i_i.A1 }}</td>
+                <td>{{ capitalisation_part_i_i_i.A10 }}</td>
+                <td>{{ capitalisation_part_i_i_i.A11 }}</td>
+                <td>{{ capitalisation_part_i_i_i.A12 }}</td>
+                <td>{{ capitalisation_part_i_i_i.A13 }}</td>
+                <td>{{ capitalisation_part_i_i_i.A19 }}</td>
+                <td>{{ capitalisation_part_i_i_i.A33 }}</td>
+                <td>{{ capitalisation_part_i_i_i.A34 }}</td>
+               
+               
+                <td>
+                    <a href="{{ path('app_capitalisation_part_i_i_i_show', {'id': capitalisation_part_i_i_i.id}) }}">show</a>
+                    <a href="{{ path('app_capitalisation_part_i_i_i_edit', {'id': capitalisation_part_i_i_i.id}) }}">edit</a>
+                </td>
+            </tr>
+        {% else %}
+            <tr>
+                <td colspan="23">no records found</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <a href="{{ path('app_capitalisation_part_i_i_i_new') }}">Create new</a>
+{% endblock %}
