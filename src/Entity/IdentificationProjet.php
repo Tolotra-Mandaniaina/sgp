@@ -46,35 +46,47 @@ class IdentificationProjet
     #[ORM\Column(name:"A5",length: 255, nullable: true)]
     private ?string $A5 = null;
 
-    #[ORM\Column(name:"A6a",length: 255, nullable: true)]
+    #[ORM\Column(name:"A6", nullable: true)]
+    private ?int $A6 = null;
+
+    #[ORM\Column(name:"A6a",length: 100, nullable: true)]
     private ?string $A6a = null;
 
-    #[ORM\Column(name:"A6b",length: 255, nullable: true)]
+    #[ORM\Column(name:"A6b",length: 100, nullable: true)]
     private ?string $A6b = null;
 
-    #[ORM\Column(name:"A6c",length: 255, nullable: true)]
+    #[ORM\Column(name:"A6c",length: 100, nullable: true)]
     private ?string $A6c = null;
 
-    #[ORM\Column(name:"A6d",length: 255, nullable: true)]
+    #[ORM\Column(name:"A6d",length: 100, nullable: true)]
     private ?string $A6d = null;
 
-    #[ORM\Column(name:"A6e",length: 255, nullable: true)]
+    #[ORM\Column(name:"A6e",length: 100, nullable: true)]
     private ?string $A6e = null;
 
-    #[ORM\Column(name:"A6f",length: 255, nullable: true)]
+    #[ORM\Column(name:"A6f",length: 100, nullable: true)]
     private ?string $A6f = null;
 
-    #[ORM\Column(name:"A6g",length: 255, nullable: true)]
+    #[ORM\Column(name:"A6g",length: 100, nullable: true)]
     private ?string $A6g = null;
 
-    #[ORM\Column(name:"A6h",length: 255, nullable: true)]
+    #[ORM\Column(name:"A6h",length: 100, nullable: true)]
     private ?string $A6h = null;
 
-    #[ORM\Column(name:"A6i",length: 255, nullable: true)]
+    #[ORM\Column(name:"A6i",length: 100, nullable: true)]
     private ?string $A6i = null;
 
-    #[ORM\Column(name:"A6j",length: 255, nullable: true)]
+    #[ORM\Column(name:"A6j",length: 100, nullable: true)]
     private ?string $A6j = null;
+
+    #[ORM\Column(name:"A6k",length: 100, nullable: true)]
+    private ?string $A6k = null;
+
+    #[ORM\Column(name:"A6l",length: 100, nullable: true)]
+    private ?string $A6l = null;
+
+    #[ORM\Column(name:"A6m",length: 100, nullable: true)]
+    private ?string $A6m = null;
 
     #[ORM\Column(name:"A7",length: 255, nullable: true)]
     private ?string $A7 = null;
@@ -87,6 +99,9 @@ class IdentificationProjet
 
     #[ORM\Column(name:"A10",length: 255, nullable: true)]
     private ?string $A10 = null;
+
+    #[ORM\Column(name:"A10a",type: "text", nullable: true)]
+    private ?string $A10a = null;
 
     #[ORM\Column(name:"A11",length: 255, nullable: true)]
     private ?string $A11 = null;
@@ -103,11 +118,17 @@ class IdentificationProjet
     #[ORM\Column(name:"A14",length: 255, nullable: true)]
     private ?string $A14 = null;
 
+    #[ORM\Column(name:"A14_autre",length: 255, nullable: true)]
+    private ?string $A14_autre = null;
+
     #[ORM\Column(name:"A15",length: 255, nullable: true)]
     private ?string $A15 = null;
 
     #[ORM\Column(name:"A16",length: 255, nullable: true)]
     private ?string $A16 = null;
+
+    #[ORM\Column(name:"A16_autre",type: "text", nullable: true)]
+    private ?string $A16_autre = null;
 
     #[ORM\Column(name:"A17",length: 255, nullable: true)]
     private ?string $A17 = null;
@@ -119,35 +140,35 @@ class IdentificationProjet
     private ?string $A19 = null;
 
 
-    #[ORM\Column(name:"A19a",length: 255, nullable: true)]
-    private ?string $A19a = null;
+    #[ORM\Column(name:"A19a", nullable: true)]
+    private ?int $A19a = null;
 
-    #[ORM\Column(name:"A19b",length: 255, nullable: true)]
-    private ?string $A19b = null;
-
-
-    #[ORM\Column(name:"A19c",length: 255, nullable: true)]
-    private ?string $A19c = null;
+    #[ORM\Column(name:"A19b", nullable: true)]
+    private ?int $A19b = null;
 
 
-    #[ORM\Column(name:"A19d",length: 255, nullable: true)]
-    private ?string $A19d = null;
+    #[ORM\Column(name:"A19c", nullable: true)]
+    private ?int $A19c = null;
 
 
-    #[ORM\Column(name:"A19e",length: 255, nullable: true)]
-    private ?string $A19e = null;
+    #[ORM\Column(name:"A19d", nullable: true)]
+    private ?int $A19d = null;
 
-    #[ORM\Column(name:"A19f",length: 255, nullable: true)]
-    private ?string $A19f = null;
 
-    #[ORM\Column(name:"A19g",length: 255, nullable: true)]
-    private ?string $A19g = null;
+    #[ORM\Column(name:"A19e",  nullable: true)]
+    private ?int $A19e = null;
 
-    #[ORM\Column(name:"A19h",length: 255, nullable: true)]
-    private ?string $A19h = null;
+    #[ORM\Column(name:"A19f", nullable: true)]
+    private ?int $A19f = null;
 
-    #[ORM\Column(name:"A19i",length: 255, nullable: true)]
-    private ?string $A19i = null;
+    #[ORM\Column(name:"A19g", nullable: true)]
+    private ?int $A19g = null;
+
+    #[ORM\Column(name:"A19h", nullable: true)]
+    private ?int $A19h = null;
+
+    #[ORM\Column(name:"A19i", nullable: true)]
+    private ?int $A19i = null;
 
     #[ORM\Column(name:"A20",length: 255, nullable: true)]
     private ?string $A20 = null;
@@ -190,6 +211,12 @@ class IdentificationProjet
 
     #[ORM\Column(name:"A33",length: 255, nullable: true)]
     private ?string $A33 = null;
+
+    #[ORM\Column(name:"A34",type: "text", nullable: true)]
+    private ?string $A34 = null;
+
+    #[ORM\Column(name:"A35",type: "text", nullable: true)]
+    private ?string $A35 = null;
 
     public function getId(): ?int
     {
@@ -328,6 +355,18 @@ class IdentificationProjet
         return $this;
     }
 
+    public function getA6(): ?string
+    {
+        return $this->A6;
+    }
+
+    public function setA6(?string $A6): static
+    {
+        $this->A6 = $A6;
+
+        return $this;
+    }
+
     public function getA6a(): ?string
     {
         return $this->A6a;
@@ -448,6 +487,41 @@ class IdentificationProjet
         return $this;
     }
 
+    public function getA6k(): ?string
+    {
+        return $this->A6k;
+    }
+
+    public function setA6k(?string $A6k): static
+    {
+        $this->A6k = $A6k;
+
+        return $this;
+    }
+    public function getA6l(): ?string
+    {
+        return $this->A6l;
+    }
+
+    public function setA6l(?string $A6l): static
+    {
+        $this->A6l = $A6l;
+
+        return $this;
+    }
+    public function getA6m(): ?string
+    {
+        return $this->A6m;
+    }
+
+    public function setA6m(?string $A6m): static
+    {
+        $this->A6m = $A6m;
+
+        return $this;
+    }
+
+
     public function getA7(): ?string
     {
         return $this->A7;
@@ -492,6 +566,17 @@ class IdentificationProjet
     public function setA10(?string $A10): static
     {
         $this->A10 = $A10;
+
+        return $this;
+    }
+    public function getA10a(): ?string
+    {
+        return $this->A10a;
+    }
+
+    public function setA10a(?string $A10a): static
+    {
+        $this->A10a = $A10a;
 
         return $this;
     }
@@ -555,6 +640,17 @@ class IdentificationProjet
 
         return $this;
     }
+    public function getA14autre(): ?string
+    {
+        return $this->A14_autre;
+    }
+
+    public function setA14autre(?string $A14_autre): static
+    {
+        $this->A14_autre = $A14_autre;
+
+        return $this;
+    }
 
     public function getA15(): ?string
     {
@@ -568,17 +664,29 @@ class IdentificationProjet
         return $this;
     }
 
-    public function getA16(): ?string
+    public function getA16(): ?int
     {
         return $this->A16;
     }
 
-    public function setA16(?string $A16): static
+    public function setA16(?int $A16): static
     {
         $this->A16 = $A16;
 
         return $this;
     }
+    public function getA16autre(): ?string
+    {
+        return $this->A16_autre;
+    }
+
+    public function setA16autre(?string $A16_autre): static
+    {
+        $this->A16_autre = $A16_autre;
+
+        return $this;
+    }
+
 
     public function getA17(): ?string
     {
@@ -615,100 +723,100 @@ class IdentificationProjet
 
         return $this;
     }
-    public function getA19a(): ?string
+    public function getA19a(): ?int
     {
         return $this->A19a;
     }
 
-    public function setA19a(?string $A19a): static
+    public function setA19a(?int $A19a): static
     {
         $this->A19a = $A19a;
 
         return $this;
     }
-    public function getA19b(): ?string
+    public function getA19b(): ?int
     {
         return $this->A19b;
     }
 
-    public function setA19b(?string $A19b): static
+    public function setA19b(?int $A19b): static
     {
         $this->A19b = $A19b;
 
         return $this;
     }
-    public function getA19c(): ?string
+    public function getA19c(): ?int
     {
         return $this->A19c;
     }
 
-    public function setA19c(?string $A19c): static
+    public function setA19c(?int $A19c): static
     {
         $this->A19c = $A19c;
 
         return $this;
     }
-    public function getA19d(): ?string
+    public function getA19d(): ?int
     {
         return $this->A19d;
     }
 
-    public function setA19d(?string $A19d): static
+    public function setA19d(?int $A19d): static
     {
         $this->A19d = $A19d;
 
         return $this;
     }
-    public function getA19e(): ?string
+    public function getA19e(): ?int
     {
         return $this->A19e;
     }
 
-    public function setA19e(?string $A19e): static
+    public function setA19e(?int $A19e): static
     {
         $this->A19e = $A19e;
 
         return $this;
     }
-    public function getA19f(): ?string
+    public function getA19f(): ?int
     {
         return $this->A19f;
     }
 
-    public function setA19f(?string $A19f): static
+    public function setA19f(?int $A19f): static
     {
         $this->A19f = $A19f;
 
         return $this;
     }
-    public function getA19g(): ?string
+    public function getA19g(): ?int
     {
         return $this->A19g;
     }
 
-    public function setA19g(?string $A19g): static
+    public function setA19g(?int $A19g): static
     {
         $this->A19g = $A19g;
 
         return $this;
     }
-    public function getA19h(): ?string
+    public function getA19h(): ?int
     {
         return $this->A19h;
     }
 
-    public function setA19h(?string $A19h): static
+    public function setA19h(?int $A19h): static
     {
         $this->A19h = $A19h;
 
         return $this;
     }
-    public function getA19i(): ?string
+    public function getA19i(): ?int
     {
         return $this->A19i;
     }
 
-    public function setA19i(?string $A19i): static
+    public function setA19i(?int $A19i): static
     {
         $this->A19i = $A19i;
 
@@ -877,6 +985,28 @@ class IdentificationProjet
     public function setA33(?string $A33): static
     {
         $this->A33 = $A33;
+
+        return $this;
+    }
+    public function getA34(): ?string
+    {
+        return $this->A34;
+    }
+
+    public function setA34(?string $A34): static
+    {
+        $this->A34 = $A34;
+
+        return $this;
+    }
+    public function getA35(): ?string
+    {
+        return $this->A35;
+    }
+
+    public function setA35(?string $A35): static
+    {
+        $this->A35 = $A35;
 
         return $this;
     }

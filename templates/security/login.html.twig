@@ -25,6 +25,13 @@
                             </div>
                         {% endif %}
 
+                           {# Intégration du logo #}
+                        <div class="logo-container">
+                        <center> <img src="{{ asset('images/logo.png') }}" alt="Logo de votre site" width="300px"></center>
+                        </div>
+                        <br>
+
+                      
                         <div class="form-group">
                             <label for="inputUsername">Nom d'utilisateur</label>
                             <input type="text" value="{{ last_username }}" name="username" id="inputUsername" class="form-control" autocomplete="username" required autofocus>
@@ -36,10 +43,18 @@
                         </div>
 
                         <input type="hidden" name="_csrf_token" value="{{ csrf_token('authenticate') }}">
-
+                            <br>
+                            <center> 
                         <button class="btn btn-lg btn-primary btn-block" type="submit">
                             Se connecter
                         </button>
+                            </center>
+
+                            <br>
+                           {# Intégration du logo #}
+                        <div class="logo-container">
+                        <center> <img src="{{ asset('images/gef.jpg') }}" alt="Logo de votre site" width="250px"></center>
+                        </div>
                     </form>
                 </div>
             </div>

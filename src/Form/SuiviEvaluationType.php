@@ -15,12 +15,13 @@ class SuiviEvaluationType extends AbstractType
            
             ->add('A1', null, ['label' => 'A1- Titre du projet ',])
             ->add('A10', null, ['label' => 'A10- Projet No.',])
+            ->add('A10a', null, ['label' => 'A10a- Projet No. Pour Confirmation.',])
             ->add('A11', null, ['label' => 'A11- Fonds',])
             ->add('A12', null, ['label' => 'A12- Phases',])
             ->add('A13', null, ['label' => 'A13- Paysages',])
             ->add('A19', null, ['label' => 'A19- Domaine d\'intervention ',])
-            ->add('A33', null, ['label' => 'A33- Année de remplissage de l\'outils',])
-            ->add('A34', null, ['label' => 'A34- Numero trimestre',])
+            ->add('A34', null, ['label' => 'A34- Année de remplissage de l\'outils',])
+            ->add('A35', null, ['label' => 'A35- Numero trimestre',])
             ->add('B1', null, ['label' => 'B1- Hectares de paysages terrestres ou marins cibles faisant l\'objet d\'une conservation communautaire améliorée et d\'une utilisation durable?',])
             ->add('B2', null, ['label' => 'B2- Hectares de  Aires du Patrimoine Autochtone et Communautaire (APAC) influencés?',])
             ->add('B3', null, ['label' => 'B3- Hectares d\'aires protégées influencés?',])
@@ -136,6 +137,7 @@ class SuiviEvaluationType extends AbstractType
             ->add('J22', null, ['label' => 'J22- Nombre de termes locaux spécifiques ? ',])
             ->add('K1', null, ['label' => 'K1- Nombre de bénéficiaires directs? ',])
             ->add('K2', null, ['label' => 'K2- Nombre de femmes bénéficiaires directs? ',])
+            ->add('K2a', null, ['label' => 'K2a- Nombre des hommes bénéficiaires directs? ',])
             ->add('K3', null, ['label' => 'K3- Nombre de jeunes (- de 35 ans) bénéficiaires directs? ',])
             ->add('K4', null, ['label' => 'K4- Nombre de personnes handicapés bénéficiaires directs? ',])
             ->add('K5', null, ['label' => 'K5- Nombre des OSC bénéficiaires du projet? ',])
@@ -163,10 +165,6 @@ class SuiviEvaluationType extends AbstractType
             ->add('K25', null, ['label' => 'K25- Cette augmentation est équivalent à combien? ',])
             ->add('K26', null, ['label' => 'K26- Existe-t-il une augmentation des revenus et / ou d\autres moyens ? ',])
             ->add('K27', null, ['label' => 'K27- Cet augmentation est équivalent à combien? ',])
-            
-            
-            
-            
             
         ;
     }

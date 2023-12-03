@@ -1,0 +1,72 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}UserSimple index{% endblock %}
+
+{% block body %}
+<div class="container">
+    <h1>All indicateur</h1>
+
+   <div class="row">
+    {% for card in allthematique %}
+        <div class="col-md-4 custom-card">
+            <div class="card border-{{ card.style }} shadow">
+                <div class="card-body">
+                    <a href="{{ path('all_indicateur', {'idthem': card.id}) }}">
+                        <p class="card-title font-weight-bold text-primary">{{ card.label }}</p>
+                    </a>
+                </div>
+            </div>
+        </div>
+    {% endfor %}
+</div>
+
+
+
+
+<center> 
+       <h4>    
+            {% for item in thematique %}
+                {{ item }}
+            {% endfor %}
+       </h4>
+</center>
+
+    <table class="table table-striped table-bordered closed-table" id="table_id">
+        <thead class="thead-dark">
+            <tr>
+                <th>Indicateur</th>
+                <th>unite</th>
+                 <th>Quest</th>
+
+            </tr>
+        </thead>
+        <tbody>
+        {% for indicateur in indicateurs %}
+            <tr>
+                <td>{{ indicateur.label }}</td>
+                <td>{{ indicateur.unite }}</td>
+                 <td>{{ indicateur.questid }}</td>
+
+            </tr>
+        {% else %}
+            <tr>
+                <td colspan="5">No records found</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+</div>
+{% endblock %}
+{% block javascripts %}
+  <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+  <script src="https://cdn.datatables.net/1.10.25/js/jquery.dataTables.min.js"></script>
+  
+<script type="text/javascript">
+    $(document).ready( function () {
+        $('#table_id').DataTable();
+    });
+</script>
+
+{% endblock %}
+

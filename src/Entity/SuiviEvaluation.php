@@ -37,6 +37,9 @@ class SuiviEvaluation
     #[ORM\Column(name:"A10",length: 50, nullable: true)]
     private ?string $A10 = null;
 
+    #[ORM\Column(name:"A10a",length: 50, nullable: true)]
+    private ?string $A10a = null;
+
     #[ORM\Column(name:"A11",length: 15, nullable: true)]
     private ?string $A11 = null;
 
@@ -49,11 +52,11 @@ class SuiviEvaluation
     #[ORM\Column(name:"A19",length: 255, nullable: true)]
     private ?string $A19 = null;
 
-    #[ORM\Column(name:"A33",length: 255, nullable: true)]
-    private ?string $A33 = null;
-
     #[ORM\Column(name:"A34",length: 255, nullable: true)]
     private ?string $A34 = null;
+
+    #[ORM\Column(name:"A35",length: 255, nullable: true)]
+    private ?string $A35 = null;
 
     #[ORM\Column(name:"B1", nullable: true)]
     private ?int $B1 = null;
@@ -400,6 +403,9 @@ class SuiviEvaluation
     #[ORM\Column(name:"K2", nullable: true)]
     private ?int $K2 = null;
 
+    #[ORM\Column(name:"K2a", nullable: true)]
+    private ?int $K2a = null;
+
     #[ORM\Column(name:"K3", nullable: true)]
     private ?int $K3 = null;
 
@@ -580,6 +586,18 @@ class SuiviEvaluation
         return $this;
     }
 
+    public function getA10a(): ?string
+    {
+        return $this->A10a;
+    }
+
+    public function setA10a(?string $A10a): static
+    {
+        $this->A10a = $A10a;
+
+        return $this;
+    }
+
     public function getA11(): ?string
     {
         return $this->A11;
@@ -631,18 +649,6 @@ class SuiviEvaluation
    
   
 
-    public function getA33(): ?string
-    {
-        return $this->A33;
-    }
-
-    public function setA33(?string $A33): static
-    {
-        $this->A33 = $A33;
-
-        return $this;
-    }
-
     public function getA34(): ?string
     {
         return $this->A34;
@@ -651,6 +657,18 @@ class SuiviEvaluation
     public function setA34(?string $A34): static
     {
         $this->A34 = $A34;
+
+        return $this;
+    }
+
+    public function getA35(): ?string
+    {
+        return $this->A35;
+    }
+
+    public function setA35(?string $A35): static
+    {
+        $this->A35 = $A35;
 
         return $this;
     }
@@ -2018,6 +2036,17 @@ class SuiviEvaluation
     public function setK2(?int $K2): static
     {
         $this->K2 = $K2;
+
+        return $this;
+    }
+    public function getK2a(): ?int
+    {
+        return $this->K2a;
+    }
+
+    public function setK2a(?int $K2a): static
+    {
+        $this->K2a = $K2a;
 
         return $this;
     }

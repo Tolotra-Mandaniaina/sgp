@@ -35,11 +35,18 @@ class AutoEvaluation
     #[ORM\Column(name:"A1",length: 255, nullable: true)]
     private ?string $A1 = null;
 
+    #[ORM\Column(name:"A5",length: 255, nullable: true)]
+    private ?string $A5 = null;
+
     #[ORM\Column(name:"A10",length: 255, nullable: true)]
     private ?string $A10 = null;
 
-    #[ORM\Column(name:"A34",length: 20, nullable: true)]
-    private ?string $A34 = null;
+    #[ORM\Column(name:"A10a",length: 255, nullable: true)]
+    private ?string $A10a = null;
+
+
+    #[ORM\Column(name:"A23",length: 20, nullable: true)]
+    private ?string $A23 = null;
 
     #[ORM\Column(name:"A35",length: 255, nullable: true)]
     private ?string $A35 = null;
@@ -221,6 +228,18 @@ class AutoEvaluation
         return $this;
     }
 
+    public function getA5(): ?string
+    {
+        return $this->A5;
+    }
+
+    public function setA5(?string $A5): static
+    {
+        $this->A5 = $A5;
+
+        return $this;
+    }
+
     public function getA10(): ?string
     {
         return $this->A10;
@@ -233,14 +252,26 @@ class AutoEvaluation
         return $this;
     }
 
-    public function getA34(): ?string
+    public function getA10a(): ?string
     {
-        return $this->A34;
+        return $this->A10a;
     }
 
-    public function setA34(?string $A34): static
+    public function setA10a(?string $A10a): static
     {
-        $this->A34 = $A34;
+        $this->A10a = $A10a;
+
+        return $this;
+    }
+
+    public function getA23(): ?string
+    {
+        return $this->A23;
+    }
+
+    public function setA23(?string $A23): static
+    {
+        $this->A23 = $A23;
 
         return $this;
     }

@@ -1,6 +1,6 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Hello TableauBordController!{% endblock %}
+{% block title %} TableauBord{% endblock %}
 
 {% block body %}
 <!DOCTYPE html>
@@ -18,7 +18,7 @@
 
         .dashboard-container {
             max-width: 800px;
-            margin: 50px auto;
+            margin: 5px auto;
             background-color: #fff;
             padding: 20px;
             border-radius: 10px;
@@ -56,6 +56,10 @@
 <body>
 
 <div class="dashboard-container">
+     {# Intégration du logo #}
+         <div class="logo-container"> 
+              <center> <img src="{{ asset('images/logo.png') }}" alt="Logo de votre site" width="300px"></center>
+          </div>
     <h1>Tableau de bord</h1>
 
     <table>

@@ -5,7 +5,7 @@
 {% block body %}
     <h1>Edit IdentificationProjet</h1>
 
-      
+ 
             {{ form_start(form) }}
     <div class="container">
 
@@ -31,10 +31,11 @@
 
     <H5>District d'intervention</H5>
     <div class="form-group">
+        {{ form_row(form.A6, {'attr': {'class': 'form-control'}}) }}
+    </div>
+    <div class="form-group">
         {{ form_row(form.A6a, {'attr': {'class': 'form-control'}}) }}
     </div>
-    <br>
-
     <div class="form-group">
         {{ form_row(form.A6b, {'attr': {'class': 'form-control'}}) }}
     </div>
@@ -62,6 +63,15 @@
     <div class="form-group">
         {{ form_row(form.A6j, {'attr': {'class': 'form-control'}}) }}
     </div>
+     <div class="form-group">
+        {{ form_row(form.A6k, {'attr': {'class': 'form-control'}}) }}
+    </div>
+    <div class="form-group">
+        {{ form_row(form.A6l, {'attr': {'class': 'form-control'}}) }}
+    </div>
+    <div class="form-group">
+        {{ form_row(form.A6m, {'attr': {'class': 'form-control'}}) }}
+    </div>
     <br>
 
     <div class="form-group">
@@ -73,6 +83,9 @@
     </div>
     <div class="form-group">
         {{ form_row(form.A10, {'attr': {'class': 'form-control'}}) }}
+    </div>
+    <div class="form-group">
+        {{ form_row(form.A10a, {'attr': {'class': 'form-control'}}) }}
     </div>
     <div class="form-group">
         {{ form_row(form.A11, {'attr': {'class': 'form-control'}}) }}
@@ -90,10 +103,16 @@
         {{ form_row(form.A14, {'attr': {'class': 'form-control'}}) }}
     </div>
     <div class="form-group">
+        {{ form_row(form.A14_autre, {'attr': {'class': 'form-control'}}) }}
+    </div>
+    <div class="form-group">
         {{ form_row(form.A15, {'attr': {'class': 'form-control'}}) }}
     </div>
     <div class="form-group">
         {{ form_row(form.A16, {'attr': {'class': 'form-control'}}) }}
+    </div>
+     <div class="form-group">
+        {{ form_row(form.A16_autre, {'attr': {'class': 'form-control'}}) }}
     </div>
     <div class="form-group">
         {{ form_row(form.A17, {'attr': {'class': 'form-control'}}) }}
@@ -183,12 +202,19 @@
     <div class="form-group">
         {{ form_row(form.A33, {'attr': {'class': 'form-control'}}) }}
     </div>
+ <div class="form-group">
+        {{ form_row(form.A34, {'attr': {'class': 'form-control'}}) }}
+    </div>
+    <div class="form-group">
+        {{ form_row(form.A35, {'attr': {'class': 'form-control'}}) }}
+    </div>
 
         <button class="btn">{{ button_label|default('Save') }}</button>
 
         {{ form_end(form) }}
 
-  </div>
+    </div>
+
 
     <a href="{{ path('app_identification_projet_index') }}">back to list</a>
 

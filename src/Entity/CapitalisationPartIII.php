@@ -35,8 +35,14 @@ class CapitalisationPartIII
     #[ORM\Column(name:"A1", length: 255, nullable: true)]
     private ?string $A1 = null;
 
+    #[ORM\Column(name:"A5", length: 255, nullable: true)]
+    private ?string $A5 = null;
+
     #[ORM\Column(name:"A10", length: 255, nullable: true)]
     private ?string $A10 = null;
+
+    #[ORM\Column(name:"A10a", length: 255, nullable: true)]
+    private ?string $A10a = null;
 
     #[ORM\Column(name:"A11", length: 50, nullable: true)]
     private ?string $A11 = null;
@@ -50,11 +56,11 @@ class CapitalisationPartIII
     #[ORM\Column(name:"A19", length: 255, nullable: true)]
     private ?string $A19 = null;
 
-    #[ORM\Column(name:"A33", length: 10, nullable: true)]
-    private ?string $A33 = null;
-
-    #[ORM\Column(name:"A34", length: 15, nullable: true)]
+    #[ORM\Column(name:"A34", length: 10, nullable: true)]
     private ?string $A34 = null;
+
+    #[ORM\Column(name:"A35", length: 15, nullable: true)]
+    private ?string $A35 = null;
 
     #[ORM\Column(name:"L1_1",length: 255, nullable: true)]
     private ?string $L1_1 = null;
@@ -161,6 +167,18 @@ class CapitalisationPartIII
         return $this;
     }
 
+    public function getA5(): ?string
+    {
+        return $this->A5;
+    }
+
+    public function setA5(?string $A5): static
+    {
+        $this->A5 = $A5;
+
+        return $this;
+    }
+
     public function getA10(): ?string
     {
         return $this->A10;
@@ -169,6 +187,18 @@ class CapitalisationPartIII
     public function setA10(?string $A10): static
     {
         $this->A10 = $A10;
+
+        return $this;
+    }
+
+    public function getA10a(): ?string
+    {
+        return $this->A10a;
+    }
+
+    public function setA10a(?string $A10a): static
+    {
+        $this->A10a = $A10a;
 
         return $this;
     }
@@ -221,18 +251,6 @@ class CapitalisationPartIII
         return $this;
     }
 
-    public function getA33(): ?string
-    {
-        return $this->A33;
-    }
-
-    public function setA33(?string $A33): static
-    {
-        $this->A33 = $A33;
-
-        return $this;
-    }
-
     public function getA34(): ?string
     {
         return $this->A34;
@@ -241,6 +259,18 @@ class CapitalisationPartIII
     public function setA34(?string $A34): static
     {
         $this->A34 = $A34;
+
+        return $this;
+    }
+
+    public function getA35(): ?string
+    {
+        return $this->A35;
+    }
+
+    public function setA35(?string $A35): static
+    {
+        $this->A35 = $A35;
 
         return $this;
     }

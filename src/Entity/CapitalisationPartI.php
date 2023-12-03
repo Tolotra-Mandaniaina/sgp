@@ -35,8 +35,14 @@ class CapitalisationPartI
     #[ORM\Column(name:"A1", length: 255, nullable: true)]
     private ?string $A1 = null;
 
+    #[ORM\Column(name:"A5", length: 100, nullable: true)]
+    private ?string $A5 = null;
+
     #[ORM\Column(name:"A10", length: 255, nullable: true)]
     private ?string $A10 = null;
+
+    #[ORM\Column(name:"A10a", length: 255, nullable: true)]
+    private ?string $A10a = null;
 
     #[ORM\Column(name:"A11", length: 50, nullable: true)]
     private ?string $A11 = null;
@@ -136,6 +142,9 @@ class CapitalisationPartI
 
     #[ORM\Column(name:"L1_23", length: 15, nullable: true)]
     private ?string $L1_23 = null;
+
+    #[ORM\Column(name:"L1_23_autre", type: Types::TEXT, nullable: true)]
+    private ?string $L1_23_autre = null;
 
     #[ORM\Column(name:"L1_24", length: 15, nullable: true)]
     private ?string $L1_24 = null;
@@ -278,6 +287,45 @@ class CapitalisationPartI
     #[ORM\Column(name:"L1_61", type: Types::TEXT, nullable: true)]
     private ?string $L1_61 = null;
 
+    #[ORM\Column(name:"L1_85", type: Types::TEXT, nullable: true)]
+    private ?string $L1_85 = null;
+
+    #[ORM\Column(name:"L1_86", type: Types::TEXT, nullable: true)]
+    private ?string $L1_86 = null;
+
+    #[ORM\Column(name:"L1_87", type: Types::TEXT, nullable: true)]
+    private ?string $L1_87 = null;
+
+    #[ORM\Column(name:"L1_88", type: Types::TEXT, nullable: true)]
+    private ?string $L1_88 = null;
+
+    #[ORM\Column(name:"L1_89", type: Types::TEXT, nullable: true)]
+    private ?string $L1_89 = null;
+
+    #[ORM\Column(name:"L1_90", type: Types::TEXT, nullable: true)]
+    private ?string $L1_90 = null;
+
+    #[ORM\Column(name:"L1_91", type: Types::TEXT, nullable: true)]
+    private ?string $L1_91 = null;
+
+    #[ORM\Column(name:"L1_92", type: Types::TEXT, nullable: true)]
+    private ?string $L1_92 = null;
+
+    #[ORM\Column(name:"L1_93", type: Types::TEXT, nullable: true)]
+    private ?string $L1_93 = null;
+
+    #[ORM\Column(name:"L1_94", type: Types::TEXT, nullable: true)]
+    private ?string $L1_94 = null;
+
+    #[ORM\Column(name:"L1_95", type: Types::TEXT, nullable: true)]
+    private ?string $L1_95 = null;
+
+    #[ORM\Column(name:"L1_96", type: Types::TEXT, nullable: true)]
+    private ?string $L1_96 = null;
+
+    #[ORM\Column(name:"L1_98", type: Types::TEXT, nullable: true)]
+    private ?string $L1_98 = null;
+
     #[ORM\Column(name:"L1_62", type: Types::TEXT, nullable: true)]
     private ?string $L1_62 = null;
 
@@ -350,6 +398,9 @@ class CapitalisationPartI
     #[ORM\Column(name:"L1_84", type: Types::TEXT, nullable: true)]
     private ?string $L1_84 = null;
 
+    #[ORM\Column(name:"L1_100", type: Types::TEXT, nullable: true)]
+    private ?string $L1_100 = null;
+
     #[ORM\Column(name:"L2_1", type: Types::TEXT, nullable: true)]
     private ?string $L2_1 = null;
 
@@ -365,8 +416,36 @@ class CapitalisationPartI
     #[ORM\Column(name:"L2_4", type: Types::TEXT, nullable: true)]
     private ?string $L2_4 = null;
 
+    #[ORM\Column(name:"L2_16", type: Types::TEXT, nullable: true)]
+    private ?string $L2_16 = null;
+
+    #[ORM\Column(name:"L2_17a", type: Types::TEXT, nullable: true)]
+    private ?string $L2_17a = null;
+
+    #[ORM\Column(name:"L2_17b", type: Types::TEXT, nullable: true)]
+    private ?string $L2_17b = null;
+
+    #[ORM\Column(name:"L2_17c", type: Types::TEXT, nullable: true)]
+    private ?string $L2_17c = null;
+
+    #[ORM\Column(name:"L2_17d", type: Types::TEXT, nullable: true)]
+    private ?string $L2_17d = null;
+
     #[ORM\Column(name:"L2_5", type: Types::TEXT, nullable: true)]
     private ?string $L2_5 = null;
+
+    #[ORM\Column(name:"L2_18", type: Types::TEXT, nullable: true)]
+    private ?string $L2_18 = null;
+
+    #[ORM\Column(name:"L2_19", type: Types::TEXT, nullable: true)]
+    private ?string $L2_19 = null;
+
+    #[ORM\Column(name:"L2_20", type: Types::TEXT, nullable: true)]
+    private ?string $L2_20 = null;
+
+    #[ORM\Column(name:"L2_21", type: Types::TEXT, nullable: true)]
+    private ?string $L2_21 = null;
+
 
     #[ORM\Column(name:"L2_6", type: Types::TEXT, nullable: true)]
     private ?string $L2_6 = null;
@@ -397,6 +476,66 @@ class CapitalisationPartI
 
     #[ORM\Column(name:"L2_15", type: Types::TEXT, nullable: true)]
     private ?string $L2_15 = null;
+
+    #[ORM\Column(name:"L2_22",type: Types::TEXT, nullable: true)]
+    private ?string $L2_22 = null;
+
+    #[ORM\Column(name:"L2_23",type: Types::TEXT, nullable: true)]
+    private ?string $L2_23 = null;
+
+    #[ORM\Column(name:"L2_24",type: Types::TEXT, nullable: true)]
+    private ?string $L2_24 = null;
+
+    #[ORM\Column(name:"L2_25",type: Types::TEXT, nullable: true)]
+    private ?string $L2_25 = null;
+
+    #[ORM\Column(name:"L2_26",type: Types::TEXT, nullable: true)]
+    private ?string $L2_26 = null;
+
+    #[ORM\Column(name:"L2_27",type: Types::TEXT, nullable: true)]
+    private ?string $L2_27 = null;
+
+    #[ORM\Column(name:"L2_28",type: Types::TEXT, nullable: true)]
+    private ?string $L2_28 = null;
+
+    #[ORM\Column(name:"L2_29",type: Types::TEXT, nullable: true)]
+    private ?string $L2_29 = null;
+
+    #[ORM\Column(name:"L2_30",type: Types::TEXT, nullable: true)]
+    private ?string $L2_30 = null;
+
+    #[ORM\Column(name:"L2_31",type: Types::TEXT, nullable: true)]
+    private ?string $L2_31 = null;
+
+    #[ORM\Column(name:"L2_32",type: Types::TEXT, nullable: true)]
+    private ?string $L2_32 = null;
+
+    #[ORM\Column(name:"L2_33",type: Types::TEXT, nullable: true)]
+    private ?string $L2_33 = null;
+
+    #[ORM\Column(name:"L2_34",type: Types::TEXT, nullable: true)]
+    private ?string $L2_34 = null;
+
+    #[ORM\Column(name:"L2_35",type: Types::TEXT, nullable: true)]
+    private ?string $L2_35 = null;
+
+    #[ORM\Column(name:"L2_36",type: Types::TEXT, nullable: true)]
+    private ?string $L2_36 = null;
+
+    #[ORM\Column(name:"L2_37",type: Types::TEXT, nullable: true)]
+    private ?string $L2_37 = null;
+
+    #[ORM\Column(name:"L2_38",type: Types::TEXT, nullable: true)]
+    private ?string $L2_38 = null;
+
+    #[ORM\Column(name:"L2_39",type: Types::TEXT, nullable: true)]
+    private ?string $L2_39 = null;
+
+    #[ORM\Column(name:"L2_40",type: Types::TEXT, nullable: true)]
+    private ?string $L2_40 = null;
+
+    #[ORM\Column(name:"L2_41",type: Types::TEXT, nullable: true)]
+    private ?string $L2_41 = null;
 
     public function getId(): ?int
     {
@@ -481,6 +620,17 @@ class CapitalisationPartI
 
         return $this;
     }
+    public function getA5(): ?string
+    {
+        return $this->A5;
+    }
+
+    public function setA5(?string $A5): static
+    {
+        $this->A5 = $A5;
+
+        return $this;
+    }
 
     public function getA10(): ?string
     {
@@ -490,6 +640,17 @@ class CapitalisationPartI
     public function setA10(?string $A10): static
     {
         $this->A10 = $A10;
+
+        return $this;
+    }
+    public function getA10a(): ?string
+    {
+        return $this->A10a;
+    }
+
+    public function setA10a(?string $A10a): static
+    {
+        $this->A10a = $A10a;
 
         return $this;
     }
@@ -886,6 +1047,17 @@ class CapitalisationPartI
     public function setL123(?string $L1_23): static
     {
         $this->L1_23 = $L1_23;
+
+        return $this;
+    }
+    public function getL123a(): ?string
+    {
+        return $this->L1_23a;
+    }
+
+    public function setL123a(?string $L1_23a): static
+    {
+        $this->L1_23a = $L1_23a;
 
         return $this;
     }
@@ -1453,7 +1625,151 @@ class CapitalisationPartI
 
         return $this;
     }
+    public function getL185(): ?string
+    {
+        return $this->L1_85;
+    }
 
+    public function setL185(?string $L1_85): static
+    {
+        $this->L1_85 = $L1_85;
+
+        return $this;
+    }
+
+    public function getL186(): ?string
+    {
+        return $this->L1_86;
+    }
+
+    public function setL186(?string $L1_86): static
+    {
+        $this->L1_86 = $L1_86;
+
+        return $this;
+    }
+    public function getL187(): ?string
+    {
+        return $this->L1_87;
+    }
+
+    public function setL187(?string $L1_87): static
+    {
+        $this->L1_87 = $L1_87;
+
+        return $this;
+    }
+    public function getL188(): ?string
+    {
+        return $this->L1_88;
+    }
+
+    public function setL188(?string $L1_88): static
+    {
+        $this->L1_88 = $L1_88;
+
+        return $this;
+    }
+    public function getL189(): ?string
+    {
+        return $this->L1_89;
+    }
+
+    public function setL189(?string $L1_89): static
+    {
+        $this->L1_89 = $L1_89;
+
+        return $this;
+    }
+    public function getL190(): ?string
+    {
+        return $this->L1_90;
+    }
+
+    public function setL190(?string $L1_90): static
+    {
+        $this->L1_90 = $L1_90;
+
+        return $this;
+    }
+    public function getL191(): ?string
+    {
+        return $this->L1_91;
+    }
+
+    public function setL191(?string $L1_91): static
+    {
+        $this->L1_91 = $L1_91;
+
+        return $this;
+    }
+    public function getL192(): ?string
+    {
+        return $this->L1_92;
+    }
+
+    public function setL192(?string $L1_92): static
+    {
+        $this->L1_92 = $L1_92;
+
+        return $this;
+    }
+    public function getL193(): ?string
+    {
+        return $this->L1_93;
+    }
+
+    public function setL193(?string $L1_93): static
+    {
+        $this->L1_93 = $L1_93;
+
+        return $this;
+    }
+    public function getL194(): ?string
+    {
+        return $this->L1_94;
+    }
+
+    public function setL194(?string $L1_94): static
+    {
+        $this->L1_94 = $L1_94;
+
+        return $this;
+    }
+    public function getL195(): ?string
+    {
+        return $this->L1_95;
+    }
+
+    public function setL195(?string $L1_95): static
+    {
+        $this->L1_95 = $L1_95;
+
+        return $this;
+    }
+    public function getL196(): ?string
+    {
+        return $this->L1_96;
+    }
+
+    public function setL196(?string $L1_96): static
+    {
+        $this->L1_96 = $L1_96;
+
+        return $this;
+    }
+    public function getL198(): ?string
+    {
+        return $this->L1_98;
+    }
+
+    public function setL198(?string $L1_98): static
+    {
+        $this->L1_98 = $L1_98;
+
+        return $this;
+    }
+    
     public function getL162(): ?string
     {
         return $this->L1_62;
@@ -1741,7 +2057,17 @@ class CapitalisationPartI
 
         return $this;
     }
+    public function getL1100(): ?string
+    {
+        return $this->L1_100;
+    }
 
+    public function setL1100(?string $L1_100): static
+    {
+        $this->L1_100 = $L1_100;
+
+        return $this;
+    }
     public function getL21(): ?string
     {
         return $this->L2_1;
@@ -1801,6 +2127,61 @@ class CapitalisationPartI
 
         return $this;
     }
+    public function getL216(): ?string
+    {
+        return $this->L2_16;
+    }
+
+    public function setL216(?string $L2_16): static
+    {
+        $this->L2_16 = $L2_16;
+
+        return $this;
+    }
+    public function getL217a(): ?string
+    {
+        return $this->L2_17a;
+    }
+
+    public function setL217a(?string $L2_17a): static
+    {
+        $this->L2_17a = $L2_17a;
+
+        return $this;
+    }
+    public function getL217b(): ?string
+    {
+        return $this->L2_17b;
+    }
+
+    public function setL217b(?string $L2_17b): static
+    {
+        $this->L2_17b = $L2_17b;
+
+        return $this;
+    }
+    public function getL217c(): ?string
+    {
+        return $this->L2_17c;
+    }
+
+    public function setL217c(?string $L2_17c): static
+    {
+        $this->L2_17c = $L2_17c;
+
+        return $this;
+    }
+    public function getL217d(): ?string
+    {
+        return $this->L2_17d;
+    }
+
+    public function setL217d(?string $L2_17d): static
+    {
+        $this->L2_17d = $L2_17d;
+
+        return $this;
+    }
 
     public function getL25(): ?string
     {
@@ -1813,7 +2194,52 @@ class CapitalisationPartI
 
         return $this;
     }
+    public function getL218(): ?string
+    {
+        return $this->L2_18;
+    }
 
+    public function setL218(?string $L2_18): static
+    {
+        $this->L2_18 = $L2_18;
+
+        return $this;
+    }
+    public function getL219(): ?string
+    {
+        return $this->L2_19;
+    }
+
+    public function setL219(?string $L2_19): static
+    {
+        $this->L2_19 = $L2_19;
+
+        return $this;
+    }
+    public function getL220(): ?string
+    {
+        return $this->L2_20;
+    }
+
+    public function setL220(?string $L2_20): static
+    {
+        $this->L2_20 = $L2_20;
+
+        return $this;
+    }
+
+
+    public function getL221(): ?string
+    {
+        return $this->L2_21;
+    }
+
+    public function setL221(?string $L2_21): static
+    {
+        $this->L2_21 = $L2_21;
+
+        return $this;
+    }
     public function getL26(): ?string
     {
         return $this->L2_6;
@@ -1930,6 +2356,246 @@ class CapitalisationPartI
     public function setL215(?string $L2_15): static
     {
         $this->L2_15 = $L2_15;
+
+        return $this;
+    }
+
+    public function getL222(): ?string
+    {
+        return $this->L2_22;
+    }
+
+    public function setL222(?string $L2_22): static
+    {
+        $this->L2_22 = $L2_22;
+
+        return $this;
+    }
+
+    public function getL223(): ?string
+    {
+        return $this->L2_23;
+    }
+
+    public function setL223(?string $L2_23): static
+    {
+        $this->L2_23 = $L2_23;
+
+        return $this;
+    }
+
+    public function getL224(): ?string
+    {
+        return $this->L2_24;
+    }
+
+    public function setL224(?string $L2_24): static
+    {
+        $this->L2_24 = $L2_24;
+
+        return $this;
+    }
+
+    public function getL225(): ?string
+    {
+        return $this->L2_25;
+    }
+
+    public function setL225(?string $L2_25): static
+    {
+        $this->L2_25 = $L2_25;
+
+        return $this;
+    }
+
+    public function getL226(): ?string
+    {
+        return $this->L2_26;
+    }
+
+    public function setL226(?string $L2_26): static
+    {
+        $this->L2_26 = $L2_26;
+
+        return $this;
+    }
+
+    public function getL227(): ?string
+    {
+        return $this->L2_27;
+    }
+
+    public function setL227(?string $L2_27): static
+    {
+        $this->L2_27 = $L2_27;
+
+        return $this;
+    }
+
+    public function getL228(): ?string
+    {
+        return $this->L2_28;
+    }
+
+    public function setL228(?string $L2_28): static
+    {
+        $this->L2_28 = $L2_28;
+
+        return $this;
+    }
+
+    public function getL229(): ?string
+    {
+        return $this->L2_29;
+    }
+
+    public function setL229(?string $L2_29): static
+    {
+        $this->L2_29 = $L2_29;
+
+        return $this;
+    }
+
+    public function getL230(): ?string
+    {
+        return $this->L2_30;
+    }
+
+    public function setL230(?string $L2_30): static
+    {
+        $this->L2_30 = $L2_30;
+
+        return $this;
+    }
+
+    public function getL231(): ?string
+    {
+        return $this->L2_31;
+    }
+
+    public function setL231(?string $L2_31): static
+    {
+        $this->L2_31 = $L2_31;
+
+        return $this;
+    }
+
+    public function getL232(): ?string
+    {
+        return $this->L2_32;
+    }
+
+    public function setL232(?string $L2_32): static
+    {
+        $this->L2_32 = $L2_32;
+
+        return $this;
+    }
+
+    public function getL233(): ?string
+    {
+        return $this->L2_33;
+    }
+
+    public function setL233(?string $L2_33): static
+    {
+        $this->L2_33 = $L2_33;
+
+        return $this;
+    }
+
+    public function getL234(): ?string
+    {
+        return $this->L2_34;
+    }
+
+    public function setL234(?string $L2_34): static
+    {
+        $this->L2_34 = $L2_34;
+
+        return $this;
+    }
+
+    public function getL235(): ?string
+    {
+        return $this->L2_35;
+    }
+
+    public function setL235(?string $L2_35): static
+    {
+        $this->L2_35 = $L2_35;
+
+        return $this;
+    }
+
+    public function getL236(): ?string
+    {
+        return $this->L2_36;
+    }
+
+    public function setL236(?string $L2_36): static
+    {
+        $this->L2_36 = $L2_36;
+
+        return $this;
+    }
+
+    public function getL237(): ?string
+    {
+        return $this->L2_37;
+    }
+
+    public function setL237(?string $L2_37): static
+    {
+        $this->L2_37 = $L2_37;
+
+        return $this;
+    }
+
+    public function getL238(): ?string
+    {
+        return $this->L2_38;
+    }
+
+    public function setL238(?string $L2_38): static
+    {
+        $this->L2_38 = $L2_38;
+
+        return $this;
+    }
+
+    public function getL239(): ?string
+    {
+        return $this->L2_39;
+    }
+
+    public function setL239(?string $L2_39): static
+    {
+        $this->L2_39 = $L2_39;
+
+        return $this;
+    }
+
+    public function getL240(): ?string
+    {
+        return $this->L2_40;
+    }
+
+    public function setL240(?string $L2_40): static
+    {
+        $this->L2_40 = $L2_40;
+
+        return $this;
+    }
+
+    public function getL241(): ?string
+    {
+        return $this->L2_41;
+    }
+
+    public function setL241(?string $L2_41): static
+    {
+        $this->L2_41 = $L2_41;
 
         return $this;
     }

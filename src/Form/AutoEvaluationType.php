@@ -13,12 +13,14 @@ class AutoEvaluationType extends AbstractType
     {
         $builder
             ->add('A1' , null, ['label' => 'A1- Titre du projet  ',]) 
+            ->add('A5' , null, ['label' => 'A5- Région d\'intervention   ',]) 
             ->add('A10', null, ['label' => 'A10- Projet No.',]) 
-            ->add('A34', null, ['label' => 'A34- Numero trimestre',]) 
-            ->add('A35', null, ['label' => 'A35- Nom de l’organisation',]) 
+            ->add('A10a', null, ['label' => 'A10a- Projet No. Pour Confirmation',]) 
+
+            ->add('A23', null, ['label' => 'A23- Nom de l\'organisation',]) 
+            ->add('A35', null, ['label' => 'Numero trimestre : de 0 (état zéro) à 20',]) 
             ->add('A36' , null, ['label' => 'A36- Activités prévues avec leur numéro identification (OS.Résultat.Activité)',]) 
             ->add('A37', null, ['label' => 'A37- Nouvelles activités amendées avec leur num.id. (OS.Résultat.Activité)',]) 
-            ->add('A38', null, ['label' => 'A38- Séance de :',]) 
             ->add('A39', null, ['label' => 'A39- Date de séance',]) 
             ->add('B1', null, ['label' => '	B1- 	Réussites (100mots)	',])
             ->add('B2', null, ['label' => '	B2-	Objectifs réalisés (100mots) ',])

@@ -4,8 +4,568 @@
 
 {% block body %}
     <h1>Edit CapitalisationPartI</h1>
+ <div class="container">
 
-    {{ include('capitalisation_part_i/_form.html.twig', {'button_label': 'Update'}) }}
+    <H4>A- IDENTIFICATION</H4>
+
+
+   <div class="form-group">
+        {{ form_row(form.A1, {'attr': {'class': 'form-control'}}) }}
+    </div>
+     <div class="form-group">
+        {{ form_row(form.A5, {'attr': {'class': 'form-control'}}) }}
+    </div>
+    <div class="form-group">
+        {{ form_row(form.A10, {'attr': {'class': 'form-control'}}) }}
+    </div>
+     <div class="form-group">
+        {{ form_row(form.A10a, {'attr': {'class': 'form-control'}}) }}
+    </div>
+    <div class="form-group">
+        {{ form_row(form.A11, {'attr': {'class': 'form-control'}}) }}
+    </div>
+    <div class="form-group">
+        {{ form_row(form.A12, {'attr': {'class': 'form-control'}}) }}
+    </div>
+    <div class="form-group">
+        {{ form_row(form.A13, {'attr': {'class': 'form-control'}}) }}
+    </div>
+    <div class="form-group">
+        {{ form_row(form.A19, {'attr': {'class': 'form-control'}}) }}
+    </div>
+    <div class="form-group">
+        {{ form_row(form.A33, {'attr': {'class': 'form-control'}}) }}
+    </div>
+    <div class="form-group">
+        {{ form_row(form.A34, {'attr': {'class': 'form-control'}}) }}
+    </div>
+    <br></br>
+
+    <H4>PARTIE L: BONNE PRATIQUE</H4>
+    <H5>1. INFORMATIONS GENERALES SUR LA BONNE PRATIQUE </H5>
+    <div class="form-group">
+        {{ form_row(form.L1_1, {'attr': {'class': 'form-control'}}) }}
+    </div>
+    <div class="form-group">
+        {{ form_row(form.L1_2, {'attr': {'class': 'form-control'}}) }}
+    </div>
+    <div class="form-group">
+        {{ form_row(form.L1_3, {'attr': {'class': 'form-control'}}) }}
+    </div>
+    <div class="form-group">
+        {{ form_row(form.L1_4, {'attr': {'class': 'form-control'}}) }}
+    </div>
+    <div class="form-group">
+        {{ form_row(form.L1_5, {'attr': {'class': 'form-control'}}) }}
+    </div>
+    <div class="form-group">
+        {{ form_row(form.L1_6, {'attr': {'class': 'form-control'}}) }}
+    </div>
+    <div class="form-group">
+        {{ form_row(form.L1_7, {'attr': {'class': 'form-control'}}) }}
+    </div>
+    <div class="form-group">
+        {{ form_row(form.L1_8, {'attr': {'class': 'form-control'}}) }}
+    </div>
+    <div class="form-group">
+        {{ form_row(form.L1_9, {'attr': {'class': 'form-control'}}) }}
+    </div>
+    <div class="form-group">
+        {{ form_row(form.L1_9_autre, {'attr': {'class': 'form-control'}}) }}
+    </div>
+    <div class="form-group">
+        {{ form_row(form.L1_10, {'attr': {'class': 'form-control'}}) }}
+    </div>
+    <div class="form-group">
+        {{ form_row(form.L1_11, {'attr': {'class': 'form-control'}}) }}
+    </div>
+    <div class="form-group">
+        {{ form_row(form.L1_11a, {'attr': {'class': 'form-control'}}) }}
+    </div>
+    <div class="form-group">
+        {{ form_row(form.L1_12, {'attr': {'class': 'form-control'}}) }}
+    </div>
+    <div class="form-group">
+        {{ form_row(form.L1_13, {'attr': {'class': 'form-control'}}) }}
+    </div>
+    <div class="form-group">
+        {{ form_row(form.L1_14, {'attr': {'class': 'form-control'}}) }}
+    </div>
+    <div class="form-group">
+        {{ form_row(form.L1_15, {'attr': {'class': 'form-control'}}) }}
+    </div>
+    <div class="form-group">
+        {{ form_row(form.L1_16, {'attr': {'class': 'form-control'}}) }}
+    </div>
+
+    <H4>PARTIE : BIODIVERSITE</H4>
+    <div class="form-group">
+        {{ form_row(form.L1_17, {'attr': {'class': 'form-control'}}) }}
+    </div>
+    <div class="form-group">
+        {{ form_row(form.L1_18, {'attr': {'class': 'form-control'}}) }}
+    </div>
+    <div class="form-group">
+        {{ form_row(form.L1_19, {'attr': {'class': 'form-control'}}) }}
+    </div>
+    <div class="form-group">
+        {{ form_row(form.L1_20, {'attr': {'class': 'form-control'}}) }}
+    </div>
+    <div class="form-group">
+        {{ form_row(form.L1_21, {'attr': {'class': 'form-control'}}) }}
+    </div>
+    <div class="form-group">
+        {{ form_row(form.L1_21_autre, {'attr': {'class': 'form-control'}}) }}
+    </div>
+    <div class="form-group">
+        {{ form_row(form.L1_22, {'attr': {'class': 'form-control'}}) }}
+    </div>
+    <div class="form-group">
+        {{ form_row(form.L1_22_autre, {'attr': {'class': 'form-control'}}) }}
+    </div>
+    <div class="form-group">
+        {{ form_row(form.L1_23, {'attr': {'class': 'form-control'}}) }}
+    </div>
+    <div class="form-group">
+        {{ form_row(form.L1_23a, {'attr': {'class': 'form-control'}}) }}
+    </div>
+    <div class="form-group">
+        {{ form_row(form.L1_24, {'attr': {'class': 'form-control'}}) }}
+    </div>
+
+    <H4>PARTIE : CHANGEMENT CLIMATIQUE</H4>
+    <div class="form-group">
+        {{ form_row(form.L1_25a, {'attr': {'class': 'form-control'}}) }}
+    </div>
+    <div class="form-group">
+        {{ form_row(form.L1_25b, {'attr': {'class': 'form-control'}}) }}
+    </div>
+    <div class="form-group">
+        {{ form_row(form.L1_25c, {'attr': {'class': 'form-control'}}) }}
+    </div>
+    <div class="form-group">
+        {{ form_row(form.L1_25d, {'attr': {'class': 'form-control'}}) }}
+    </div>
+    <div class="form-group">
+        {{ form_row(form.L1_25e, {'attr': {'class': 'form-control'}}) }}
+    </div>
+    <div class="form-group">
+        {{ form_row(form.L1_25f, {'attr': {'class': 'form-control'}}) }}
+    </div>
+    <div class="form-group">
+        {{ form_row(form.L1_26a, {'attr': {'class': 'form-control'}}) }}
+    </div>
+    <div class="form-group">
+        {{ form_row(form.L1_26b, {'attr': {'class': 'form-control'}}) }}
+    </div>
+    <div class="form-group">
+        {{ form_row(form.L1_26c, {'attr': {'class': 'form-control'}}) }}
+    </div>
+    <div class="form-group">
+        {{ form_row(form.L1_27, {'attr': {'class': 'form-control'}}) }}
+    </div>
+
+    <H4>PARTIE : DEGRADATION DES SOLS</H4>
+    <div class="form-group">
+        {{ form_row(form.L1_28, {'attr': {'class': 'form-control'}}) }}
+    </div>
+    <div class="form-group">
+        {{ form_row(form.L1_29, {'attr': {'class': 'form-control'}}) }}
+    </div>
+    <div class="form-group">
+        {{ form_row(form.L1_30, {'attr': {'class': 'form-control'}}) }}
+    </div>
+    <div class="form-group">
+        {{ form_row(form.L1_31, {'attr': {'class': 'form-control'}}) }}
+    </div>
+    <div class="form-group">
+        {{ form_row(form.L1_32, {'attr': {'class': 'form-control'}}) }}
+    </div>
+    <div class="form-group">
+        {{ form_row(form.L1_33, {'attr': {'class': 'form-control'}}) }}
+    </div>
+    <div class="form-group">
+        {{ form_row(form.L1_34, {'attr': {'class': 'form-control'}}) }}
+    </div>
+    <div class="form-group">
+        {{ form_row(form.L1_35, {'attr': {'class': 'form-control'}}) }}
+    </div>
+    <div class="form-group">
+        {{ form_row(form.L1_36, {'attr': {'class': 'form-control'}}) }}
+    </div>
+    <div class="form-group">
+        {{ form_row(form.L1_37, {'attr': {'class': 'form-control'}}) }}
+    </div>
+    <div class="form-group">
+        {{ form_row(form.L1_38, {'attr': {'class': 'form-control'}}) }}
+    </div>
+    <div class="form-group">
+        {{ form_row(form.L1_39, {'attr': {'class': 'form-control'}}) }}
+    </div>
+
+    <H4>PARTIE : EAUX INTERNATIONALES</H4>
+    <div class="form-group">
+        {{ form_row(form.L1_40, {'attr': {'class': 'form-control'}}) }}
+    </div>
+    <div class="form-group">
+        {{ form_row(form.L1_41, {'attr': {'class': 'form-control'}}) }}
+    </div>
+    <div class="form-group">
+        {{ form_row(form.L1_42, {'attr': {'class': 'form-control'}}) }}
+    </div>
+    <div class="form-group">
+        {{ form_row(form.L1_43, {'attr': {'class': 'form-control'}}) }}
+    </div>
+    <div class="form-group">
+        {{ form_row(form.L1_44, {'attr': {'class': 'form-control'}}) }}
+    </div>
+    <div class="form-group">
+        {{ form_row(form.L1_45, {'attr': {'class': 'form-control'}}) }}
+    </div>
+    <div class="form-group">
+        {{ form_row(form.L1_46, {'attr': {'class': 'form-control'}}) }}
+    </div>
+    <div class="form-group">
+        {{ form_row(form.L1_47, {'attr': {'class': 'form-control'}}) }}
+    </div>
+    <div class="form-group">
+        {{ form_row(form.L1_48, {'attr': {'class': 'form-control'}}) }}
+    </div>
+    <div class="form-group">
+        {{ form_row(form.L1_49, {'attr': {'class': 'form-control'}}) }}
+    </div>
+    <div class="form-group">
+        {{ form_row(form.L1_49_autre, {'attr': {'class': 'form-control'}}) }}
+    </div>
+    <div class="form-group">
+        {{ form_row(form.L1_50, {'attr': {'class': 'form-control'}}) }}
+    </div>
+    <div class="form-group">
+        {{ form_row(form.L1_51, {'attr': {'class': 'form-control'}}) }}
+    </div>
+    <div class="form-group">
+        {{ form_row(form.L1_52, {'attr': {'class': 'form-control'}}) }}
+    </div>
+    <div class="form-group">
+        {{ form_row(form.L1_52_autre, {'attr': {'class': 'form-control'}}) }}
+    </div>
+    <div class="form-group">
+        {{ form_row(form.L1_53, {'attr': {'class': 'form-control'}}) }}
+    </div>
+
+    <H4>PARTIE : Pollution organiques / PRODUITS CHIMMIQUES ET DECHETS</H4>
+    <div class="form-group">
+        {{ form_row(form.L1_54, {'attr': {'class': 'form-control'}}) }}
+    </div>
+    <div class="form-group">
+        {{ form_row(form.L1_55, {'attr': {'class': 'form-control'}}) }}
+    </div>
+    <div class="form-group">
+        {{ form_row(form.L1_56, {'attr': {'class': 'form-control'}}) }}
+    </div>
+    <div class="form-group">
+        {{ form_row(form.L1_57, {'attr': {'class': 'form-control'}}) }}
+    </div>
+    <div class="form-group">
+        {{ form_row(form.L1_58, {'attr': {'class': 'form-control'}}) }}
+    </div>
+    <div class="form-group">
+        {{ form_row(form.L1_59, {'attr': {'class': 'form-control'}}) }}
+    </div>
+    <div class="form-group">
+        {{ form_row(form.L1_60, {'attr': {'class': 'form-control'}}) }}
+    </div>
+    <div class="form-group">
+        {{ form_row(form.L1_61, {'attr': {'class': 'form-control'}}) }}
+    </div>
+    <br>
+    <H4>PARTIE : Dialogue public et société civile</H4>
+    <div class="form-group">
+        {{ form_row(form.L1_85, {'attr': {'class': 'form-control'}}) }}
+    </div>
+    <div class="form-group">
+        {{ form_row(form.L1_86, {'attr': {'class': 'form-control'}}) }}
+    </div>
+    <div class="form-group">
+        {{ form_row(form.L1_87, {'attr': {'class': 'form-control'}}) }}
+    </div>
+    <div class="form-group">
+        {{ form_row(form.L1_88, {'attr': {'class': 'form-control'}}) }}
+    </div>
+    <div class="form-group">
+        {{ form_row(form.L1_89, {'attr': {'class': 'form-control'}}) }}
+    </div>
+    <br>
+
+    <H4>PARTIE : Aire et patrimoine des peuples autochtones</H4>
+     <div class="form-group">
+        {{ form_row(form.L1_90, {'attr': {'class': 'form-control'}}) }}
+    </div>
+     <div class="form-group">
+        {{ form_row(form.L1_91, {'attr': {'class': 'form-control'}}) }}
+    </div>
+     <div class="form-group">
+        {{ form_row(form.L1_92, {'attr': {'class': 'form-control'}}) }}
+    </div>
+     <div class="form-group">
+        {{ form_row(form.L1_93, {'attr': {'class': 'form-control'}}) }}
+    </div>
+     <div class="form-group">
+        {{ form_row(form.L1_94, {'attr': {'class': 'form-control'}}) }}
+    </div>
+     <div class="form-group">
+        {{ form_row(form.L1_95, {'attr': {'class': 'form-control'}}) }}
+    </div>
+     <div class="form-group">
+        {{ form_row(form.L1_96, {'attr': {'class': 'form-control'}}) }}
+    </div>
+     <div class="form-group">
+        {{ form_row(form.L1_98, {'attr': {'class': 'form-control'}}) }}
+    </div>
+
+    <H4>PARTIE : BIODIVERSITE</H4>
+    <div class="form-group">
+        {{ form_row(form.L1_62, {'attr': {'class': 'form-control'}}) }}
+    </div>
+    <div class="form-group">
+        {{ form_row(form.L1_63, {'attr': {'class': 'form-control'}}) }}
+    </div>
+    <div class="form-group">
+        {{ form_row(form.L1_64, {'attr': {'class': 'form-control'}}) }}
+    </div>
+    <div class="form-group">
+        {{ form_row(form.L1_65, {'attr': {'class': 'form-control'}}) }}
+    </div>
+
+    <H4>PARTIE : CHANGEMENT CLIMATIQUE</H4>
+    <div class="form-group">
+        {{ form_row(form.L1_66, {'attr': {'class': 'form-control'}}) }}
+    </div>
+    <div class="form-group">
+        {{ form_row(form.L1_67, {'attr': {'class': 'form-control'}}) }}
+    </div>
+    <div class="form-group">
+        {{ form_row(form.L1_68, {'attr': {'class': 'form-control'}}) }}
+    </div>
+    <div class="form-group">
+        {{ form_row(form.L1_68_autre, {'attr': {'class': 'form-control'}}) }}
+    </div>
+
+    <H4>PARTIE : DEGRADATION DES SOLS</H4>
+    <div class="form-group">
+        {{ form_row(form.L1_69, {'attr': {'class': 'form-control'}}) }}
+    </div>
+    <div class="form-group">
+        {{ form_row(form.L1_70, {'attr': {'class': 'form-control'}}) }}
+    </div>
+    <div class="form-group">
+        {{ form_row(form.L1_71, {'attr': {'class': 'form-control'}}) }}
+    </div>
+    <div class="form-group">
+        {{ form_row(form.L1_72, {'attr': {'class': 'form-control'}}) }}
+    </div>
+
+    <H4>PARTIE : EAUX INTERNATIONALES</H4>
+    <div class="form-group">
+        {{ form_row(form.L1_73, {'attr': {'class': 'form-control'}}) }}
+    </div>
+    <div class="form-group">
+        {{ form_row(form.L1_74, {'attr': {'class': 'form-control'}}) }}
+    </div>
+    <div class="form-group">
+        {{ form_row(form.L1_75, {'attr': {'class': 'form-control'}}) }}
+    </div>
+    <div class="form-group">
+        {{ form_row(form.L1_76, {'attr': {'class': 'form-control'}}) }}
+    </div>
+    <div class="form-group">
+        {{ form_row(form.L1_77, {'attr': {'class': 'form-control'}}) }}
+    </div>
+    <div class="form-group">
+        {{ form_row(form.L1_78, {'attr': {'class': 'form-control'}}) }}
+    </div>
+    <div class="form-group">
+        {{ form_row(form.L1_79, {'attr': {'class': 'form-control'}}) }}
+    </div>
+
+    <H4>PARTIE : Pollution organiques / PRODUITS CHIMMIQUES ET DECHETS</H4>
+    <div class="form-group">
+        {{ form_row(form.L1_80, {'attr': {'class': 'form-control'}}) }}
+    </div>
+    <div class="form-group">
+        {{ form_row(form.L1_81, {'attr': {'class': 'form-control'}}) }}
+    </div>
+    <div class="form-group">
+        {{ form_row(form.L1_82, {'attr': {'class': 'form-control'}}) }}
+    </div>
+    <div class="form-group">
+        {{ form_row(form.L1_83, {'attr': {'class': 'form-control'}}) }}
+    </div>
+    <div class="form-group">
+        {{ form_row(form.L1_84, {'attr': {'class': 'form-control'}}) }}
+    </div>
+     <div class="form-group">
+        {{ form_row(form.L1_100, {'attr': {'class': 'form-control'}}) }}
+    </div>
+    <br>
+
+    <H4>2. RELATION ENTRE VIE COMMUNAUTAIRE ET LA BONNE PRATIQUE </H4>
+    <div class="form-group">
+        {{ form_row(form.L2_1, {'attr': {'class': 'form-control'}}) }}
+    </div>
+    <div class="form-group">
+        {{ form_row(form.L2_1_autre, {'attr': {'class': 'form-control'}}) }}
+    </div>
+    <div class="form-group">
+        {{ form_row(form.L2_2, {'attr': {'class': 'form-control'}}) }}
+    </div>
+    <div class="form-group">
+        {{ form_row(form.L2_3, {'attr': {'class': 'form-control'}}) }}
+    </div>
+    <div class="form-group">
+        {{ form_row(form.L2_4, {'attr': {'class': 'form-control'}}) }}
+    </div>
+    <br>
+    <H4>PARTIE : Dialogue public et société civile</H4>
+      <div class="form-group">
+        {{ form_row(form.L2_16, {'attr': {'class': 'form-control'}}) }}
+    </div>
+    <div class="form-group">
+        {{ form_row(form.L2_17a, {'attr': {'class': 'form-control'}}) }}
+    </div>
+     <div class="form-group">
+        {{ form_row(form.L2_17b, {'attr': {'class': 'form-control'}}) }}
+    </div>
+     <div class="form-group">
+        {{ form_row(form.L2_17c, {'attr': {'class': 'form-control'}}) }}
+    </div>
+     <div class="form-group">
+        {{ form_row(form.L2_17d, {'attr': {'class': 'form-control'}}) }}
+    </div>
+    <div class="form-group">
+        {{ form_row(form.L2_5, {'attr': {'class': 'form-control'}}) }}
+    </div>
+
+    <br>
+    <H4>PARTIE : Aire et patrimoine des peuples autochtones</H4>
+      </div>
+     <div class="form-group">
+        {{ form_row(form.L2_18, {'attr': {'class': 'form-control'}}) }}
+    </div>
+    <div class="form-group">
+        {{ form_row(form.L2_19, {'attr': {'class': 'form-control'}}) }}
+    </div>
+    <div class="form-group">
+        {{ form_row(form.L2_20, {'attr': {'class': 'form-control'}}) }}
+    </div>
+    <div class="form-group">
+        {{ form_row(form.L2_21, {'attr': {'class': 'form-control'}}) }}
+    </div>
+    <div class="form-group">
+        {{ form_row(form.L2_6, {'attr': {'class': 'form-control'}}) }}
+    </div>
+
+    <H5>Description des problèmes confrontés par les communautés qui a entraîné à la naissance de la bonne pratique </H5>
+    <div class="form-group">
+        {{ form_row(form.L2_7, {'attr': {'class': 'form-control'}}) }}
+    </div>
+    <div class="form-group">
+        {{ form_row(form.L2_8, {'attr': {'class': 'form-control'}}) }}
+    </div>
+
+    <H5>Décrire les menaces si les bonnes pratiques n’ont pas été pratiques </H5>
+    <div class="form-group">
+        {{ form_row(form.L2_9, {'attr': {'class': 'form-control'}}) }}
+    </div>
+    <div class="form-group">
+        {{ form_row(form.L2_10, {'attr': {'class': 'form-control'}}) }}
+    </div>
+    <div class="form-group">
+        {{ form_row(form.L2_11, {'attr': {'class': 'form-control'}}) }}
+    </div>
+    <div class="form-group">
+        {{ form_row(form.L2_12, {'attr': {'class': 'form-control'}}) }}
+    </div>
+    <div class="form-group">
+        {{ form_row(form.L2_13, {'attr': {'class': 'form-control'}}) }}
+    </div>
+    <div class="form-group">
+        {{ form_row(form.L2_14, {'attr': {'class': 'form-control'}}) }}
+    </div>
+    <div class="form-group">
+        {{ form_row(form.L2_15, {'attr': {'class': 'form-control'}}) }}
+    </div>
+
+    <H4>PARTIE : Développement de capacité</H4>
+     <div class="form-group">
+        {{ form_row(form.L2_22, {'attr': {'class': 'form-control'}}) }}
+    </div>
+     <div class="form-group">
+        {{ form_row(form.L2_23, {'attr': {'class': 'form-control'}}) }}
+    </div>
+     <div class="form-group">
+        {{ form_row(form.L2_24, {'attr': {'class': 'form-control'}}) }}
+    </div>
+     <div class="form-group">
+        {{ form_row(form.L2_25, {'attr': {'class': 'form-control'}}) }}
+    </div> <div class="form-group">
+        {{ form_row(form.L2_26, {'attr': {'class': 'form-control'}}) }}
+    </div>
+     <div class="form-group">
+        {{ form_row(form.L2_27, {'attr': {'class': 'form-control'}}) }}
+    </div>
+     <div class="form-group">
+        {{ form_row(form.L2_28, {'attr': {'class': 'form-control'}}) }}
+    </div>
+     <div class="form-group">
+        {{ form_row(form.L2_29, {'attr': {'class': 'form-control'}}) }}
+    </div>
+     <div class="form-group">
+        {{ form_row(form.L2_30, {'attr': {'class': 'form-control'}}) }}
+    </div>
+     <div class="form-group">
+        {{ form_row(form.L2_31, {'attr': {'class': 'form-control'}}) }}
+    </div>
+     <div class="form-group">
+        {{ form_row(form.L2_32, {'attr': {'class': 'form-control'}}) }}
+    </div>
+    <br>
+
+    <H4>PARTIE : Dialogue public et société civile </H4>
+     <div class="form-group">
+        {{ form_row(form.L2_33, {'attr': {'class': 'form-control'}}) }}
+    </div>
+     <div class="form-group">
+        {{ form_row(form.L2_34, {'attr': {'class': 'form-control'}}) }}
+    </div>
+     <div class="form-group">
+        {{ form_row(form.L2_35, {'attr': {'class': 'form-control'}}) }}
+    </div>
+     <div class="form-group">
+        {{ form_row(form.L2_36, {'attr': {'class': 'form-control'}}) }}
+    </div>
+     <div class="form-group">
+        {{ form_row(form.L2_37, {'attr': {'class': 'form-control'}}) }}
+    </div>
+    <br>
+
+    <H5>PARTIE : Aire et patrimoine des peuples autochtones</H5>
+     <div class="form-group">
+        {{ form_row(form.L2_38, {'attr': {'class': 'form-control'}}) }}
+    </div>
+     <div class="form-group">
+        {{ form_row(form.L2_39, {'attr': {'class': 'form-control'}}) }}
+    </div>
+     <div class="form-group">
+        {{ form_row(form.L2_40, {'attr': {'class': 'form-control'}}) }}
+    </div>
+     <div class="form-group">
+        {{ form_row(form.L2_41, {'attr': {'class': 'form-control'}}) }}
+    </div>
+    
+      <button class="btn">{{ button_label|default('Save') }}</button>
+
+        {{ form_end(form) }}
 
     <a href="{{ path('app_capitalisation_part_i_index') }}">back to list</a>
 

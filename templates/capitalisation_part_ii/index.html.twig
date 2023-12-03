@@ -5,7 +5,7 @@
 {% block body %}
     <h1>CapitalisationPartII index</h1>
 
-    <table class="table">
+    <table  id="table_id" class="table table-bordered table-hover">
         <thead>
             <tr>
                 <th>Titre du projet</th>
@@ -33,7 +33,8 @@
               
                 <td>
                    {#   <a href="{{ path('app_capitalisation_part_i_i_show', {'id': capitalisation_part_i_i.id}) }}">show</a> #}
-                    <a href="{{ path('app_capitalisation_part_i_i_edit', {'id': capitalisation_part_i_i.id}) }}">edit</a>
+                    <a href="{{ path('app_capitalisation_part_i_i_edit', {'id': capitalisation_part_i_i.id}) }}"  class="btn btn-sm btn-success"
+>Voir et Editer</a>
                 </td>
             </tr>
         {% else %}
@@ -45,4 +46,15 @@
     </table>
 
      {#  <a href="{{ path('app_capitalisation_part_i_i_new') }}">Create new</a> #}
+{% endblock %}
+{% block javascripts %}
+  <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+  <script src="https://cdn.datatables.net/1.10.25/js/jquery.dataTables.min.js"></script>
+  
+<script type="text/javascript">
+    $(document).ready( function () {
+        $('#table_id').DataTable();
+    });
+</script>
+
 {% endblock %}
