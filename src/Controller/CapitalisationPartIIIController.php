@@ -30,6 +30,8 @@ class CapitalisationPartIIIController extends AbstractController
         $form->handleRequest($request);
 
         if ($form->isSubmitted() && $form->isValid()) {
+           // dump($form->getData()); // Vérifier les données du formulaire
+
             $entityManager->persist($capitalisationPartIII);
             $entityManager->flush();
 

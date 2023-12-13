@@ -6,8 +6,9 @@
         <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 128 128%22><text y=%221.2em%22 font-size=%2296%22>⚫️</text></svg>">
         {# Run `composer require symfony/webpack-encore-bundle` to start using Symfony UX #}
         {% block stylesheets %}
-
             <style>
+              
+
                 .custom-card {
                     width: 100%;
                     margin-bottom: 20px;
@@ -17,6 +18,33 @@
                     height: 100px; /* Set a fixed height for the card body */
                     overflow: hidden; /* Hide any overflow content */
                 }
+
+
+                textarea {
+                        resize: vertical;
+                        width: 800px;
+                }
+
+            </style>
+            <style>
+             .form-control {
+                    height: auto !important;
+                    overflow: auto;
+                }
+
+            </style>
+
+             
+            <style>
+                    .containerchart {
+                        display: flex;
+                        justify-content: space-between;
+                    }
+
+                    .columnchart {
+                        flex: 1;
+                        margin-right: 10px;
+                    }
             </style>
 
       
@@ -32,10 +60,14 @@
             <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
             <link rel="stylesheet" href="{{ asset('css/style.css') }}">
             <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800,900" rel="stylesheet">
+             
+
         {% endblock %}
 
         {% block javascripts %}
             {{ encore_entry_script_tags('app') }}
+           
+
           
         {% endblock %}          
   </head>
@@ -57,8 +89,12 @@
                         <a href="{{ path('app_tableau_bord') }}"><span class="fa fa-home mr-3"></span>Tableau de Bord </p></a>
                     </li>
                      <li>
-                        <a href="{{ path('all_indicateur', {'idthem': 1}) }}"><span class="fa fa-user mr-3"></span>All Indicateur</a>
+                        <a href="{{ path('all_indicateur', {'idthem': 1}) }}"><span class="fa fa-home mr-3"></span>Vitrine-lac d'indicateur</a>
                     </li>
+                    <li class="active">
+                        <a href="{{ path('app_chart') }}"><span class="fa fa-home mr-3"></span>Visualisation </p></a>
+                    </li>
+
                     <li>
                         <a href="{{ path('app_identification_projet_index') }}"><span class="fa fa-user mr-3"></span>Identification Projet</a>
                     </li>
@@ -73,9 +109,6 @@
                     <li>
                     <a href="{{ path('app_auto_evaluation_index') }}"><span class="fa fa-sticky-note mr-3"></span>Auto Evaluation</a>
                     </li>
-                    <li>
-                    <a href="{{ path('app_conception_index') }}"><span class="fa fa-suitcase mr-3"></span> Conception</a>
-                    </li>
                      <li>
                     <a href="{{ path('app_capitalisation_part_i_index') }}"><span class="fa fa-briefcase mr-3"></span> Capitalisation partie I</a>
                     </li>
@@ -84,6 +117,10 @@
                     </li>
                     <li>
                     <a href="{{ path('app_capitalisation_part_i_i_i_index') }}"><span class="fa fa-suitcase mr-3"></span> Capitalisation partie III</a>
+                    </li>
+
+                     <li>
+                    <a href="{{ path('app_conception_index') }}"><span class="fa fa-suitcase mr-3"></span> Conception et mise en oeuvre</a>
                     </li>
                     <li>
                     <a href="{{ path('app_register_index') }}"><span class="fa fa-cogs mr-3"></span> Liste des Utilisateurs </a>
@@ -110,13 +147,14 @@
         
         {% endblock %}
 
-
+  
       
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"></script>
         <script src="{{ asset('js/popper.js') }}"></script>
         <script src="{{ asset('js/bootstrap.min.js') }}"></script>
         <script src="{{ asset('js/main.js') }}"></script>
-
+         <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+         
         </div>
     </div>
     </body>

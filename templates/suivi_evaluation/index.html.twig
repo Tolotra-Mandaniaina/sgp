@@ -9,13 +9,13 @@
     <table id="table_id"  class="table table-bordered table-hover">
         <thead>
             <tr>
-                <th>Titre du projet</th>
+              <th>Statut</th>
                 <th>Projet No.</th>
+                 <th>Région d'intervention</th>
                 <th>Fonds</th>
                 <th>Phases</th>
                 <th>Paysages</th>
                 <th>Domaine d'intervention</th>
-                <th>Année de remplissage de l'outils</th>
                 <th>Numero trimestre</th>
                 <th>actions</th>
             </tr>
@@ -23,13 +23,24 @@
         <tbody>
         {% for suivi_evaluation in suivi_evaluations %}
             <tr>
-                <td>{{ suivi_evaluation.A1 }}</td>
-                <td>{{ suivi_evaluation.A10 }}</td>
+              <td>
+                    {% if suivi_evaluation.StatutFiche == '' %}
+                     <button type="button" class="btn btn-warning">En cours</button>
+                    {% elseif suivi_evaluation.StatutFiche == 1 %}
+                     <button type="button" class="btn btn-danger">A vérifier</button>
+
+                    {% elseif suivi_evaluation.StatutFiche == 2 %}
+                    <button type="button" class="btn btn-success">Valider</button>
+                    {% else %}
+                        Autre cas (optionnel)
+                    {% endif %}
+                    </td>
+              <td>{{ suivi_evaluation.A10 }}</td>
+                 <td>{{ suivi_evaluation.A5 }}</td>
                 <td>{{ suivi_evaluation.A11 }}</td>
                 <td>{{ suivi_evaluation.A12 }}</td>
                 <td>{{ suivi_evaluation.A13 }}</td>
                 <td>{{ suivi_evaluation.A19 }}</td>
-                <td>{{ suivi_evaluation.A34 }}</td>
                 <td>{{ suivi_evaluation.A35 }}</td>
                
                 <td>

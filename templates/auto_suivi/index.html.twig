@@ -9,27 +9,33 @@
     <table id="table_id" class="table table-bordered table-hover">
         <thead>
             <tr>
+                <th>Statut</th>
                 <th>Titre du projet</th>
                 <th>Projet No.</th>
-                <th>Numero trimestre</th>
-                <th>Nom de l’organisation</th>
-                <th>Activités prévues avec leur numéro identification (OS.Résultat.Activité)</th>
-                <th>Nouvelles activités amendées avec leur num.id. (OS.Résultat.Activité)</th>
+                <th>Numero trimestre : de 0 (état zéro) à 20</th>
                 <th>Séance de :</th>
-                <th>Date de séance</th>
+           
                 <th>actions</th>
             </tr>
         </thead>
         <tbody>
         {% for auto_suivi in auto_suivis %}
             <tr>
+                 <td>
+                    {% if auto_suivi.StatutFiche == '' %}
+                     <button type="button" class="btn btn-warning">En cours</button>
+                    {% elseif auto_suivi.StatutFiche == 1 %}
+                     <button type="button" class="btn btn-danger">A vérifier</button>
+
+                    {% elseif auto_suivi.StatutFiche == 2 %}
+                    <button type="button" class="btn btn-success">Valider</button>
+                    {% else %}
+                        Autre cas (optionnel)
+                    {% endif %}
+                    </td>
                 <td>{{ auto_suivi.A1 }}</td>
                 <td>{{ auto_suivi.A10 }}</td>
-                <td>{{ auto_suivi.A34 }}</td>
                 <td>{{ auto_suivi.A35 }}</td>
-                <td>{{ auto_suivi.A36 }}</td>
-                <td>{{ auto_suivi.A37 }}</td>
-                <td>{{ auto_suivi.A38 }}</td>
                 <td>{{ auto_suivi.A39 }}</td>
                 <td>
                   {#  <a href="{{ path('app_auto_suivi_show', {'id': auto_suivi.id}) }}">show</a> #}

@@ -34,6 +34,9 @@ class SuiviEvaluation
     #[ORM\Column(name:"A1", length: 255, nullable: true)]
     private ?string $A1 = null;
 
+    #[ORM\Column(name:"A5", length: 255, nullable: true)]
+    private ?string $A5 = null;
+
     #[ORM\Column(name:"A10",length: 50, nullable: true)]
     private ?string $A10 = null;
 
@@ -488,6 +491,9 @@ class SuiviEvaluation
     #[ORM\Column(name:"K27",nullable: true)]
     private ?int $K27 = null;
 
+    #[ORM\Column(nullable: true)]
+    private ?int $StatutFiche = null;
+
 
 
     public function getId(): ?int
@@ -574,6 +580,18 @@ class SuiviEvaluation
         return $this;
     }
 
+    public function getA5(): ?string
+    {
+        return $this->A5;
+    }
+
+    public function setA5(?string $A5): static
+    {
+        $this->A5 = $A5;
+
+        return $this;
+    }
+
     public function getA10(): ?string
     {
         return $this->A10;
@@ -600,8 +618,18 @@ class SuiviEvaluation
 
     public function getA11(): ?string
     {
-        return $this->A11;
+        $value = $this->A11;
+
+    // Ajouter une condition pour vérifier si la valeur est égale à 6
+    if ($value === '1') { return 'CORE';  }
+    else if ($value === '2' ) { return 'STAR';  }
+    else if ($value === '3' ) { return 'ICCA - GSI';  }
+   
+
+
+    return $value;
     }
+
 
     public function setA11(?string $A11): static
     {
@@ -612,7 +640,18 @@ class SuiviEvaluation
 
     public function getA12(): ?string
     {
-        return $this->A12;
+    $value = $this->A12;
+
+    // Ajouter une condition pour vérifier si la valeur est égale à 6
+    if ($value === '1') { return 'OP 5';  }
+    else if ($value === '2' ) { return 'OP 6';  }
+    else if ($value === '3' ) { return 'OP 7';  }
+    else if ($value === '4' ) { return 'OP 8';  }
+    else if ($value === '5' ) { return 'OP 9';  }
+    else if ($value === '6' ) { return 'OP 10';  }
+
+
+    return $value;
     }
 
     public function setA12(?string $A12): static
@@ -624,7 +663,18 @@ class SuiviEvaluation
 
     public function getA13(): ?string
     {
-        return $this->A13;
+        $value = $this->A13;
+
+        // Ajouter une condition pour vérifier si la valeur est égale à 6
+        if ($value === '1') { return 'Nord';  }
+        else if ($value === '2' ) { return 'Est';  }
+        else if ($value === '3' ) { return 'Sud-Ouest';  }
+        else if ($value === '4' ) { return 'Centre';  }
+        else if ($value === '5' ) { return 'Potentiel';  }
+       
+    
+    
+        return $value;
     }
 
     public function setA13(?string $A13): static
@@ -634,10 +684,62 @@ class SuiviEvaluation
         return $this;
     }
 
+    public function getA13a(): ?string
+    {   
+     $value = $this->A13a;
+
+    // Ajouter une condition pour vérifier si la valeur est égale à 6
+    if ($value === '1') { return 'Région Amoron\'i Mania';  }
+    else if ($value === '2' ) { return 'Région Analamanga';  }
+    else if ($value === '3' ) { return 'Région Vakinankaratra';  }
+    else if ($value === '4' ) { return 'Région Itasy';  }
+    else if ($value === '5' ) { return 'Région Anosy';  }
+    else if ($value === '6' ) { return 'Région Androy';  }
+    else if ($value === '6' ) { return 'Région Haute Matsiatra';  }
+
+
+    return $value;
+    }
+
+    public function setA13a(?string $A13a): static
+    {
+        $this->A13a = $A13a;
+
+        return $this;
+    }
+
+   
 
     public function getA19(): ?string
     {
-        return $this->A19;
+            // Récupérer la valeur de A19
+        $value = $this->A19;
+
+        // Définir une correspondance entre les nombres et leurs libellés
+        $labelMapping = [
+            '1' =>  'Biodiversité',
+            '2' =>  'Atténuation du changement climatique',
+            '3' =>  'Dégradation des sols',
+            '4' =>  'Gestion durable des forêts',
+            '5' =>  'Eaux internationales',
+            '6' =>  'Produits chimiques et déchets',
+            '7' =>   'Développement des capacités',
+            '8' =>   'Dialogue public société civile',
+            '9' => 'Aire et patrimoine des peuples autochtones'
+        ];
+
+        // Diviser la chaîne en nombres
+        $numbers = explode(' ', $value);
+
+        // Remplacer les nombres par leurs libellés correspondants
+        $labels = array_map(function ($number) use ($labelMapping) {
+            return $labelMapping[$number] ?? $number;
+        }, $numbers);
+
+        // Joindre les libellés avec '/'
+        $result = implode(' / ', $labels);
+
+        return $result;
     }
 
     public function setA19(?string $A19): static
@@ -646,8 +748,6 @@ class SuiviEvaluation
 
         return $this;
     }
-   
-  
 
     public function getA34(): ?string
     {
@@ -759,7 +859,7 @@ class SuiviEvaluation
 
     public function getB8(): ?string
     {
-        return $this->B8;
+        return $this->B8 == 1 ? "oui" : "non";
     }
 
     public function setB8(?string $B8): static
@@ -795,7 +895,7 @@ class SuiviEvaluation
 
     public function getB11(): ?string
     {
-        return $this->B11;
+        return $this->B11 == 1 ? "oui" : "non";
     }
 
     public function setB11(?string $B11): static
@@ -819,7 +919,7 @@ class SuiviEvaluation
 
     public function getB13(): ?string
     {
-        return $this->B13;
+        return $this->B13 == 1 ? "oui" : "non";
     }
 
     public function setB13(?string $B13): static
@@ -843,7 +943,7 @@ class SuiviEvaluation
 
     public function getB15(): ?string
     {
-        return $this->B15;
+        return $this->B15 == 1 ? "oui" : "non";
     }
 
     public function setB15(?string $B15): static
@@ -1361,7 +1461,15 @@ class SuiviEvaluation
 
     public function getH8(): ?string
     {
-        return $this->H8;
+        
+        $value = $this->H8;
+        if ($value === '1') { return  'Note 0 (Nul) '; }
+        if ($value === '2') { return  'Note 1 '; }
+        if ($value === '3') { return  'Note 2 (Moyen) '; }
+        if ($value === '4') { return  'Note 3 '; }
+        if ($value === '5') { return  'Note 4 (Haut) '; }
+        return $value;
+
     }
 
     public function setH8(?string $H8): static
@@ -1397,7 +1505,15 @@ class SuiviEvaluation
 
     public function getH11(): ?string
     {
-        return $this->H11;
+        
+        $value = $this->H11;
+        if ($value === '1') { return  'Note 0 (Nul) '; }
+        if ($value === '2') { return  'Note 1 '; }
+        if ($value === '3') { return  'Note 2 (Moyen) '; }
+        if ($value === '4') { return  'Note 3 '; }
+        if ($value === '5') { return  'Note 4 (Haut) '; }
+        return $value;
+
     }
 
     public function setH11(?string $H11): static
@@ -1433,7 +1549,15 @@ class SuiviEvaluation
 
     public function getH14(): ?string
     {
-        return $this->H14;
+        
+        $value = $this->H8;
+        if ($value === '1') { return  'Note 0 (Nul) '; }
+        if ($value === '2') { return  'Note 1 '; }
+        if ($value === '3') { return  'Note 2 (Moyen) '; }
+        if ($value === '4') { return  'Note 3 '; }
+        if ($value === '5') { return  'Note 4 (Haut) '; }
+        return $value;
+
     }
 
     public function setH14(?string $H14): static
@@ -1541,7 +1665,7 @@ class SuiviEvaluation
 
     public function getH23(): ?string
     {
-        return $this->H23;
+        return $this->H23 == 1 ? "oui" : "non";
     }
 
     public function setH23(?string $H23): static
@@ -1553,7 +1677,7 @@ class SuiviEvaluation
 
     public function getH24(): ?string
     {
-        return $this->H24;
+        return $this->H24 == 1 ? "oui" : "non";
     }
 
     public function setH24(?string $H24): static
@@ -1565,7 +1689,7 @@ class SuiviEvaluation
 
     public function getH25(): ?string
     {
-        return $this->H25;
+        return $this->H25 == 1 ? "oui" : "non";
     }
 
     public function setH25(?string $H25): static
@@ -1577,7 +1701,7 @@ class SuiviEvaluation
 
     public function getH26(): ?string
     {
-        return $this->H26;
+        return $this->H26 == 1 ? "oui" : "non";
     }
 
     public function setH26(?string $H26): static
@@ -1589,7 +1713,7 @@ class SuiviEvaluation
 
     public function getH27(): ?string
     {
-        return $this->H27;
+        return $this->H27 == 1 ? "oui" : "non";
     }
 
     public function setH27(?string $H27): static
@@ -1601,7 +1725,7 @@ class SuiviEvaluation
 
     public function getH28(): ?string
     {
-        return $this->H28;
+        return $this->H28 == 1 ? "oui" : "non";
     }
 
     public function setH28(?string $H28): static
@@ -2231,7 +2355,7 @@ class SuiviEvaluation
 
     public function getK16(): ?string
     {
-        return $this->K16;
+        return $this->K16 == 1 ? "oui" : "non";
     }
 
     public function setK16(?string $K16): static
@@ -2277,12 +2401,12 @@ class SuiviEvaluation
         return $this;
     }
    
-    public function getK20(): ?int
+    public function getK20(): ?string
     {
         return $this->K20;
     }
 
-    public function setK20(?int $K20): static
+    public function setK20(?string $K20): static
     {
         $this->K20 = $K20;
 
@@ -2291,7 +2415,7 @@ class SuiviEvaluation
 
     public function getK21(): ?string
     {
-        return $this->K21;
+        return $this->K21 == 1 ? "oui" : "non";
     }
 
     public function setK21(?string $K21): static
@@ -2327,7 +2451,7 @@ class SuiviEvaluation
 
     public function getK24(): ?string
     {
-        return $this->K24;
+        return $this->K24 == 1 ? "oui" : "non";
     }
 
     public function setK24(?string $K24): static
@@ -2351,7 +2475,7 @@ class SuiviEvaluation
 
     public function getK26(): ?string
     {
-        return $this->K26;
+        return $this->K26 == 1 ? "oui" : "non";
     }
 
     public function setK26(?string $K26): static
@@ -2369,6 +2493,18 @@ class SuiviEvaluation
     public function setK27(?int $K27): static
     {
         $this->K27 = $K27;
+
+        return $this;
+    }
+
+    public function getStatutFiche(): ?int
+    {
+        return $this->StatutFiche;
+    }
+
+    public function setStatutFiche(?int $StatutFiche): static
+    {
+        $this->StatutFiche = $StatutFiche;
 
         return $this;
     }

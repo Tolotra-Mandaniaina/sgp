@@ -35,11 +35,15 @@ class AutoSuivi
     #[ORM\Column(name:"A1",length: 255, nullable: true)]
     private ?string $A1 = null;
 
+    #[ORM\Column(name:"A5",length: 255, nullable: true)]
+    private ?string $A5 = null;
+
     #[ORM\Column(name:"A10",length: 255, nullable: true)]
     private ?string $A10 = null;
 
-    #[ORM\Column(name:"A34",length: 50, nullable: true)]
-    private ?string $A34 = null;
+    #[ORM\Column(name:"A10a",length: 255, nullable: true)]
+    private ?string $A10a = null;
+
 
     #[ORM\Column(name:"A35",length: 255, nullable: true)]
     private ?string $A35 = null;
@@ -47,11 +51,11 @@ class AutoSuivi
     #[ORM\Column(name:"A36", type: Types::TEXT, nullable: true)]
     private ?string $A36 = null;
 
+    #[ORM\Column(name:"A36a", type: Types::TEXT, nullable: true)]
+    private ?string $A36a = null;
+
     #[ORM\Column(name:"A37", type: Types::TEXT, nullable: true)]
     private ?string $A37 = null;
-
-    #[ORM\Column(name:"A38",length: 20, nullable: true)]
-    private ?string $A38 = null;
 
     #[ORM\Column(name:"A39",length: 15, nullable: true)]
     private ?string $A39 = null;
@@ -97,6 +101,15 @@ class AutoSuivi
 
     #[ORM\Column(name:"B18_autre",length: 255, nullable: true)]
     private ?string $B18_autre = null;
+
+    #[ORM\Column(name:"group_IR_count",nullable: true)]
+    private ?int $groupIrCount = null;
+
+    #[ORM\Column(name:"group_IR", type: Types::TEXT, nullable: true)]
+    private ?string $groupIr = null;
+
+    #[ORM\Column(nullable: true)]
+    private ?int $StatutFiche = null;
 
     public function getId(): ?int
     {
@@ -187,6 +200,18 @@ class AutoSuivi
         return $this;
     }
 
+    public function getA5(): ?string
+    {
+        return $this->A5;
+    }
+
+    public function setA5(?string $A5): static
+    {
+        $this->A5 = $A5;
+
+        return $this;
+    }
+
     public function getA10(): ?string
     {
         return $this->A10;
@@ -199,17 +224,19 @@ class AutoSuivi
         return $this;
     }
 
-    public function getA34(): ?string
+    public function getA10a(): ?string
     {
-        return $this->A34;
+        return $this->A10a;
     }
 
-    public function setA34(?string $A34): static
+    public function setA10a(?string $A10a): static
     {
-        $this->A34 = $A34;
+        $this->A10a = $A10a;
 
         return $this;
     }
+
+
 
     public function getA35(): ?string
     {
@@ -223,14 +250,15 @@ class AutoSuivi
         return $this;
     }
 
-    public function getA36(): ?string
+   
+    public function getA36a(): ?string
     {
-        return $this->A36;
+        return $this->A36a;
     }
 
-    public function setA36(?string $A36): static
+    public function setA36a(?string $A36a): static
     {
-        $this->A36 = $A36;
+        $this->A36a = $A36a;
 
         return $this;
     }
@@ -243,18 +271,6 @@ class AutoSuivi
     public function setA37(?string $A37): static
     {
         $this->A37 = $A37;
-
-        return $this;
-    }
-
-    public function getA38(): ?string
-    {
-        return $this->A38;
-    }
-
-    public function setA38(?string $A38): static
-    {
-        $this->A38 = $A38;
 
         return $this;
     }
@@ -369,7 +385,16 @@ class AutoSuivi
 
     public function getB16(): ?string
     {
-        return $this->B16;
+        $value = $this->B16;
+
+        // Ajouter une condition pour vérifier si la valeur est égale à 6
+        if ($value === '1') { return 'Project activities completed';  }
+        else if ($value === '2' ) { return 'Final reports pending';  }
+        else if ($value === '3' ) { return 'Project Terminated Before Completion';  }
+        else if ($value === '4' ) { return 'Satisfactorily Completed';  }
+     
+    
+        return $value;
     }
 
     public function setB16(?string $B16): static
@@ -393,7 +418,12 @@ class AutoSuivi
 
     public function getB17(): ?string
     {
-        return $this->B17;
+        $value = $this->B17;
+        if ($value === '1') { return 'fiche diagnostic';  }
+        if ($value === '2') { return 'fiche planification annuelle';  }
+        if ($value === '3') { return 'fiche bilan annuel d\'impact';  }
+        if ($value === '4') { return 'Autres';  }
+          return $value;
     }
 
     public function setB17(?string $B17): static
@@ -417,7 +447,13 @@ class AutoSuivi
 
     public function getB18(): ?string
     {
-        return $this->B18;
+                    
+            $value = $this->B18;
+            if ($value === '1') { return 'Gantt chart';  }
+            if ($value === '2') { return 'Radial bar chart';  }
+            if ($value === '3') { return 'Multi-set bar chart';  }
+            if ($value === '4') { return 'Autres';  }
+            return $value;
     }
 
     public function setB18(?string $B18): static
@@ -435,6 +471,42 @@ class AutoSuivi
     public function setB18Autre(?string $B18_autre): static
     {
         $this->B18_autre = $B18_autre;
+
+        return $this;
+    }
+
+    public function getGroupIrCount(): ?int
+    {
+        return $this->groupIrCount;
+    }
+
+    public function setGroupIrCount(?int $groupIrCount): static
+    {
+        $this->groupIrCount = $groupIrCount;
+
+        return $this;
+    }
+
+    public function getGroupIr(): ?string
+    {
+        return $this->groupIr;
+    }
+
+    public function setGroupIr(?string $groupIr): static
+    {
+        $this->groupIr = $groupIr;
+
+        return $this;
+    }
+
+    public function getStatutFiche(): ?int
+    {
+        return $this->StatutFiche;
+    }
+
+    public function setStatutFiche(?int $StatutFiche): static
+    {
+        $this->StatutFiche = $StatutFiche;
 
         return $this;
     }

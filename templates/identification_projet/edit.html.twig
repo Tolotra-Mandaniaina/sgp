@@ -5,13 +5,19 @@
 {% block body %}
     <h1>Edit IdentificationProjet</h1>
 
+{% set externalLink = "https://ee-eu.kobotoolbox.org/x/cX74Xc15" %}
+
+{% if externalLink starts with 'http' %}
+<a href="{{ externalLink }}" class="btn btn-primary" target="_blank">Voir Questionnaire sur kobo</a>
+
+{% endif %}
+<br>
+<br>
  
-            {{ form_start(form) }}
+     {{ form_start(form) }}
     <div class="container">
 
-
-    <H4>Identification</H4>
-   
+    <H4>Identification</H4>   
     <div class="form-group">
         {{ form_row(form.A1, {'attr': {'class': 'form-control'}}) }}
     </div>
@@ -25,54 +31,136 @@
         {{ form_row(form.A4, {'attr': {'class': 'form-control'}}) }}
     </div>
     <div class="form-group">
-        {{ form_row(form.A5, {'attr': {'class': 'form-control'}}) }}
+        {{ form_row(form.A5_0, {'attr': {'class': 'form-control'}}) }}
     </div>
-<br>
 
-    <H5>District d'intervention</H5>
-    <div class="form-group">
-        {{ form_row(form.A6, {'attr': {'class': 'form-control'}}) }}
-    </div>
-    <div class="form-group">
-        {{ form_row(form.A6a, {'attr': {'class': 'form-control'}}) }}
-    </div>
-    <div class="form-group">
-        {{ form_row(form.A6b, {'attr': {'class': 'form-control'}}) }}
-    </div>
-    <div class="form-group">
-        {{ form_row(form.A6c, {'attr': {'class': 'form-control'}}) }}
-    </div>
-    <div class="form-group">
-        {{ form_row(form.A6d, {'attr': {'class': 'form-control'}}) }}
-    </div>
-    <div class="form-group">
-        {{ form_row(form.A6e, {'attr': {'class': 'form-control'}}) }}
-    </div>
-    <div class="form-group">
-        {{ form_row(form.A6f, {'attr': {'class': 'form-control'}}) }}
-    </div>
-    <div class="form-group">
-        {{ form_row(form.A6g, {'attr': {'class': 'form-control'}}) }}
-    </div>
-    <div class="form-group">
-        {{ form_row(form.A6h, {'attr': {'class': 'form-control'}}) }}
-    </div>
-    <div class="form-group">
-        {{ form_row(form.A6i, {'attr': {'class': 'form-control'}}) }}
-    </div>
-    <div class="form-group">
-        {{ form_row(form.A6j, {'attr': {'class': 'form-control'}}) }}
-    </div>
-     <div class="form-group">
-        {{ form_row(form.A6k, {'attr': {'class': 'form-control'}}) }}
-    </div>
-    <div class="form-group">
-        {{ form_row(form.A6l, {'attr': {'class': 'form-control'}}) }}
-    </div>
-    <div class="form-group">
-        {{ form_row(form.A6m, {'attr': {'class': 'form-control'}}) }}
-    </div>
-    <br>
+
+    {# INTER REGIONAL ( RESGION ET DISTRICT INTERVENTION ) 
+    {% if form.A5_0.vars.value == 2 %}
+        <H5>Région d'intervention Inter Régional</H5>
+
+        <div class="form-group">
+            {{ form_row(form.A5a, {'attr': {'class': 'form-control'}}) }}
+        </div>
+        <div class="form-group">
+            {{ form_row(form.A5b, {'attr': {'class': 'form-control'}}) }}
+        </div>
+        <div class="form-group">
+            {{ form_row(form.A5c, {'attr': {'class': 'form-control'}}) }}
+        </div>
+        <div class="form-group">
+            {{ form_row(form.A5d, {'attr': {'class': 'form-control'}}) }}
+        </div>
+        <div class="form-group">
+            {{ form_row(form.A5e, {'attr': {'class': 'form-control'}}) }}
+        </div>
+        <div class="form-group">
+            {{ form_row(form.A5f, {'attr': {'class': 'form-control'}}) }}
+        </div>
+        <br>
+
+        <br>
+
+
+
+      <H5>District d'intervention A5b</H5>
+        <div id="formContainer">
+            {% for i in 1..13 %}
+                {% set currentField = attribute(form, 'A5b_' ~ i) %}
+                {% if currentField.vars.value is not empty and currentField is not empty %}
+                    <div class="form-group">
+                        {{ form_label(currentField, {'label_attr': {'class': 'control-label'}}) }}
+                        {{ form_widget(currentField, {'attr': {'class': 'form-control'}}) }}
+                    </div>
+                {% endif %}
+            {% endfor %}
+        </div>
+
+
+        <H5>District d'intervention A5c</H5>
+        <div id="formContainer">
+            {% for i in 1..13 %}
+                {% set currentField = attribute(form, 'A5c_' ~ i) %}
+                {% if currentField.vars.value is not empty and currentField is not empty %}
+                    <div class="form-group">
+                        {{ form_label(currentField, {'label_attr': {'class': 'control-label'}}) }}
+                        {{ form_widget(currentField, {'attr': {'class': 'form-control'}}) }}
+                    </div>
+                {% endif %}
+            {% endfor %}
+        </div>
+
+        <H5>District d'intervention A5d</H5>
+        <div id="formContainer">
+            {% for i in 1..13 %}
+                {% set currentField = attribute(form, 'A5d_' ~ i) %}
+                {% if currentField.vars.value is not empty and currentField is not empty %}
+                    <div class="form-group">
+                        {{ form_label(currentField, {'label_attr': {'class': 'control-label'}}) }}
+                        {{ form_widget(currentField, {'attr': {'class': 'form-control'}}) }}
+                    </div>
+                {% endif %}
+            {% endfor %}
+        </div>
+
+         <H5>District d'intervention A5e</H5>
+        <div id="formContainer">
+            {% for i in 1..13 %}
+                {% set currentField = attribute(form, 'A5e_' ~ i) %}
+                {% if currentField.vars.value is not empty and currentField is not empty %}
+                    <div class="form-group">
+                        {{ form_label(currentField, {'label_attr': {'class': 'control-label'}}) }}
+                        {{ form_widget(currentField, {'attr': {'class': 'form-control'}}) }}
+                    </div>
+                {% endif %}
+            {% endfor %}
+        </div>
+
+        <H5>District d'intervention A5f</H5>
+        <div id="formContainer">
+            {% for i in 1..13 %}
+                {% set currentField = attribute(form, 'A5f_' ~ i) %}
+                {% if currentField.vars.value is not empty and currentField is not empty %}
+                    <div class="form-group">
+                        {{ form_label(currentField, {'label_attr': {'class': 'control-label'}}) }}
+                        {{ form_widget(currentField, {'attr': {'class': 'form-control'}}) }}
+                    </div>
+                {% endif %}
+            {% endfor %}
+        </div>
+
+    {% endif %}
+
+
+ #}
+
+    {#  REGIONAL ( RESGION ET DISTRICT INTERVENTION ) #}
+    {% if form.A5_0.vars.value == 3 %}
+        <H4>Région d'intervention (Projet Régional)</H4>
+            <div class="form-group">
+                {{ form_row(form.A5, {'attr': {'class': 'form-control'}}) }}
+        </div>
+
+        <H4>District d'intervention (Projet Régional)</H4>
+
+        {% for field in [form.A6, form.A6a, form.A6b, form.A6c, form.A6d, form.A6e, form.A6f, form.A6g, form.A6h, form.A6i, form.A6j, form.A6k, form.A6l, form.A6m] %}
+            {% if field.vars.value is not null and field.vars.value != '' %}
+                <div class="form-group">
+                    {{ form_row(field, {'attr': {'class': 'form-control'}}) }}
+                </div>
+            {% endif %}
+        {% endfor %}
+        <br>
+    {% endif %}
+
+
+
+
+
+
+
+
+
 
     <div class="form-group">
         {{ form_row(form.A7, {'attr': {'class': 'form-control'}}) }}
@@ -85,7 +173,7 @@
         {{ form_row(form.A10, {'attr': {'class': 'form-control'}}) }}
     </div>
     <div class="form-group">
-        {{ form_row(form.A10a, {'attr': {'class': 'form-control'}}) }}
+        {{ form_row(form.A10a) }}
     </div>
     <div class="form-group">
         {{ form_row(form.A11, {'attr': {'class': 'form-control'}}) }}
@@ -112,7 +200,7 @@
         {{ form_row(form.A16, {'attr': {'class': 'form-control'}}) }}
     </div>
      <div class="form-group">
-        {{ form_row(form.A16_autre, {'attr': {'class': 'form-control'}}) }}
+        {{ form_row(form.A16_autre) }}
     </div>
     <div class="form-group">
         {{ form_row(form.A17, {'attr': {'class': 'form-control'}}) }}
@@ -123,10 +211,22 @@
     <br>
 
     <H5>Domaine d'intervention</H5>
+    
     <div class="form-group">
-        {{ form_row(form.A19, {'attr': {'class': 'form-control'}}) }}
+        {{ form_label(form.A19, 'Domaine d\intervention', {'label_attr': {'class': 'control-label'}}) }}
+        {% for child in form.A19 %}
+            <div class="form-check">
+                {{ form_widget(child, {'attr': {'class': 'form-check-input'}}) }}
+                {{ form_label(child, null, {'label_attr': {'class': 'form-check-label'}}) }}
+            </div>
+        {% endfor %}
+        {{ form_errors(form.A19) }}
     </div>
-       <div class="form-group">
+
+    <br>
+
+
+    <div class="form-group">
         {{ form_row(form.A19a, {'attr': {'class': 'form-control'}}) }}
     </div>
     <div class="form-group">
@@ -153,9 +253,23 @@
     <div class="form-group">
         {{ form_row(form.A19i, {'attr': {'class': 'form-control'}}) }}
     </div>
-    <div class="form-group">
-        {{ form_row(form.A20, {'attr': {'class': 'form-control'}}) }}
+   
+     <div class="form-group">
+        {{ form_label(form.A20, 'Catégorie de projet', {'label_attr': {'class': 'control-label'}}) }}
+        {% for child in form.A20 %}
+            <div class="form-check">
+                {{ form_widget(child, {'attr': {'class': 'form-check-input'}}) }}
+                {{ form_label(child, null, {'label_attr': {'class': 'form-check-label'}}) }}
+            </div>
+        {% endfor %}
+        {{ form_errors(form.A20) }}
     </div>
+
+    <br>
+
+
+
+
     <div class="form-group">
         {{ form_row(form.A21, {'attr': {'class': 'form-control'}}) }}
     </div>
@@ -202,21 +316,48 @@
     <div class="form-group">
         {{ form_row(form.A33, {'attr': {'class': 'form-control'}}) }}
     </div>
- <div class="form-group">
-        {{ form_row(form.A34, {'attr': {'class': 'form-control'}}) }}
+    <div class="form-group">
+        {{ form_row(form.A34) }}
     </div>
     <div class="form-group">
-        {{ form_row(form.A35, {'attr': {'class': 'form-control'}}) }}
+        {{ form_row(form.A35) }}
     </div>
 
-        <button class="btn">{{ button_label|default('Save') }}</button>
+        <button type="submit" class="save-button">{{ button_label|default('Save') }}</button>
 
         {{ form_end(form) }}
 
-    </div>
 
 
-    <a href="{{ path('app_identification_projet_index') }}">back to list</a>
+     <br>
+    <a class="btn btn-warning" href="{{ path('app_identification_projet_index') }}">back to list</a>
 
     {{ include('identification_projet/_delete_form.html.twig') }}
+
 {% endblock %}
+
+
+
+{% block javascripts %}            
+<script> 
+document.addEventListener('DOMContentLoaded', function() {
+    var nonVideChamps = document.querySelectorAll('.non-vide');
+
+    // Masquer les champs non vides initialement
+    nonVideChamps.forEach(function(champ) {
+        champ.style.display = 'none';
+    });
+
+    // Ajouter un écouteur d'événement sur le bouton Save pour afficher les champs au clic
+    document.getElementById('boutonSave').addEventListener('click', function(event) {
+        // Empêcher le comportement par défaut du formulaire (s'il y en a un)
+        event.preventDefault();
+
+        // Afficher les champs lorsque le bouton Save est cliqué
+        nonVideChamps.forEach(function(champ) {
+            champ.style.display = 'block';
+        });
+    });
+});
+</script> 
+{% endblock %}    

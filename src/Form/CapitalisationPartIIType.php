@@ -6,6 +6,7 @@ use App\Entity\CapitalisationPartII;
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolver;
+use Symfony\Component\Form\Extension\Core\Type\ChoiceType;
 
 class CapitalisationPartIIType extends AbstractType
 {
@@ -262,6 +263,16 @@ class CapitalisationPartIIType extends AbstractType
             ->add('L9_4', null, ['label' => 'L9_4 - Comment avez-vous fait pour mettre en exergue la visibilité de GEF SGP?',])
             ->add('L9_5', null, ['label' => 'L9_5 - Comment les autres communautés agissent par rapport aux bonnes pratiques?',])
             ->add('L9_6', null, ['label' => 'L9_6 - Quels sont les moyens requis pour assurer le partage des bonnes pratiques : humain, financier?',])
+            ->add('StatutFiche', ChoiceType::class, [
+                'label' => 'StatutFiche',
+                'choices' => [
+                    'A Vérifier' => '1', 
+                    'Valider' => '2',
+                    
+                ],
+                'placeholder' => 'Sélectionnez une option', 
+                'required' => true, 
+            ]) 
         ;
     }
 

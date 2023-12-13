@@ -6,14 +6,16 @@ use App\Entity\SuiviEvaluation;
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolver;
+use Symfony\Component\Form\Extension\Core\Type\ChoiceType;
+
 
 class SuiviEvaluationType extends AbstractType
 {
     public function buildForm(FormBuilderInterface $builder, array $options): void
     {
-        $builder
-           
+        $builder    
             ->add('A1', null, ['label' => 'A1- Titre du projet ',])
+            ->add('A5', null, ['label' => 'A5- Region d\intervention',])
             ->add('A10', null, ['label' => 'A10- Projet No.',])
             ->add('A10a', null, ['label' => 'A10a- Projet No. Pour Confirmation.',])
             ->add('A11', null, ['label' => 'A11- Fonds',])
@@ -28,7 +30,7 @@ class SuiviEvaluationType extends AbstractType
             ->add('B4', null, ['label' => 'B4- Hectares d\'écosystèmes importants avec le statut de conservation améliorée?',])
             ->add('B5', null, ['label' => 'B5- Hectares de zones de production terrestres appliquant des pratiques d\'utilisation durable? ',])
             ->add('B6', null, ['label' => 'B6- Hectares de zones de production marines appliquant des pratiques d\'utilisation durable ',])
-            ->add('B7', null, ['label' => 'B7- Valeur totale de la biodiversité en termes de produits/services produits par les écosystèmes (équivalent en dollars américains)?',])
+          
             ->add('B8', null, ['label' => 'B8- Le paysage terrestre et marin est-il composé de divers écosystèmes naturels (terrestres et aquatiques) et d\'utilisations du sol - par exemple des parcelles de forêt, des jardins familiaux, des champs cultivés et des vergers… ?  ',])
             ->add('B9', null, ['label' => 'B9- Combien sont-ils ?',])
             ->add('B10', null, ['label' => 'B10- Leurs Superficies (ha) ?',])
@@ -165,6 +167,16 @@ class SuiviEvaluationType extends AbstractType
             ->add('K25', null, ['label' => 'K25- Cette augmentation est équivalent à combien? ',])
             ->add('K26', null, ['label' => 'K26- Existe-t-il une augmentation des revenus et / ou d\autres moyens ? ',])
             ->add('K27', null, ['label' => 'K27- Cet augmentation est équivalent à combien? ',])
+            ->add('StatutFiche', ChoiceType::class, [
+                'label' => 'StatutFiche',
+                'choices' => [
+                    'A Vérifier' => '1', 
+                    'Valider' => '2',
+                    
+                ],
+                'placeholder' => 'Sélectionnez une option', 
+                'required' => true, 
+            ]) 
             
         ;
     }

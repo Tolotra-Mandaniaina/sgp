@@ -1,0 +1,35 @@
+// Dans public/js/chart.js
+document.addEventListener('DOMContentLoaded', function () {
+    var ctx = document.getElementById('myChart').getContext('2d');
+
+    var data = {{ result|json_encode|raw }};
+
+    var labels = data.map(function (item) {
+        return item.A13_region;
+    });
+
+    var values = data.map(function (item) {
+        return item.occurrences;
+    });
+
+    var myChart = new Chart(ctx, {
+        type: 'bar',
+        data: {
+            labels: labels,
+            datasets: [{
+                label: 'Occurrences',
+                data: values,
+                backgroundColor: 'rgba(75, 192, 192, 0.2)',
+                borderColor: 'rgba(75, 192, 192, 1)',
+                borderWidth: 1
+            }]
+        },
+        options: {
+            scales: {
+                y: {
+                    beginAtZero: true
+                }
+            }
+        }
+    });
+});

@@ -83,6 +83,9 @@ class CapitalisationPartIII
     #[ORM\Column(name:"L10_6",type: Types::TEXT, nullable: true)]
     private ?string $L10_6 = null;
 
+    #[ORM\Column(nullable: true)]
+    private ?int $StatutFiche = null;
+
 
     public function getId(): ?int
     {
@@ -205,7 +208,16 @@ class CapitalisationPartIII
 
     public function getA11(): ?string
     {
-        return $this->A11;
+        $value = $this->A11;
+
+    // Ajouter une condition pour vérifier si la valeur est égale à 6
+    if ($value === '1') { return 'CORE';  }
+    else if ($value === '2' ) { return 'STAR';  }
+    else if ($value === '3' ) { return 'ICCA - GSI';  }
+   
+
+
+    return $value;
     }
 
     public function setA11(?string $A11): static
@@ -217,8 +229,20 @@ class CapitalisationPartIII
 
     public function getA12(): ?string
     {
-        return $this->A12;
+    $value = $this->A12;
+
+    // Ajouter une condition pour vérifier si la valeur est égale à 6
+    if ($value === '1') { return 'OP 5';  }
+    else if ($value === '2' ) { return 'OP 6';  }
+    else if ($value === '3' ) { return 'OP 7';  }
+    else if ($value === '4' ) { return 'OP 8';  }
+    else if ($value === '5' ) { return 'OP 9';  }
+    else if ($value === '6' ) { return 'OP 10';  }
+
+
+    return $value;
     }
+
 
     public function setA12(?string $A12): static
     {
@@ -229,7 +253,18 @@ class CapitalisationPartIII
 
     public function getA13(): ?string
     {
-        return $this->A13;
+        $value = $this->A13;
+
+        // Ajouter une condition pour vérifier si la valeur est égale à 6
+        if ($value === '1') { return 'Nord';  }
+        else if ($value === '2' ) { return 'Est';  }
+        else if ($value === '3' ) { return 'Sud-Ouest';  }
+        else if ($value === '4' ) { return 'Centre';  }
+        else if ($value === '5' ) { return 'Potentiel';  }
+       
+    
+    
+        return $value;
     }
 
     public function setA13(?string $A13): static
@@ -241,8 +276,36 @@ class CapitalisationPartIII
 
     public function getA19(): ?string
     {
-        return $this->A19;
+            // Récupérer la valeur de A19
+        $value = $this->A19;
+
+        // Définir une correspondance entre les nombres et leurs libellés
+        $labelMapping = [
+            '1' =>  'Biodiversité',
+            '2' =>  'Atténuation du changement climatique',
+            '3' =>  'Dégradation des sols',
+            '4' =>  'Gestion durable des forêts',
+            '5' =>  'Eaux internationales',
+            '6' =>  'Produits chimiques et déchets',
+            '7' =>   'Développement des capacités',
+            '8' =>   'Dialogue public société civile',
+            '9' => 'Aire et patrimoine des peuples autochtones'
+        ];
+
+        // Diviser la chaîne en nombres
+        $numbers = explode(' ', $value);
+
+        // Remplacer les nombres par leurs libellés correspondants
+        $labels = array_map(function ($number) use ($labelMapping) {
+            return $labelMapping[$number] ?? $number;
+        }, $numbers);
+
+        // Joindre les libellés avec '/'
+        $result = implode(' / ', $labels);
+
+        return $result;
     }
+
 
     public function setA19(?string $A19): static
     {
@@ -282,9 +345,13 @@ class CapitalisationPartIII
 
     public function setL11(?string $L1_1): static
     {
-        $this->L1_1 = $L1_1;
+        $value = $this->L1_1;
 
-        return $this;
+        // Ajouter une condition pour vérifier si la valeur est égale à 6
+        if ($value === '1') { return 'Oui';  }
+        else if ($value === '2' ) { return 'Non';  }
+        return $value;
+        
     }
 
     public function getL101(): ?string
@@ -355,6 +422,18 @@ class CapitalisationPartIII
     public function setL106(?string $L10_6): static
     {
         $this->L10_6 = $L10_6;
+
+        return $this;
+    }
+
+    public function getStatutFiche(): ?int
+    {
+        return $this->StatutFiche;
+    }
+
+    public function setStatutFiche(?int $StatutFiche): static
+    {
+        $this->StatutFiche = $StatutFiche;
 
         return $this;
     }

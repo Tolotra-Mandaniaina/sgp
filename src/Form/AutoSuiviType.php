@@ -6,6 +6,7 @@ use App\Entity\AutoSuivi;
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolver;
+use Symfony\Component\Form\Extension\Core\Type\ChoiceType;
 
 class AutoSuiviType extends AbstractType
 {
@@ -13,12 +14,14 @@ class AutoSuiviType extends AbstractType
     {
         $builder
             ->add('A1' , null, ['label' => 'A1- Titre du projet  ',]) 
+            ->add('A5' , null, ['label' => 'A5- Region d\'intervention ',]) 
             ->add('A10', null, ['label' => 'A10- Projet No.',]) 
-            ->add('A34', null, ['label' => 'A34- Numero trimestre',]) 
-            ->add('A35', null, ['label' => 'A35- Nom de l’organisation',]) 
-            ->add('A36' , null, ['label' => 'A36- Activités prévues avec leur numéro identification (OS.Résultat.Activité)',]) 
+            ->add('A10a', null, ['label' => 'A10- Projet No pour confirmation.',]) 
+           
+            ->add('A35', null, ['label' => 'A35- Numero trimestre : de 0 (état zéro) à 20',]) 
+            ->add('A36a' , null, ['label' => 'A36a- Nombre des activités prévues pour ce trimestre?',]) 
             ->add('A37', null, ['label' => 'A37- Nouvelles activités amendées avec leur num.id. (OS.Résultat.Activité)',]) 
-            ->add('A38', null, ['label' => 'A38- Séance de :',]) 
+          
             ->add('A39', null, ['label' => 'A39- Date de séance',]) 
             ->add('B1', null, ['label' => 'B1- Degré d’avancement des activités par rapport au calendrier',]) 
             ->add('B2', null, ['label' => 'B2- Pourcentage des résultats obtenus par rapport aux indicateurs prévus et au calendrier ',]) 
@@ -33,7 +36,17 @@ class AutoSuiviType extends AbstractType
             ->add('B17', null, ['label' => 'B17- Type de méthode participative : ',]) 
             ->add('B17_autre', null, ['label' => 'B17- Si autre, préciser',]) 
             ->add('B18', null, ['label' => 'B18- Choisir le type de présentation graphique le plus significatif et démonstratif possible que l\'indicateur doit traduire.',]) 
-            ->add('B18_autre', null, ['label' => 'B18- Si autre, préciser',]) 
+            ->add('StatutFiche', ChoiceType::class, [
+                'label' => 'StatutFiche',
+                'choices' => [
+                    'A Vérifier' => '1', 
+                    'Valider' => '2',
+                    
+                ],
+                'placeholder' => 'Sélectionnez une option', 
+                'required' => true, 
+            ]) 
+
         ;
     }
 

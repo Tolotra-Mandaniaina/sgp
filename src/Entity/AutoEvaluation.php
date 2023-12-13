@@ -57,9 +57,6 @@ class AutoEvaluation
     #[ORM\Column(name:"A37",type: Types::TEXT, nullable: true)]
     private ?string $A37 = null;
 
-    #[ORM\Column(name:"A38",length: 20, nullable: true)]
-    private ?string $A38 = null;
-
     #[ORM\Column(name:"A39",length: 12, nullable: true)]
     private ?string $A39 = null;
 
@@ -143,6 +140,9 @@ class AutoEvaluation
 
     #[ORM\Column(name:"B27",type: Types::TEXT, nullable: true)]
     private ?string $B27 = null;
+
+    #[ORM\Column(nullable: true)]
+    private ?int $StatutFiche = null;
 
     public function getId(): ?int
     {
@@ -314,7 +314,10 @@ class AutoEvaluation
 
     public function getA38(): ?string
     {
-        return $this->A38;
+        $value = $this->A38;
+        if ($value === '1') { return  'Suivi'; }
+        if ($value === '2') { return  'Evaluation'; }
+        return $value;
     }
 
     public function setA38(string $A38): static
@@ -656,6 +659,18 @@ class AutoEvaluation
     public function setB27(?string $B27): static
     {
         $this->B27 = $B27;
+
+        return $this;
+    }
+
+    public function getStatutFiche(): ?int
+    {
+        return $this->StatutFiche;
+    }
+
+    public function setStatutFiche(?int $StatutFiche): static
+    {
+        $this->StatutFiche = $StatutFiche;
 
         return $this;
     }

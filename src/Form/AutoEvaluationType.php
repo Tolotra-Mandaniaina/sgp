@@ -6,6 +6,7 @@ use App\Entity\AutoEvaluation;
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolver;
+use Symfony\Component\Form\Extension\Core\Type\ChoiceType;
 
 class AutoEvaluationType extends AbstractType
 {
@@ -49,6 +50,17 @@ class AutoEvaluationType extends AbstractType
             ->add('B25', null, ['label' => 'B25- Présentation des solutions possibles, des conseils de suivi de la situation, des actions correctrices,…	',])
             ->add('B26', null, ['label' => 'B26- Appréciations permettant de prendre des décisions	',])
             ->add('B27', null, ['label' => 'B27- Coûts de la collecte, du traitement et des utilisations des indicateurs	',])
+            ->add('StatutFiche', ChoiceType::class, [
+                'label' => 'StatutFiche',
+                'choices' => [
+                    'A Vérifier' => '1', 
+                    'Valider' => '2',
+                    
+                ],
+                'placeholder' => 'Sélectionnez une option', 
+                'required' => true, 
+            ]) 
+
         ;
     }
 

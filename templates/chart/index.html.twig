@@ -1,0 +1,276 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Chart{% endblock %}
+
+{% block body %}
+<div class="containerchart">
+    <div class="column">
+            <h5>Nombre de projet par statut</h5>
+
+        <table class="table table-striped table-bordered">
+            <thead>
+                <tr>
+                    <th>Statut du projet</th>
+                    <th>Nombre</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for row in statut %}
+                    <tr>
+                        <td>{{ row.statut_projet }}</td>
+                        <td>{{ row.nbrprojet }}</td>
+                    </tr>  
+                {% endfor %}
+            </tbody>
+        </table>
+
+        <div class="columnchart">
+            <canvas id="chartStatut" width="400" height="250"></canvas>
+        </div>
+    </div>
+
+    <div class="column">
+        <h5>Nombre de projet par Paysage</h5>
+        
+        <table class="table table-striped table-bordered">
+            <thead>
+                <tr>
+                    <th>Région</th>
+                    <th>Occurrences</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for row in result %}
+                    <tr>
+                        <td>{{ row.A13_region }}</td>
+                        <td>{{ row.occurrences }}</td>
+                    </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+
+        <div class="columnchart">
+            <canvas id="myChart" width="400" height="180"></canvas>
+        </div>
+    </div>
+</div>
+
+
+<br><br>
+<div class="containerchart">
+<div class="column">
+        <h5>Nombre de projet par Phase</h5>
+        
+        <table class="table table-striped table-bordered">
+            <thead>
+                <tr>
+                    <th>Phase</th>
+                    <th>Occurrences</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for row in phase %}
+                    <tr>
+                        <td>{{ row.A12_phase }}</td>
+                        <td>{{ row.occurrences }}</td>
+                    </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+
+        <div class="columnchart">
+            <canvas id="phase" width="400" height="180"></canvas>
+        </div>
+    </div>
+
+
+    <div class="column">
+            <h5>Nombre de projet par Fond</h5>
+
+    <table class="table table-striped table-bordered">
+        <thead>
+            <tr>
+                <th>Phase du projet</th>
+                <th>Nombre</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for row in fond %}
+                <tr>
+                    <td>{{ row.A11_fond }}</td>
+                    <td>{{ row.occurrences }}</td>
+                </tr>  
+            {% endfor %}
+        </tbody>
+    </table>
+
+    <div class="columnchart">
+        <canvas id="fond" width="400" height="150"></canvas>
+    </div>
+</div>
+</div>
+
+       <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            var ctx = document.getElementById('fond').getContext('2d');
+
+            var data = {{ fond|json_encode|raw }};
+
+            var labels = data.map(function (item) {
+                return item.A11_fond;
+            });
+
+            var values = data.map(function (item) {
+                return item.occurrences;
+            });
+
+            var myChartA13 = new Chart(ctx, {
+                type: 'bar',
+                data: {
+                    labels: labels,
+                    datasets: [{
+                        label: 'Occurrences',
+                        data: values,
+                        backgroundColor: 'rgba(75, 192, 192, 0.2)',
+                        borderColor: 'rgba(75, 192, 192, 1)',
+                        borderWidth: 1
+                    }]
+                },
+                options: {
+                    scales: {
+                        y: {
+                            beginAtZero: true,
+                            precision: 0,
+                        }
+                    }
+                }
+            });
+        });
+    </script>
+
+
+{% endblock %}
+ 
+
+{% block javascripts %}
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            var ctx = document.getElementById('myChart').getContext('2d');
+
+            var data = {{ result|json_encode|raw }};
+
+            var labels = data.map(function (item) {
+                return item.A13_region;
+            });
+
+            var values = data.map(function (item) {
+                return item.occurrences;
+            });
+
+            var myChartA13 = new Chart(ctx, {
+                type: 'bar',
+                data: {
+                    labels: labels,
+                    datasets: [{
+                        label: 'Occurrences',
+                        data: values,
+                        backgroundColor: 'rgba(75, 192, 192, 0.2)',
+                        borderColor: 'rgba(75, 192, 192, 1)',
+                        borderWidth: 1
+                    }]
+                },
+                options: {
+                    scales: {
+                        y: {
+                            beginAtZero: true,
+                            precision: 0,
+                        }
+                    }
+                }
+            });
+        });
+    </script>
+
+   <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            var ctx = document.getElementById('chartStatut').getContext('2d');
+
+            var data = {{ statut |json_encode|raw }};
+
+            var labels = data.map(function (item) {
+                return item.statut_projet;
+            });
+
+            var values = data.map(function (item) {
+                return item.nbrprojet;
+            });
+
+            var myChartA13 = new Chart(ctx, {
+                type: 'bar',
+                data: {
+                    labels: labels,
+                    datasets: [{
+                        label: 'Occurrences',
+                        data: values,
+                        backgroundColor: 'rgba(75, 192, 192, 0.2)',
+                        borderColor: 'rgba(75, 192, 192, 1)',
+                        borderWidth: 1
+                    }]
+                },
+                options: {
+                    scales: {
+                        y: {
+                            beginAtZero: true,
+                            precision: 0,
+                        }
+                    }
+                }
+            });
+        });
+    </script>
+
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            var ctx = document.getElementById('phase').getContext('2d');
+
+            var data = {{ phase|json_encode|raw }};
+
+            var labels = data.map(function (item) {
+                return item.A12_phase;
+            });
+
+            var values = data.map(function (item) {
+                return item.occurrences;
+            });
+
+            var myChartA13 = new Chart(ctx, {
+                type: 'bar',
+                data: {
+                    labels: labels,
+                    datasets: [{
+                        label: 'Occurrences',
+                        data: values,
+                        backgroundColor: 'rgba(75, 192, 192, 0.2)',
+                        borderColor: 'rgba(75, 192, 192, 1)',
+                        borderWidth: 1
+                    }]
+                },
+                options: {
+                    scales: {
+                        y: {
+                            beginAtZero: true,
+                            precision: 0,
+                        }
+                    }
+                }
+            });
+        });
+    </script>
+
+    <script>
+    console.log('statutData:', {{ statut | json_encode| raw }});
+    console.log('labelsStatut:', labelsStatut);
+    console.log('dataStatut:', dataStatut);
+    </script>
+{% endblock %}

@@ -1,4 +1,4 @@
 <form method="post" action="{{ path('app_capitalisation_part_i_i_i_delete', {'id': capitalisation_part_i_i_i.id}) }}" onsubmit="return confirm('Are you sure you want to delete this item?');">
     <input type="hidden" name="_token" value="{{ csrf_token('delete' ~ capitalisation_part_i_i_i.id) }}">
-    <button class="btn">Delete</button>
+    <button class="btn btn-danger">Delete</button>
 </form>

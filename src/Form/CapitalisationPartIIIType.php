@@ -7,6 +7,7 @@ use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolver;
 use EasyCorp\Bundle\EasyAdminBundle\Form\Type\TextEditorType;
+use Symfony\Component\Form\Extension\Core\Type\ChoiceType;
 
 
 
@@ -17,9 +18,8 @@ class CapitalisationPartIIIType extends AbstractType
         $builder
             ->add('A1', null, ['label' => 'A1- Titre du projet  ',])
             ->add('A5', null, ['label' => 'A5- Région d\'intervention  ',])
-
             ->add('A10', null, ['label' => 'A10- Projet No.',])
-            ->add('A10', null, ['label' => 'A10- Projet No. Pour Confirmation.',])
+            ->add('A10a', null, ['label' => 'A10a- Projet No. Pour Confirmation.',])
             ->add('A11', null, ['label' => 'A11- Fonds',])
             ->add('A12', null, ['label' => 'A12- Phases',])
             ->add('A13', null, ['label' => 'A13- Paysages',])
@@ -33,6 +33,16 @@ class CapitalisationPartIIIType extends AbstractType
             ->add('L10_4', null, ['label' => 'L10.4- Veuillez joindre le fichier d\'illustration (Si video)',])
             ->add('L10_5', null, ['label' => 'L10.5- Veuillez joindre le fichier d\'illustration (Si photo)',])
             ->add('L10_6', null, ['label' => 'L10.6- Veuillez joindre le fichier d\'illustration (Si données statistiques)',])
+            ->add('StatutFiche', ChoiceType::class, [
+                'label' => 'StatutFiche',
+                'choices' => [
+                    'A Vérifier' => '1', 
+                    'Valider' => '2',
+                    
+                ],
+                'placeholder' => 'Sélectionnez une option', 
+                'required' => true, 
+            ]) 
         ;
     }
 

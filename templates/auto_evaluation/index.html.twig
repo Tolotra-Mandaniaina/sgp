@@ -8,12 +8,12 @@
     <table id="table_id" class="table table-bordered table-hover">
         <thead>
             <tr>
+                <th>Statut</th>
                 <th>Titre du projet</th>
                 <th>Projet No.</th>
                 <th>Nom de l’organisation</th>
                 <th>Activités prévues avec leur numéro identification (OS.Résultat.Activité)</th>
                 <th>Nouvelles activités amendées avec leur num.id. (OS.Résultat.Activité)</th>
-                <th>Séance de :</th>
                 <th>Date de séance</th>
               
                 <th>actions</th>
@@ -22,12 +22,23 @@
         <tbody>
         {% for auto_evaluation in auto_evaluations %}
             <tr>
+                    <td>
+                    {% if auto_evaluation.StatutFiche == '' %}
+                     <button type="button" class="btn btn-warning">En cours</button>
+                    {% elseif auto_evaluation.StatutFiche == 1 %}
+                     <button type="button" class="btn btn-danger">A vérifier</button>
+
+                    {% elseif auto_evaluation.StatutFiche == 2 %}
+                    <button type="button" class="btn btn-success">Valider</button>
+                    {% else %}
+                        Autre cas (optionnel)
+                    {% endif %}
+                    </td>
                 <td>{{ auto_evaluation.A1 }}</td>
                 <td>{{ auto_evaluation.A10 }}</td>
                 <td>{{ auto_evaluation.A35 }}</td>
                 <td>{{ auto_evaluation.A36 }}</td>
                 <td>{{ auto_evaluation.A37 }}</td>
-                <td>{{ auto_evaluation.A38 }}</td>
                 <td>{{ auto_evaluation.A39 }}</td>
                 <td>
                    {#   <a href="{{ path('app_auto_evaluation_show', {'id': auto_evaluation.id}) }}">show</a> #}

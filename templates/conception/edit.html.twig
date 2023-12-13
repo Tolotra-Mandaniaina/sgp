@@ -5,6 +5,17 @@
 {% block body %}
     <h1>Edit Conception</h1>
 
+
+{% set externalLink = "https://ee-eu.kobotoolbox.org/x/dyAuwaHO" %}
+
+{% if externalLink starts with 'http' %}
+<a href="{{ externalLink }}" class="btn btn-primary" target="_blank">Voir Questionnaire sur kobo</a>
+
+{% endif %}
+<br>
+<br>
+
+
    
        {{ form_start(form) }}
     <div class="container">

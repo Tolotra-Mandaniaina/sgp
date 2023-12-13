@@ -8,28 +8,40 @@
     <table  id="table_id" class="table table-bordered table-hover">
         <thead>
             <tr>
+             <th>Statut</th>
                 <th>Titre du projet</th>
+                <th>Région d'intervention</th>
                 <th>Projet No</th>
                 <th>Fonds</th>
                 <th>Phases</th>
                 <th>Paysages</th>
                 <th>Domaine d'intervention</th>
-                <th>Année de remplissage de l'outils</th>
-                <th>Numero trimestre</th>
                 <th>actions</th>
             </tr>
         </thead>
         <tbody>
         {% for capitalisation_part_i_i_i in capitalisation_part_i_i_is %}
             <tr>
+                <td>
+                    {% if capitalisation_part_i_i_i.StatutFiche == '' %}
+                    <button type="button" class="btn btn-warning">En cours</button>
+                    {% elseif capitalisation_part_i_i_i.StatutFiche == 1 %}
+                     <button type="button" class="btn btn-danger">A vérifier</button>
+
+                    {% elseif capitalisation_part_i_i_i.StatutFiche == 2 %}
+                     <button type="button" class="btn btn-success">Valider</button>
+                    {% else %}
+                        Autre cas (optionnel)
+                    {% endif %}
+                </td>
                 <td>{{ capitalisation_part_i_i_i.A1 }}</td>
+                <td>{{ capitalisation_part_i_i_i.A5 }}</td>
                 <td>{{ capitalisation_part_i_i_i.A10 }}</td>
                 <td>{{ capitalisation_part_i_i_i.A11 }}</td>
                 <td>{{ capitalisation_part_i_i_i.A12 }}</td>
                 <td>{{ capitalisation_part_i_i_i.A13 }}</td>
                 <td>{{ capitalisation_part_i_i_i.A19 }}</td>
-                <td>{{ capitalisation_part_i_i_i.A34 }}</td>
-                <td>{{ capitalisation_part_i_i_i.A35 }}</td>
+              
                
                
                 <td>
@@ -46,7 +58,7 @@
         </tbody>
     </table>
 
-  {#   <a href="{{ path('app_capitalisation_part_i_i_i_new') }}">Create new</a> #}
+    <a href="{{ path('app_capitalisation_part_i_i_i_new') }}">Create new</a> 
 {% endblock %}
 {% block javascripts %}
   <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>

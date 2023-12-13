@@ -4,6 +4,17 @@
 
 {% block body %}
     <h1>Edit CapitalisationPartIII</h1>
+    {{ form_start(form) }}
+
+         {% set externalLink = "https://ee-eu.kobotoolbox.org/x/ZJ9uiDXv" %}
+
+{% if externalLink starts with 'http' %}
+<a href="{{ externalLink }}" class="btn btn-primary" target="_blank">Voir Questionnaire sur kobo</a>
+
+{% endif %}
+<br>
+<br>
+
 <div class="container">
 
     <H4>A- IDENTIFICATION</H4>
@@ -66,10 +77,16 @@
         {{ form_row(form.L10_6, {'attr': {'class': 'form-control'}}) }}
     </div>
 
-    <button class="btn">{{ button_label|default('Save') }}</button>
-
+    <button type="submit" class="btn">{{ button_label|default('Save') }}</button>
         {{ form_end(form) }}
-    <a href="{{ path('app_capitalisation_part_i_i_i_index') }}">back to list</a>
+
+         <br>
+    <a class="btn btn-warning" href="{{ path('app_capitalisation_part_i_i_i_index') }}">back to list</a>
+
+
+</div>
+
+
 
     {{ include('capitalisation_part_iii/_delete_form.html.twig') }}
 {% endblock %}

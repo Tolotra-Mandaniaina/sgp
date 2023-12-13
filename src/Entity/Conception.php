@@ -466,7 +466,7 @@ class Conception
 
     public function getB1(): ?string
     {
-        return $this->B1;
+        return $this->B1 == 1 ? "oui" : "non";
     }
 
     public function setB1(?string $B1): static
@@ -490,7 +490,16 @@ class Conception
 
     public function getB1b(): ?string
     {
-        return $this->B1b;
+        $value = $this->B1b;
+        if ($value === '1') { return 'Important et urgent';  }
+        else if ($value === '2' ) { return 'Important mais pas urgent';  }
+        else if ($value === '3' ) { return 'Peu important mais urgent';  }
+        else if ($value === '4' ) { return 'Pas si important et pas si urgent ';  }
+        else if ($value === '0' ) { return 'Déjà fait';  }
+       
+    
+    
+        return $value;
     }
 
     public function setB1b(?string $B1b): static
@@ -502,7 +511,7 @@ class Conception
 
     public function getB2(): ?string
     {
-        return $this->B2;
+        return $this->B2 == 1 ? "oui" : "non";
     }
 
     public function setB2(?string $B2): static
@@ -526,7 +535,13 @@ class Conception
 
     public function getB2b(): ?string
     {
-        return $this->B2b;
+        $value = $this->B2b;
+        if ($value === '1') { return 'Important et urgent';  }
+        else if ($value === '2' ) { return 'Important mais pas urgent';  }
+        else if ($value === '3' ) { return 'Peu important mais urgent';  }
+        else if ($value === '4' ) { return 'Pas si important et pas si urgent ';  }
+        else if ($value === '0' ) { return 'Déjà fait';  }
+        return $value;
     }
 
     public function setB2b(?string $B2b): static
@@ -538,7 +553,7 @@ class Conception
 
     public function getB3(): ?string
     {
-        return $this->B3;
+        return $this->B3 == 1 ? "oui" : "non";
     }
 
     public function setB3(?string $B3): static
@@ -562,7 +577,14 @@ class Conception
 
     public function getB3b(): ?string
     {
-        return $this->B3b;
+        $value = $this->B3b;
+        if ($value === '1') { return 'Important et urgent';  }
+        else if ($value === '2' ) { return 'Important mais pas urgent';  }
+        else if ($value === '3' ) { return 'Peu important mais urgent';  }
+        else if ($value === '4' ) { return 'Pas si important et pas si urgent ';  }
+        else if ($value === '0' ) { return 'Déjà fait';  }
+       
+        return $value;
     }
 
     public function setB3b(?string $B3b): static
@@ -574,7 +596,7 @@ class Conception
 
     public function getC1(): ?string
     {
-        return $this->C1;
+        return $this->C1 == 1 ? "oui" : "non";
     }
 
     public function setC1(?string $C1): static
@@ -610,7 +632,14 @@ class Conception
 
     public function getC1c(): ?string
     {
-        return $this->C1c;
+        $value = $this->C1c;
+        if ($value === '1') { return 'Important et urgent';  }
+        else if ($value === '2' ) { return 'Important mais pas urgent';  }
+        else if ($value === '3' ) { return 'Peu important mais urgent';  }
+        else if ($value === '4' ) { return 'Pas si important et pas si urgent ';  }
+        else if ($value === '0' ) { return 'Déjà fait';  }
+       
+        return $value;
     }
 
     public function setC1c(?string $C1c): static
@@ -622,7 +651,7 @@ class Conception
 
     public function getC2(): ?string
     {
-        return $this->C2;
+        return $this->C2 == 1 ? "oui" : "non";
     }
 
     public function setC2(?string $C2): static
@@ -646,8 +675,14 @@ class Conception
 
     public function getC2b(): ?string
     {
-        return $this->C2b;
-    }
+        $value = $this->C2b;
+        if ($value === '1') { return 'Important et urgent';  }
+        else if ($value === '2' ) { return 'Important mais pas urgent';  }
+        else if ($value === '3' ) { return 'Peu important mais urgent';  }
+        else if ($value === '4' ) { return 'Pas si important et pas si urgent ';  }
+        else if ($value === '0' ) { return 'Déjà fait';  }
+       
+        return $value;    }
 
     public function setC2b(?string $C2b): static
     {
@@ -658,7 +693,7 @@ class Conception
 
     public function getD1(): ?string
     {
-        return $this->D1;
+        return $this->D1 == 1 ? "oui" : "non";
     }
 
     public function setD1(?string $D1): static
@@ -682,7 +717,14 @@ class Conception
 
     public function getD1b(): ?string
     {
-        return $this->D1b;
+        $value = $this->D1b;
+        if ($value === '1') { return 'Important et urgent';  }
+        else if ($value === '2' ) { return 'Important mais pas urgent';  }
+        else if ($value === '3' ) { return 'Peu important mais urgent';  }
+        else if ($value === '4' ) { return 'Pas si important et pas si urgent ';  }
+        else if ($value === '0' ) { return 'Déjà fait';  }
+       
+        return $value;
     }
 
     public function setD1b(?string $D1b): static
@@ -694,7 +736,7 @@ class Conception
 
     public function getD2(): ?string
     {
-        return $this->D2;
+        return $this->D2 == 1 ? "oui" : "non";
     }
 
     public function setD2(?string $D2): static
@@ -718,7 +760,14 @@ class Conception
 
     public function getD2b(): ?string
     {
-        return $this->D2b;
+        $value = $this->D2b;
+        if ($value === '1') { return 'Important et urgent';  }
+        else if ($value === '2' ) { return 'Important mais pas urgent';  }
+        else if ($value === '3' ) { return 'Peu important mais urgent';  }
+        else if ($value === '4' ) { return 'Pas si important et pas si urgent ';  }
+        else if ($value === '0' ) { return 'Déjà fait';  }
+       
+        return $value;
     }
 
     public function setD2b(?string $D2b): static
@@ -730,7 +779,7 @@ class Conception
 
     public function getD3(): ?string
     {
-        return $this->D3;
+        return $this->D3 == 1 ? "oui" : "non";
     }
 
     public function setD3(?string $D3): static
@@ -754,7 +803,14 @@ class Conception
 
     public function getD3b(): ?string
     {
-        return $this->D3b;
+        $value = $this->D3b;
+        if ($value === '1') { return 'Important et urgent';  }
+        else if ($value === '2' ) { return 'Important mais pas urgent';  }
+        else if ($value === '3' ) { return 'Peu important mais urgent';  }
+        else if ($value === '4' ) { return 'Pas si important et pas si urgent ';  }
+        else if ($value === '0' ) { return 'Déjà fait';  }
+       
+        return $value;
     }
 
     public function setD3b(?string $D3b): static
@@ -766,7 +822,7 @@ class Conception
 
     public function getD4(): ?string
     {
-        return $this->D4;
+        return $this->D4 == 1 ? "oui" : "non";
     }
 
     public function setD4(?string $D4): static
@@ -790,7 +846,14 @@ class Conception
 
     public function getD4b(): ?string
     {
-        return $this->D4b;
+        $value = $this->D4b;
+        if ($value === '1') { return 'Important et urgent';  }
+        else if ($value === '2' ) { return 'Important mais pas urgent';  }
+        else if ($value === '3' ) { return 'Peu important mais urgent';  }
+        else if ($value === '4' ) { return 'Pas si important et pas si urgent ';  }
+        else if ($value === '0' ) { return 'Déjà fait';  }
+       
+        return $value;
     }
 
     public function setD4b(?string $D4b): static
@@ -802,7 +865,7 @@ class Conception
 
     public function getD5(): ?string
     {
-        return $this->D5;
+        return $this->D5 == 1 ? "oui" : "non";
     }
 
     public function setD5(?string $D5): static
@@ -826,7 +889,14 @@ class Conception
 
     public function getD5b(): ?string
     {
-        return $this->D5b;
+        $value = $this->D5b;
+        if ($value === '1') { return 'Important et urgent';  }
+        else if ($value === '2' ) { return 'Important mais pas urgent';  }
+        else if ($value === '3' ) { return 'Peu important mais urgent';  }
+        else if ($value === '4' ) { return 'Pas si important et pas si urgent ';  }
+        else if ($value === '0' ) { return 'Déjà fait';  }
+       
+        return $value;
     }
 
     public function setD5b(?string $D5b): static
@@ -838,7 +908,7 @@ class Conception
 
     public function getD6(): ?string
     {
-        return $this->D6;
+        return $this->D6 == 1 ? "oui" : "non";
     }
 
     public function setD6(?string $D6): static
@@ -862,7 +932,14 @@ class Conception
 
     public function getD6b(): ?string
     {
-        return $this->D6b;
+        $value = $this->D6b;
+        if ($value === '1') { return 'Important et urgent';  }
+        else if ($value === '2' ) { return 'Important mais pas urgent';  }
+        else if ($value === '3' ) { return 'Peu important mais urgent';  }
+        else if ($value === '4' ) { return 'Pas si important et pas si urgent ';  }
+        else if ($value === '0' ) { return 'Déjà fait';  }
+       
+        return $value;
     }
 
     public function setD6b(?string $D6b): static
@@ -874,7 +951,7 @@ class Conception
 
     public function getE1(): ?string
     {
-        return $this->E1;
+        return $this->E1 == 1 ? "oui" : "non";
     }
 
     public function setE1(?string $E1): static
@@ -898,7 +975,14 @@ class Conception
 
     public function getE1b(): ?string
     {
-        return $this->E1b;
+        $value = $this->E1b;
+        if ($value === '1') { return 'Important et urgent';  }
+        else if ($value === '2' ) { return 'Important mais pas urgent';  }
+        else if ($value === '3' ) { return 'Peu important mais urgent';  }
+        else if ($value === '4' ) { return 'Pas si important et pas si urgent ';  }
+        else if ($value === '0' ) { return 'Déjà fait';  }
+       
+        return $value;
     }
 
     public function setE1b(?string $E1b): static
@@ -910,7 +994,7 @@ class Conception
 
     public function getE2(): ?string
     {
-        return $this->E2;
+        return $this->E2 == 1 ? "oui" : "non";
     }
 
     public function setE2(?string $E2): static
@@ -934,7 +1018,14 @@ class Conception
 
     public function getE2b(): ?string
     {
-        return $this->E2b;
+        $value = $this->E2b;
+        if ($value === '1') { return 'Important et urgent';  }
+        else if ($value === '2' ) { return 'Important mais pas urgent';  }
+        else if ($value === '3' ) { return 'Peu important mais urgent';  }
+        else if ($value === '4' ) { return 'Pas si important et pas si urgent ';  }
+        else if ($value === '0' ) { return 'Déjà fait';  }
+       
+        return $value;
     }
 
     public function setE2b(?string $E2b): static
@@ -946,7 +1037,7 @@ class Conception
 
     public function getE3(): ?string
     {
-        return $this->E3;
+        return $this->E3 == 1 ? "oui" : "non";
     }
 
     public function setE3(?string $E3): static
@@ -970,7 +1061,14 @@ class Conception
 
     public function getE3b(): ?string
     {
-        return $this->E3b;
+        $value = $this->E3b;
+        if ($value === '1') { return 'Important et urgent';  }
+        else if ($value === '2' ) { return 'Important mais pas urgent';  }
+        else if ($value === '3' ) { return 'Peu important mais urgent';  }
+        else if ($value === '4' ) { return 'Pas si important et pas si urgent ';  }
+        else if ($value === '0' ) { return 'Déjà fait';  }
+       
+        return $value;
     }
 
     public function setE3b(?string $E3b): static
@@ -982,7 +1080,7 @@ class Conception
 
     public function getE4(): ?string
     {
-        return $this->E4;
+        return $this->E4 == 1 ? "oui" : "non";
     }
 
     public function setE4(?string $E4): static
@@ -1006,7 +1104,14 @@ class Conception
 
     public function getE4b(): ?string
     {
-        return $this->E4b;
+        $value = $this->E4b;
+        if ($value === '1') { return 'Important et urgent';  }
+        else if ($value === '2' ) { return 'Important mais pas urgent';  }
+        else if ($value === '3' ) { return 'Peu important mais urgent';  }
+        else if ($value === '4' ) { return 'Pas si important et pas si urgent ';  }
+        else if ($value === '0' ) { return 'Déjà fait';  }
+       
+        return $value;
     }
 
     public function setE4b(?string $E4b): static
@@ -1018,7 +1123,7 @@ class Conception
 
     public function getF1(): ?string
     {
-        return $this->F1;
+        return $this->F1 == 1 ? "oui" : "non";
     }
 
     public function setF1(?string $F1): static
@@ -1042,7 +1147,14 @@ class Conception
 
     public function getF1b(): ?string
     {
-        return $this->F1b;
+        $value = $this->F1b;
+        if ($value === '1') { return 'Important et urgent';  }
+        else if ($value === '2' ) { return 'Important mais pas urgent';  }
+        else if ($value === '3' ) { return 'Peu important mais urgent';  }
+        else if ($value === '4' ) { return 'Pas si important et pas si urgent ';  }
+        else if ($value === '0' ) { return 'Déjà fait';  }
+       
+        return $value;
     }
 
     public function setF1b(?string $F1b): static
@@ -1054,7 +1166,7 @@ class Conception
 
     public function getF2(): ?string
     {
-        return $this->F2;
+        return $this->F2 == 1 ? "oui" : "non";
     }
 
     public function setF2(?string $F2): static
@@ -1078,7 +1190,14 @@ class Conception
 
     public function getF2b(): ?string
     {
-        return $this->F2b;
+        $value = $this->F2b;
+        if ($value === '1') { return 'Important et urgent';  }
+        else if ($value === '2' ) { return 'Important mais pas urgent';  }
+        else if ($value === '3' ) { return 'Peu important mais urgent';  }
+        else if ($value === '4' ) { return 'Pas si important et pas si urgent ';  }
+        else if ($value === '0' ) { return 'Déjà fait';  }
+       
+        return $value;
     }
 
     public function setF2b(?string $F2b): static
@@ -1090,7 +1209,7 @@ class Conception
 
     public function getF3(): ?string
     {
-        return $this->F3;
+        return $this->F3 == 1 ? "oui" : "non";
     }
 
     public function setF3(?string $F3): static
@@ -1114,7 +1233,14 @@ class Conception
 
     public function getF3b(): ?string
     {
-        return $this->F3b;
+        $value = $this->F3b;
+        if ($value === '1') { return 'Important et urgent';  }
+        else if ($value === '2' ) { return 'Important mais pas urgent';  }
+        else if ($value === '3' ) { return 'Peu important mais urgent';  }
+        else if ($value === '4' ) { return 'Pas si important et pas si urgent ';  }
+        else if ($value === '0' ) { return 'Déjà fait';  }
+       
+        return $value;
     }
 
     public function setF3b(?string $F3b): static
@@ -1126,7 +1252,7 @@ class Conception
 
     public function getF4(): ?string
     {
-        return $this->F4;
+        return $this->F4 == 1 ? "oui" : "non";
     }
 
     public function setF4(?string $F4): static
@@ -1150,7 +1276,14 @@ class Conception
 
     public function getF4b(): ?string
     {
-        return $this->F4b;
+        $value = $this->F4b;
+        if ($value === '1') { return 'Important et urgent';  }
+        else if ($value === '2' ) { return 'Important mais pas urgent';  }
+        else if ($value === '3' ) { return 'Peu important mais urgent';  }
+        else if ($value === '4' ) { return 'Pas si important et pas si urgent ';  }
+        else if ($value === '0' ) { return 'Déjà fait';  }
+       
+        return $value;
     }
 
     public function setF4b(?string $F4b): static
@@ -1162,7 +1295,7 @@ class Conception
 
     public function getF5(): ?string
     {
-        return $this->F5;
+        return $this->F5 == 1 ? "oui" : "non";
     }
 
     public function setF5(?string $F5): static
@@ -1186,7 +1319,14 @@ class Conception
 
     public function getF5b(): ?string
     {
-        return $this->F5b;
+        $value = $this->F5b;
+        if ($value === '1') { return 'Important et urgent';  }
+        else if ($value === '2' ) { return 'Important mais pas urgent';  }
+        else if ($value === '3' ) { return 'Peu important mais urgent';  }
+        else if ($value === '4' ) { return 'Pas si important et pas si urgent ';  }
+        else if ($value === '0' ) { return 'Déjà fait';  }
+       
+        return $value;
     }
 
     public function setF5b(?string $F5b): static
@@ -1222,7 +1362,14 @@ class Conception
 
     public function getF6b(): ?string
     {
-        return $this->F6b;
+        $value = $this->F6b;
+        if ($value === '1') { return 'Important et urgent';  }
+        else if ($value === '2' ) { return 'Important mais pas urgent';  }
+        else if ($value === '3' ) { return 'Peu important mais urgent';  }
+        else if ($value === '4' ) { return 'Pas si important et pas si urgent ';  }
+        else if ($value === '0' ) { return 'Déjà fait';  }
+       
+        return $value;
     }
 
     public function setF6b(?string $F6b): static
@@ -1234,7 +1381,7 @@ class Conception
 
     public function getG1(): ?string
     {
-        return $this->G1;
+        return $this->G1 == 1 ? "oui" : "non";
     }
 
     public function setG1(?string $G1): static
@@ -1258,7 +1405,14 @@ class Conception
 
     public function getG1b(): ?string
     {
-        return $this->G1b;
+        $value = $this->G1b;
+        if ($value === '1') { return 'Important et urgent';  }
+        else if ($value === '2' ) { return 'Important mais pas urgent';  }
+        else if ($value === '3' ) { return 'Peu important mais urgent';  }
+        else if ($value === '4' ) { return 'Pas si important et pas si urgent ';  }
+        else if ($value === '0' ) { return 'Déjà fait';  }
+       
+        return $value;
     }
 
     public function setG1b(?string $G1b): static
@@ -1270,7 +1424,7 @@ class Conception
 
     public function getG2(): ?string
     {
-        return $this->G2;
+        return $this->G2 == 1 ? "oui" : "non";
     }
 
     public function setG2(?string $G2): static
@@ -1294,7 +1448,14 @@ class Conception
 
     public function getG2b(): ?string
     {
-        return $this->G2b;
+        $value = $this->G2b;
+        if ($value === '1') { return 'Important et urgent';  }
+        else if ($value === '2' ) { return 'Important mais pas urgent';  }
+        else if ($value === '3' ) { return 'Peu important mais urgent';  }
+        else if ($value === '4' ) { return 'Pas si important et pas si urgent ';  }
+        else if ($value === '0' ) { return 'Déjà fait';  }
+       
+        return $value;
     }
 
     public function setG2b(?string $G2b): static
@@ -1306,7 +1467,7 @@ class Conception
 
     public function getH1(): ?string
     {
-        return $this->H1;
+        return $this->H1 == 1 ? "oui" : "non";
     }
 
     public function setH1(?string $H1): static
@@ -1330,7 +1491,14 @@ class Conception
 
     public function getH1b(): ?string
     {
-        return $this->H1b;
+        $value = $this->H1b;
+        if ($value === '1') { return 'Important et urgent';  }
+        else if ($value === '2' ) { return 'Important mais pas urgent';  }
+        else if ($value === '3' ) { return 'Peu important mais urgent';  }
+        else if ($value === '4' ) { return 'Pas si important et pas si urgent ';  }
+        else if ($value === '0' ) { return 'Déjà fait';  }
+       
+        return $value;
     }
 
     public function setH1b(?string $H1b): static
@@ -1342,7 +1510,7 @@ class Conception
 
     public function getH2(): ?string
     {
-        return $this->H2;
+        return $this->H2 == 1 ? "oui" : "non";
     }
 
     public function setH2(?string $H2): static
@@ -1366,7 +1534,14 @@ class Conception
 
     public function getH2b(): ?string
     {
-        return $this->H2b;
+        $value = $this->H2b;
+        if ($value === '1') { return 'Important et urgent';  }
+        else if ($value === '2' ) { return 'Important mais pas urgent';  }
+        else if ($value === '3' ) { return 'Peu important mais urgent';  }
+        else if ($value === '4' ) { return 'Pas si important et pas si urgent ';  }
+        else if ($value === '0' ) { return 'Déjà fait';  }
+       
+        return $value;
     }
 
     public function setH2b(?string $H2b): static
@@ -1378,7 +1553,7 @@ class Conception
 
     public function getH3(): ?string
     {
-        return $this->H3;
+        return $this->H3 == 1 ? "oui" : "non";
     }
 
     public function setH3(?string $H3): static
@@ -1402,7 +1577,14 @@ class Conception
 
     public function getH3b(): ?string
     {
-        return $this->H3b;
+        $value = $this->H3b;
+        if ($value === '1') { return 'Important et urgent';  }
+        else if ($value === '2' ) { return 'Important mais pas urgent';  }
+        else if ($value === '3' ) { return 'Peu important mais urgent';  }
+        else if ($value === '4' ) { return 'Pas si important et pas si urgent ';  }
+        else if ($value === '0' ) { return 'Déjà fait';  }
+       
+        return $value;
     }
 
     public function setH3b(?string $H3b): static
@@ -1438,7 +1620,14 @@ class Conception
 
     public function getI1b(): ?string
     {
-        return $this->I1b;
+        $value = $this->I1b;
+        if ($value === '1') { return 'Important et urgent';  }
+        else if ($value === '2' ) { return 'Important mais pas urgent';  }
+        else if ($value === '3' ) { return 'Peu important mais urgent';  }
+        else if ($value === '4' ) { return 'Pas si important et pas si urgent ';  }
+        else if ($value === '0' ) { return 'Déjà fait';  }
+       
+        return $value;
     }
 
     public function setI1b(?string $I1b): static
@@ -1474,7 +1663,14 @@ class Conception
 
     public function getI2b(): ?string
     {
-        return $this->I2b;
+        $value = $this->I2b;
+        if ($value === '1') { return 'Important et urgent';  }
+        else if ($value === '2' ) { return 'Important mais pas urgent';  }
+        else if ($value === '3' ) { return 'Peu important mais urgent';  }
+        else if ($value === '4' ) { return 'Pas si important et pas si urgent ';  }
+        else if ($value === '0' ) { return 'Déjà fait';  }
+       
+        return $value;
     }
 
     public function setI2b(?string $I2b): static

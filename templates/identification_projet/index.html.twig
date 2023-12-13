@@ -13,26 +13,40 @@
     <table id="table_id" class="table table-bordered table-hover">
         <thead>
             <tr>
-                <th>_id</th>
-                <th>Titre du projet</th>
+                <th>Statut</th>
                 <th>Région d'intervention</th>
                 <th>Projet n°</th>
                 <th>Phases</th>
                 <th>Paysages</th>
                 <th>Statut du projet</th>
+                <th>A19</th>
                 <th>Actions</th>
             </tr>
         </thead>
         <tbody>
             {% for identification_projet in identification_projets %}
                 <tr>
-                    <td>{{ identification_projet._id }}</td>
-                    <td>{{ identification_projet.A1 }}</td>
+                    <td>
+                    {% if identification_projet.StatutFiche == '' %}
+                 <button type="button" class="btn btn-warning">En cours</button>
+                    {% elseif identification_projet.StatutFiche == 1 %}
+                <button type="button" class="btn btn-danger">A vérifier</button>
+
+                    {% elseif identification_projet.StatutFiche == 2 %}
+                 <button type="button" class="btn btn-success">Valider</button>
+                    {% else %}
+                        Autre cas (optionnel)
+                    {% endif %}
+                    </td>
+
                     <td>{{ identification_projet.A5 }}</td>
                     <td>{{ identification_projet.A10 }}</td>
                     <td>{{ identification_projet.A12 }}</td>
                     <td>{{ identification_projet.A13 }}</td>
                     <td>{{ identification_projet.A16 }}</td>
+                    <td>{{ identification_projet.A19|join(', ') }}</td>
+                  
+
                     <td class="actions">
                         <a href="{{ path('app_identification_projet_edit', {'id': identification_projet.id}) }}" class="btn btn-sm btn-success">Voir et Editer</a>
                     </td>
@@ -46,6 +60,9 @@
     </table>
 </div>
 
+
+
+
     {# <a href="{{ path('app_identification_projet_new') }}">Create new</a> #} 
 {% endblock %}
 
@@ -58,5 +75,7 @@
         $('#table_id').DataTable();
     });
 </script>
+
+
 
 {% endblock %}

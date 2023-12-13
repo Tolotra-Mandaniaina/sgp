@@ -3,6 +3,7 @@
 namespace App\Entity;
 
 use App\Repository\IdentificationProjetRepository;
+use Doctrine\DBAL\Types\Types;
 use Doctrine\ORM\Mapping as ORM;
 
 #[ORM\Entity(repositoryClass: IdentificationProjetRepository::class)]
@@ -42,6 +43,28 @@ class IdentificationProjet
 
     #[ORM\Column(name:"A4",length: 255, nullable: true)]
     private ?string $A4 = null;
+
+    #[ORM\Column(name:"A5_0",length: 255, nullable: true)]
+    private ?int $A5_0 = null;
+
+    #[ORM\Column(name:"A5a",length: 255, nullable: true)]
+    private ?int $A5a = null;
+
+    #[ORM\Column(name:"A5b",length: 100, nullable: true)]
+    private ?string $A5b = null;
+
+    #[ORM\Column(name:"A5c",length: 100, nullable: true)]
+    private ?string $A5c = null;
+
+    #[ORM\Column(name:"A5d",length: 100, nullable: true)]
+    private ?string $A5d = null;
+
+    #[ORM\Column(name:"A5e",length: 100, nullable: true)]
+    private ?string $A5e = null;
+
+    #[ORM\Column(name:"A5f",length: 100, nullable: true)]
+    private ?string $A5f = null;
+   
 
     #[ORM\Column(name:"A5",length: 255, nullable: true)]
     private ?string $A5 = null;
@@ -136,8 +159,8 @@ class IdentificationProjet
     #[ORM\Column(name:"A18",length: 255, nullable: true)]
     private ?string $A18 = null;
 
-    #[ORM\Column(name:"A19",length: 255, nullable: true)]
-    private ?string $A19 = null;
+    #[ORM\Column(name:"A19",length: 255, nullable: true, type:"simple_array",)]
+    private ?array $A19 = null;
 
 
     #[ORM\Column(name:"A19a", nullable: true)]
@@ -170,8 +193,8 @@ class IdentificationProjet
     #[ORM\Column(name:"A19i", nullable: true)]
     private ?int $A19i = null;
 
-    #[ORM\Column(name:"A20",length: 255, nullable: true)]
-    private ?string $A20 = null;
+    #[ORM\Column(name:"A20",length: 255, nullable: true, type:"simple_array")]
+    private ?array $A20 = null;
 
     #[ORM\Column(name:"A21",length: 255, nullable: true)]
     private ?string $A21 = null;
@@ -217,6 +240,219 @@ class IdentificationProjet
 
     #[ORM\Column(name:"A35",type: "text", nullable: true)]
     private ?string $A35 = null;
+
+    #[ORM\Column(name:"A5b_1", type: Types::TEXT, nullable: true)]
+    private ?string $A5b_1 = null;
+
+    #[ORM\Column(name:"A5b_2", type: Types::TEXT, nullable: true)]
+    private ?string $A5b_2 = null;
+
+    #[ORM\Column(name:"A5b_3", type: Types::TEXT, nullable: true)]
+    private ?string $A5b_3 = null;
+
+    #[ORM\Column(name:"A5b_4", type: Types::TEXT, nullable: true)]
+    private ?string $A5b_4 = null;
+
+    #[ORM\Column(name:"A5b_5", type: Types::TEXT, nullable: true)]
+    private ?string $A5b_5 = null;
+
+    #[ORM\Column(name:"A5b_6", type: Types::TEXT, nullable: true)]
+    private ?string $A5b_6 = null;
+
+    #[ORM\Column(name:"A5b_7", type: Types::TEXT, nullable: true)]
+    private ?string $A5b_7 = null;
+
+    #[ORM\Column(name:"A5b_8", type: Types::TEXT, nullable: true)]
+    private ?string $A5b_8 = null;
+
+    #[ORM\Column(name:"A5b_9", type: Types::TEXT, nullable: true)]
+    private ?string $A5b_9 = null;
+
+    #[ORM\Column(name:"A5b_10", type: Types::TEXT, nullable: true)]
+    private ?string $A5b_10 = null;
+
+    #[ORM\Column(name:"A5b_11", type: Types::TEXT, nullable: true)]
+    private ?string $A5b_11 = null;
+
+    #[ORM\Column(name:"A5b_12", type: Types::TEXT, nullable: true)]
+    private ?string $A5b_12 = null;
+
+    #[ORM\Column(name:"A5b_13", type: Types::TEXT, nullable: true)]
+    private ?string $A5b_13 = null;
+
+    #[ORM\Column(name:"A5b_14", type: Types::TEXT, nullable: true)]
+    private ?string $A5b_14 = null;
+
+    #[ORM\Column(name:"A5c_1", type: Types::TEXT)]
+    private ?string $A5c_1 = null;
+
+    #[ORM\Column(name:"A5c_2", type: Types::TEXT, nullable: true)]
+    private ?string $A5c_2 = null;
+
+    #[ORM\Column(name:"A5c_3", type: Types::TEXT, nullable: true)]
+    private ?string $A5c_3 = null;
+
+    #[ORM\Column(name:"A5c_4", type: Types::TEXT, nullable: true)]
+    private ?string $A5c_4 = null;
+
+    #[ORM\Column(name:"A5c_5", type: Types::TEXT, nullable: true)]
+    private ?string $A5c_5 = null;
+
+    #[ORM\Column(name:"A5c_6", type: Types::TEXT, nullable: true)]
+    private ?string $A5c_6 = null;
+
+    #[ORM\Column(name:"A5c_7", type: Types::TEXT, nullable: true)]
+    private ?string $A5c_7 = null;
+
+    #[ORM\Column(name:"A5c_8", type: Types::TEXT, nullable: true)]
+    private ?string $A5c_8 = null;
+
+    #[ORM\Column(name:"A5c_9", type: Types::TEXT, nullable: true)]
+    private ?string $A5c_9 = null;
+
+    #[ORM\Column(name:"A5c_10", type: Types::TEXT, nullable: true)]
+    private ?string $A5c_10 = null;
+
+    #[ORM\Column(name:"A5c_11", type: Types::TEXT, nullable: true)]
+    private ?string $A5c_11 = null;
+
+    #[ORM\Column(name:"A5c_12", type: Types::TEXT, nullable: true)]
+    private ?string $A5c_12 = null;
+
+    #[ORM\Column(name:"A5c_13", type: Types::TEXT, nullable: true)]
+    private ?string $A5c_13 = null;
+
+    #[ORM\Column(name:"A5c_14", type: Types::TEXT, nullable: true)]
+    private ?string $A5c_14 = null;
+
+    #[ORM\Column(name:"A5d_1", type: Types::TEXT, nullable: true)]
+    private ?string $A5d_1 = null;
+
+    #[ORM\Column(name:"A5d_2", type: Types::TEXT, nullable: true)]
+    private ?string $A5d_2 = null;
+
+    #[ORM\Column(name:"A5d_3", type: Types::TEXT, nullable: true)]
+    private ?string $A5d_3 = null;
+
+    #[ORM\Column(name:"A5d_4", type: Types::TEXT, nullable: true)]
+    private ?string $A5d_4 = null;
+
+    #[ORM\Column(name:"A5d_5", type: Types::TEXT, nullable: true)]
+    private ?string $A5d_5 = null;
+
+    #[ORM\Column(name:"A5d_6", type: Types::TEXT, nullable: true)]
+    private ?string $A5d_6 = null;
+
+    #[ORM\Column(name:"A5d_7", type: Types::TEXT, nullable: true)]
+    private ?string $A5d_7 = null;
+
+    #[ORM\Column(name:"A5d_8", type: Types::TEXT, nullable: true)]
+    private ?string $A5d_8 = null;
+
+    #[ORM\Column(name:"A5d_9", type: Types::TEXT, nullable: true)]
+    private ?string $A5d_9 = null;
+
+    #[ORM\Column(name:"A5d_10", type: Types::TEXT, nullable: true)]
+    private ?string $A5d_10 = null;
+
+    #[ORM\Column(name:"A5d_11", type: Types::TEXT, nullable: true)]
+    private ?string $A5d_11 = null;
+
+    #[ORM\Column(name:"A5d_12", type: Types::TEXT, nullable: true)]
+    private ?string $A5d_12 = null;
+
+    #[ORM\Column(name:"A5d_13", type: Types::TEXT, nullable: true)]
+    private ?string $A5d_13 = null;
+
+    #[ORM\Column(name:"A5d_14", type: Types::TEXT, nullable: true)]
+    private ?string $A5d_14 = null;
+
+    #[ORM\Column(name:"A5e_1", type: Types::TEXT, nullable: true)]
+    private ?string $A5e_1 = null;
+
+    #[ORM\Column(name:"A5e_2", type: Types::TEXT, nullable: true)]
+    private ?string $A5e_2 = null;
+
+    #[ORM\Column(name:"A5e_3", type: Types::TEXT, nullable: true)]
+    private ?string $A5e_3 = null;
+
+    #[ORM\Column(name:"A5e_4", type: Types::TEXT, nullable: true)]
+    private ?string $A5e_4 = null;
+
+    #[ORM\Column(name:"A5e_5", type: Types::TEXT, nullable: true)]
+    private ?string $A5e_5 = null;
+
+    #[ORM\Column(name:"A5e_6", type: Types::TEXT, nullable: true)]
+    private ?string $A5e_6 = null;
+
+    #[ORM\Column(name:"A5e_7", type: Types::TEXT, nullable: true)]
+    private ?string $A5e_7 = null;
+
+    #[ORM\Column(name:"A5e_8", type: Types::TEXT, nullable: true)]
+    private ?string $A5e_8 = null;
+
+    #[ORM\Column(name:"A5e_9", type: Types::TEXT, nullable: true)]
+    private ?string $A5e_9 = null;
+
+    #[ORM\Column(name:"A5e_10", type: Types::TEXT, nullable: true)]
+    private ?string $A5e_10 = null;
+
+    #[ORM\Column(name:"A5e_11", type: Types::TEXT, nullable: true)]
+    private ?string $A5e_11 = null;
+
+    #[ORM\Column(name:"A5e_12", type: Types::TEXT, nullable: true)]
+    private ?string $A5e_12 = null;
+
+    #[ORM\Column(name:"A5e_13", type: Types::TEXT, nullable: true)]
+    private ?string $A5e_13 = null;
+
+    #[ORM\Column(name:"A5e_14", type: Types::TEXT, nullable: true)]
+    private ?string $A5e_14 = null;
+
+    #[ORM\Column(name:"A5f_1", type: Types::TEXT, nullable: true)]
+    private ?string $A5f_1 = null;
+
+    #[ORM\Column(name:"A5f_2", type: Types::TEXT, nullable: true)]
+    private ?string $A5f_2 = null;
+
+    #[ORM\Column(name:"A5f_3", type: Types::TEXT, nullable: true)]
+    private ?string $A5f_3 = null;
+
+    #[ORM\Column(name:"A5f_4", type: Types::TEXT, nullable: true)]
+    private ?string $A5f_4 = null;
+
+    #[ORM\Column(name:"A5f_5", type: Types::TEXT, nullable: true)]
+    private ?string $A5f_5 = null;
+
+    #[ORM\Column(name:"A5f_6", type: Types::TEXT, nullable: true)]
+    private ?string $A5f_6 = null;
+
+    #[ORM\Column(name:"A5f_7", type: Types::TEXT, nullable: true)]
+    private ?string $A5f_7 = null;
+
+    #[ORM\Column(name:"A5f_8", type: Types::TEXT, nullable: true)]
+    private ?string $A5f_8 = null;
+
+    #[ORM\Column(name:"A5f_9", type: Types::TEXT, nullable: true)]
+    private ?string $A5f_9 = null;
+
+    #[ORM\Column(name:"A5f_10", type: Types::TEXT)]
+    private ?string $A5f_10 = null;
+
+    #[ORM\Column(name:"A5f_11", type: Types::TEXT, nullable: true)]
+    private ?string $A5f_11 = null;
+
+    #[ORM\Column(name:"A5f_12", type: Types::TEXT, nullable: true)]
+    private ?string $A5f_12 = null;
+
+    #[ORM\Column(name:"A5f_13", type: Types::TEXT, nullable: true)]
+    private ?string $A5f_13 = null;
+
+    #[ORM\Column(name:"A5f_14", type: Types::TEXT, nullable: true)]
+    private ?string $A5f_14 = null;
+
+    #[ORM\Column(nullable: true)]
+    private ?int $StatutFiche = null;
 
     public function getId(): ?int
     {
@@ -339,6 +575,85 @@ class IdentificationProjet
     public function setA4(?string $A4): static
     {
         $this->A4 = $A4;
+
+        return $this;
+    }
+    public function getA50(): ?int
+    {
+        return $this->A5_0;
+    }
+
+    public function setA50(?int $A5_0): static
+    {
+        $this->A5_0 = $A5_0;
+
+        return $this;
+    }
+
+    public function getA5a(): ?int
+    {
+        return $this->A5a;
+    }
+
+    public function setA5a(?int $A5a): static
+    {
+        $this->A5a = $A5a;
+
+        return $this;
+    }
+
+    public function getA5b(): ?string
+    {
+        return $this->A5b;
+    }
+
+    public function setA5b(?string $A5b): static
+    {
+        $this->A5b = $A5b;
+
+        return $this;
+    }
+    public function getA5c(): ?string
+    {
+        return $this->A5c;
+    }
+
+    public function setA5c(?string $A5c): static
+    {
+        $this->A5c = $A5c;
+
+        return $this;
+    }
+    public function getA5d(): ?string
+    {
+        return $this->A5d;
+    }
+
+    public function setA5d(?string $A5d): static
+    {
+        $this->A5d = $A5d;
+
+        return $this;
+    }
+    public function getA5e(): ?string
+    {
+        return $this->A5e;
+    }
+
+    public function setA5e(?string $A5e): static
+    {
+        $this->A5e = $A5e;
+
+        return $this;
+    }
+    public function getA5f(): ?string
+    {
+        return $this->A5f;
+    }
+
+    public function setA5f(?string $A5f): static
+    {
+        $this->A5f = $A5f;
 
         return $this;
     }
@@ -583,7 +898,16 @@ class IdentificationProjet
 
     public function getA11(): ?string
     {
-        return $this->A11;
+        $value = $this->A11;
+
+    // Ajouter une condition pour vérifier si la valeur est égale à 6
+    if ($value === '1') { return 'CORE';  }
+    else if ($value === '2' ) { return 'STAR';  }
+    else if ($value === '3' ) { return 'ICCA - GSI';  }
+   
+
+
+     return $value;
     }
 
     public function setA11(?string $A11): static
@@ -595,7 +919,26 @@ class IdentificationProjet
 
     public function getA12(): ?string
     {
-        return $this->A12;
+        //$this->A12= $A12;
+        
+
+
+        //return $this;
+        
+    $value = $this->A12;
+
+     //Ajouter une condition pour vérifier si la valeur est égale à 6
+    if ($value === '1') { return 'OP 1';  }
+    else if ($value === '2' ) { return 'OP 2';  }
+    else if ($value === '3' ) { return 'OP 3';  }
+    else if ($value === '4' ) { return 'OP 4';  }
+    else if ($value === '5' ) { return 'OP 5';  }
+    else if ($value === '6' ) { return 'OP 6';  }
+    else if ($value === '7' ) { return 'OP 7';  }
+
+
+    return $value;
+
     }
 
     public function setA12(?string $A12): static
@@ -607,7 +950,18 @@ class IdentificationProjet
 
     public function getA13(): ?string
     {
-        return $this->A13;
+        $value = $this->A13;
+
+        // Ajouter une condition pour vérifier si la valeur est égale à 6
+        if ($value === '1') { return 'Nord';  }
+        else if ($value === '2' ) { return 'Est';  }
+        else if ($value === '3' ) { return 'Sud-Ouest';  }
+        else if ($value === '4' ) { return 'Centre';  }
+        else if ($value === '5' ) { return 'Potentiel';  }
+       
+    
+    
+        return $value;
     }
 
     public function setA13(?string $A13): static
@@ -618,8 +972,20 @@ class IdentificationProjet
     }
 
     public function getA13a(): ?string
-    {
-        return $this->A13a;
+    {   
+     $value = $this->A13a;
+
+    // Ajouter une condition pour vérifier si la valeur est égale à 6
+    if ($value === '1') { return 'Région Amoron\'i Mania';  }
+    else if ($value === '2' ) { return 'Région Analamanga';  }
+    else if ($value === '3' ) { return 'Région Vakinankaratra';  }
+    else if ($value === '4' ) { return 'Région Itasy';  }
+    else if ($value === '5' ) { return 'Région Anosy';  }
+    else if ($value === '6' ) { return 'Région Androy';  }
+    else if ($value === '6' ) { return 'Région Haute Matsiatra';  }
+
+
+    return $value;
     }
 
     public function setA13a(?string $A13a): static
@@ -631,7 +997,21 @@ class IdentificationProjet
 
     public function getA14(): ?string
     {
-        return $this->A14;
+        $value = $this->A14;
+
+        // Ajouter une condition pour vérifier si la valeur est égale à 6
+        if ($value === '1') { return 'Ambaro';  }
+        else if ($value === '2' ) { return 'Comatsa';  }
+        else if ($value === '3' ) { return 'Mamabay';  }
+        else if ($value === '4' ) { return 'Caz';  }
+        else if ($value === '5' ) { return 'Cofam';  }
+        else if ($value === '6' ) { return 'Mahafaly';  }
+        else if ($value === '7' ) { return 'Mikea';  }
+        else if ($value === '77' ) { return 'Autres';  }
+
+    
+    
+        return $value;
     }
 
     public function setA14(?string $A14): static
@@ -664,12 +1044,23 @@ class IdentificationProjet
         return $this;
     }
 
-    public function getA16(): ?int
+    public function getA16(): ?string
     {
-        return $this->A16;
+
+        $value = $this->A16;
+
+        // Ajouter une condition pour vérifier si la valeur est égale à 6
+        if ($value === '1') { return 'Project activities completed';  }
+        else if ($value === '2' ) { return 'Final reports pending';  }
+        else if ($value === '3' ) { return 'Project Terminated Before Completion';  }
+        else if ($value === '4' ) { return 'Satisfactorily Completed';  }
+        else if ($value === '77' ) { return 'Autre';  }
+     
+    
+        return $value;
     }
 
-    public function setA16(?int $A16): static
+    public function setA16(?string $A16): static
     {
         $this->A16 = $A16;
 
@@ -711,13 +1102,53 @@ class IdentificationProjet
 
         return $this;
     }
+   
+     /*
+    public function getA19(): ?array
+    {
+            // Récupérer la valeur de A19
+        $value = $this->A19;
 
-    public function getA19(): ?string
+        // Définir une correspondance entre les nombres et leurs libellés
+        $labelMapping = [
+            '1' =>  'Biodiversité',
+            '2' =>  'Atténuation_du_changement_climatique',
+            '3' =>  'Dégradation_des_sols',
+            '4' =>  'Gestion_durable_des_forêts',
+            '5' =>  'Eaux_internationales',
+            '6' =>  'Produits_chimiques_et_déchets',
+            '7' =>  'Développement_des_capacités',
+            '8' =>  'Dialogue_public_société_civile',
+            '9' =>   'Aire_et_patrimoine_des_peuples_autochtones'
+        ];
+
+        // Si $value est un tableau, convertissez-le en chaîne
+       if (is_array($value)) {
+       $value = implode(' ', $value);
+       }
+
+        // Diviser la chaîne en nombres
+        $numbers = explode(' ', $value);
+
+        // Remplacer les nombres par leurs libellés correspondants
+        $labels = array_map(function ($number) use ($labelMapping) {
+            return $labelMapping[$number] ?? $number;
+        }, $numbers);
+
+        // Joindre les libellés avec '/'
+        $result = implode(',', $labels);
+
+        return $result;
+    }
+    
+  */
+    
+    public function getA19(): ?array
     {
         return $this->A19;
     }
-
-    public function setA19(?string $A19): static
+    
+    public function setA19(?array $A19): static
     {
         $this->A19 = $A19;
 
@@ -822,12 +1253,14 @@ class IdentificationProjet
 
         return $this;
     }
-    public function getA20(): ?string
+    public function getA20(): ?array
     {
         return $this->A20;
+
+        return $this;
     }
 
-    public function setA20(?string $A20): static
+    public function setA20(?array $A20): static
     {
         $this->A20 = $A20;
 
@@ -836,7 +1269,16 @@ class IdentificationProjet
 
     public function getA21(): ?string
     {
-        return $this->A21;
+        
+        $value = $this->A21;
+
+        // Ajouter une condition pour vérifier si la valeur est égale à 6
+        if ($value === '1') { return 'Homme';  }
+        else if ($value === '2' ) { return 'Femme';  }
+       
+     
+    
+        return $value;
     }
 
     public function setA21(?string $A21): static
@@ -1001,7 +1443,16 @@ class IdentificationProjet
     }
     public function getA35(): ?string
     {
-        return $this->A35;
+        $value = $this->A16;
+
+        // Ajouter une condition pour vérifier si la valeur est égale à 6
+        if ($value === '1') { return 'Trimestre 1';  }
+        else if ($value === '2' ) { return 'Trimestre 2';  }
+        else if ($value === '3' ) { return 'Trimestre 3';  }
+        else if ($value === '4' ) { return 'Trimestre 4';  }
+     
+    
+        return $value;
     }
 
     public function setA35(?string $A35): static
@@ -1014,5 +1465,857 @@ class IdentificationProjet
      public function __toString()
      {
          return $this->_id;
+     }
+
+     public function getA5b1(): ?string
+     {
+         return $this->A5b_1;
+     }
+
+     public function setA5b1(?string $A5b_1): static
+     {
+         $this->A5b_1 = $A5b_1;
+
+         return $this;
+     }
+
+     public function getA5b2(): ?string
+     {
+         return $this->A5b_2;
+     }
+
+     public function setA5b2(?string $A5b_2): static
+     {
+         $this->A5b_2 = $A5b_2;
+
+         return $this;
+     }
+
+     public function getA5b3(): ?string
+     {
+         return $this->A5b_3;
+     }
+
+     public function setA5b3(?string $A5b_3): static
+     {
+         $this->A5b_3 = $A5b_3;
+
+         return $this;
+     }
+
+     public function getA5b4(): ?string
+     {
+         return $this->A5b_4;
+     }
+
+     public function setA5b4(?string $A5b_4): static
+     {
+         $this->A5b_4 = $A5b_4;
+
+         return $this;
+     }
+
+     public function getA5b5(): ?string
+     {
+         return $this->A5b_5;
+     }
+
+     public function setA5b5(?string $A5b_5): static
+     {
+         $this->A5b_5 = $A5b_5;
+
+         return $this;
+     }
+
+     public function getA5b6(): ?string
+     {
+         return $this->A5b_6;
+     }
+
+     public function setA5b6(?string $A5b_6): static
+     {
+         $this->A5b_6 = $A5b_6;
+
+         return $this;
+     }
+
+     public function getA5b7(): ?string
+     {
+         return $this->A5b_7;
+     }
+
+     public function setA5b7(?string $A5b_7): static
+     {
+         $this->A5b_7 = $A5b_7;
+
+         return $this;
+     }
+
+     public function getA5b8(): ?string
+     {
+         return $this->A5b_8;
+     }
+
+     public function setA5b8(?string $A5b_8): static
+     {
+         $this->A5b_8 = $A5b_8;
+
+         return $this;
+     }
+
+     public function getA5b9(): ?string
+     {
+         return $this->A5b_9;
+     }
+
+     public function setA5b9(?string $A5b_9): static
+     {
+         $this->A5b_9 = $A5b_9;
+
+         return $this;
+     }
+
+     public function getA5b10(): ?string
+     {
+         return $this->A5b_10;
+     }
+
+     public function setA5b10(?string $A5b_10): static
+     {
+         $this->A5b_10 = $A5b_10;
+
+         return $this;
+     }
+
+     public function getA5b11(): ?string
+     {
+         return $this->A5b_11;
+     }
+
+     public function setA5b11(?string $A5b_11): static
+     {
+         $this->A5b_11 = $A5b_11;
+
+         return $this;
+     }
+
+     public function getA5b12(): ?string
+     {
+         return $this->A5b_12;
+     }
+
+     public function setA5b12(?string $A5b_12): static
+     {
+         $this->A5b_12 = $A5b_12;
+
+         return $this;
+     }
+
+     public function getA5b13(): ?string
+     {
+         return $this->A5b_13;
+     }
+
+     public function setA5b13(?string $A5b_13): static
+     {
+         $this->A5b_13 = $A5b_13;
+
+         return $this;
+     }
+
+     public function getA5b14(): ?string
+     {
+         return $this->A5b_14;
+     }
+
+     public function setA5b14(?string $A5b_14): static
+     {
+         $this->A5b_14 = $A5b_14;
+
+         return $this;
+     }
+
+     public function getA5c1(): ?string
+     {
+         return $this->A5c_1;
+     }
+
+     public function setA5c1(string $A5c_1): static
+     {
+         $this->A5c_1 = $A5c_1;
+
+         return $this;
+     }
+
+     public function getA5c2(): ?string
+     {
+         return $this->A5c_2;
+     }
+
+     public function setA5c2(?string $A5c_2): static
+     {
+         $this->A5c_2 = $A5c_2;
+
+         return $this;
+     }
+
+     public function getA5c3(): ?string
+     {
+         return $this->A5c_3;
+     }
+
+     public function setA5c3(?string $A5c_3): static
+     {
+         $this->A5c_3 = $A5c_3;
+
+         return $this;
+     }
+
+     public function getA5c4(): ?string
+     {
+         return $this->A5c_4;
+     }
+
+     public function setA5c4(?string $A5c_4): static
+     {
+         $this->A5c_4 = $A5c_4;
+
+         return $this;
+     }
+
+     public function getA5c5(): ?string
+     {
+         return $this->A5c_5;
+     }
+
+     public function setA5c5(?string $A5c_5): static
+     {
+         $this->A5c_5 = $A5c_5;
+
+         return $this;
+     }
+
+     public function getA5c6(): ?string
+     {
+         return $this->A5c_6;
+     }
+
+     public function setA5c6(?string $A5c_6): static
+     {
+         $this->A5c_6 = $A5c_6;
+
+         return $this;
+     }
+
+     public function getA5c7(): ?string
+     {
+         return $this->A5c_7;
+     }
+
+     public function setA5c7(?string $A5c_7): static
+     {
+         $this->A5c_7 = $A5c_7;
+
+         return $this;
+     }
+
+     public function getA5c8(): ?string
+     {
+         return $this->A5c_8;
+     }
+
+     public function setA5c8(?string $A5c_8): static
+     {
+         $this->A5c_8 = $A5c_8;
+
+         return $this;
+     }
+
+     public function getA5c9(): ?string
+     {
+         return $this->A5c_9;
+     }
+
+     public function setA5c9(?string $A5c_9): static
+     {
+         $this->A5c_9 = $A5c_9;
+
+         return $this;
+     }
+
+     public function getA5c10(): ?string
+     {
+         return $this->A5c_10;
+     }
+
+     public function setA5c10(?string $A5c_10): static
+     {
+         $this->A5c_10 = $A5c_10;
+
+         return $this;
+     }
+
+     public function getA5c11(): ?string
+     {
+         return $this->A5c_11;
+     }
+
+     public function setA5c11(?string $A5c_11): static
+     {
+         $this->A5c_11 = $A5c_11;
+
+         return $this;
+     }
+
+     public function getA5c12(): ?string
+     {
+         return $this->A5c_12;
+     }
+
+     public function setA5c12(?string $A5c_12): static
+     {
+         $this->A5c_12 = $A5c_12;
+
+         return $this;
+     }
+
+     public function getA5c13(): ?string
+     {
+         return $this->A5c_13;
+     }
+
+     public function setA5c13(?string $A5c_13): static
+     {
+         $this->A5c_13 = $A5c_13;
+
+         return $this;
+     }
+
+     public function getA5c14(): ?string
+     {
+         return $this->A5c_14;
+     }
+
+     public function setA5c14(?string $A5c_14): static
+     {
+         $this->A5c_14 = $A5c_14;
+
+         return $this;
+     }
+
+     public function getA5d1(): ?string
+     {
+         return $this->A5d_1;
+     }
+
+     public function setA5d1(?string $A5d_1): static
+     {
+         $this->A5d_1 = $A5d_1;
+
+         return $this;
+     }
+
+     public function getA5d2(): ?string
+     {
+         return $this->A5d_2;
+     }
+
+     public function setA5d2(?string $A5d_2): static
+     {
+         $this->A5d_2 = $A5d_2;
+
+         return $this;
+     }
+
+     public function getA5d3(): ?string
+     {
+         return $this->A5d_3;
+     }
+
+     public function setA5d3(?string $A5d_3): static
+     {
+         $this->A5d_3 = $A5d_3;
+
+         return $this;
+     }
+
+     public function getA5d4(): ?string
+     {
+         return $this->A5d_4;
+     }
+
+     public function setA5d4(?string $A5d_4): static
+     {
+         $this->A5d_4 = $A5d_4;
+
+         return $this;
+     }
+
+     public function getA5d5(): ?string
+     {
+         return $this->A5d_5;
+     }
+
+     public function setA5d5(?string $A5d_5): static
+     {
+         $this->A5d_5 = $A5d_5;
+
+         return $this;
+     }
+
+     public function getA5d6(): ?string
+     {
+         return $this->A5d_6;
+     }
+
+     public function setA5d6(?string $A5d_6): static
+     {
+         $this->A5d_6 = $A5d_6;
+
+         return $this;
+     }
+
+     public function getA5d7(): ?string
+     {
+         return $this->A5d_7;
+     }
+
+     public function setA5d7(?string $A5d_7): static
+     {
+         $this->A5d_7 = $A5d_7;
+
+         return $this;
+     }
+
+     public function getA5d8(): ?string
+     {
+         return $this->A5d_8;
+     }
+
+     public function setA5d8(?string $A5d_8): static
+     {
+         $this->A5d_8 = $A5d_8;
+
+         return $this;
+     }
+
+     public function getA5d9(): ?string
+     {
+         return $this->A5d_9;
+     }
+
+     public function setA5d9(?string $A5d_9): static
+     {
+         $this->A5d_9 = $A5d_9;
+
+         return $this;
+     }
+
+     public function getA5d10(): ?string
+     {
+         return $this->A5d_10;
+     }
+
+     public function setA5d10(?string $A5d_10): static
+     {
+         $this->A5d_10 = $A5d_10;
+
+         return $this;
+     }
+
+     public function getA5d11(): ?string
+     {
+         return $this->A5d_11;
+     }
+
+     public function setA5d11(?string $A5d_11): static
+     {
+         $this->A5d_11 = $A5d_11;
+
+         return $this;
+     }
+
+     public function getA5d12(): ?string
+     {
+         return $this->A5d_12;
+     }
+
+     public function setA5d12(?string $A5d_12): static
+     {
+         $this->A5d_12 = $A5d_12;
+
+         return $this;
+     }
+
+     public function getA5d13(): ?string
+     {
+         return $this->A5d_13;
+     }
+
+     public function setA5d13(?string $A5d_13): static
+     {
+         $this->A5d_13 = $A5d_13;
+
+         return $this;
+     }
+
+     public function getA5d14(): ?string
+     {
+         return $this->A5d_14;
+     }
+
+     public function setA5d14(?string $A5d_14): static
+     {
+         $this->A5d_14 = $A5d_14;
+
+         return $this;
+     }
+
+     public function getA5e1(): ?string
+     {
+         return $this->A5e_1;
+     }
+
+     public function setA5e1(?string $A5e_1): static
+     {
+         $this->A5e_1 = $A5e_1;
+
+         return $this;
+     }
+
+     public function getA5e2(): ?string
+     {
+         return $this->A5e_2;
+     }
+
+     public function setA5e2(?string $A5e_2): static
+     {
+         $this->A5e_2 = $A5e_2;
+
+         return $this;
+     }
+
+     public function getA5e3(): ?string
+     {
+         return $this->A5e_3;
+     }
+
+     public function setA5e3(?string $A5e_3): static
+     {
+         $this->A5e_3 = $A5e_3;
+
+         return $this;
+     }
+
+     public function getA5e4(): ?string
+     {
+         return $this->A5e_4;
+     }
+
+     public function setA5e4(?string $A5e_4): static
+     {
+         $this->A5e_4 = $A5e_4;
+
+         return $this;
+     }
+
+     public function getA5e5(): ?string
+     {
+         return $this->A5e_5;
+     }
+
+     public function setA5e5(?string $A5e_5): static
+     {
+         $this->A5e_5 = $A5e_5;
+
+         return $this;
+     }
+
+     public function getA5e6(): ?string
+     {
+         return $this->A5e_6;
+     }
+
+     public function setA5e6(?string $A5e_6): static
+     {
+         $this->A5e_6 = $A5e_6;
+
+         return $this;
+     }
+
+     function getA5e7(): ?string
+     {
+         return $this->A5e_7;
+     }
+
+     public function setA5e7(?string $A5e_7): static
+     {
+         $this->A5e_7 = $A5e_7;
+
+         return $this;
+     }
+
+     public function getA5e8(): ?string
+     {
+         return $this->A5e_8;
+     }
+
+     public function setA5e8(?string $A5e_8): static
+     {
+         $this->A5e_8 = $A5e_8;
+
+         return $this;
+     }
+
+     public function getA5e9(): ?string
+     {
+         return $this->A5e_9;
+     }
+
+     public function setA5e9(?string $A5e_9): static
+     {
+         $this->A5e_9 = $A5e_9;
+
+         return $this;
+     }
+
+     public function getA5e10(): ?string
+     {
+         return $this->A5e_10;
+     }
+
+     public function setA5e10(?string $A5e_10): static
+     {
+         $this->A5e_10 = $A5e_10;
+
+         return $this;
+     }
+
+     public function getA5e11(): ?string
+     {
+         return $this->A5e_11;
+     }
+
+     public function setA5e11(?string $A5e_11): static
+     {
+         $this->A5e_11 = $A5e_11;
+
+         return $this;
+     }
+
+     public function getA5e12(): ?string
+     {
+         return $this->A5e_12;
+     }
+
+     public function setA5e12(?string $A5e_12): static
+     {
+         $this->A5e_12 = $A5e_12;
+
+         return $this;
+     }
+
+     public function getA5e13(): ?string
+     {
+         return $this->A5e_13;
+     }
+
+     public function setA5e13(?string $A5e_13): static
+     {
+         $this->A5e_13 = $A5e_13;
+
+         return $this;
+     }
+
+     public function getA5e14(): ?string
+     {
+         return $this->A5e_14;
+     }
+
+     public function setA5e14(?string $A5e_14): static
+     {
+         $this->A5e_14 = $A5e_14;
+
+         return $this;
+     }
+
+     public function getA5f1(): ?string
+     {
+         return $this->A5f_1;
+     }
+
+     public function setA5f1(?string $A5f_1): static
+     {
+         $this->A5f_1 = $A5f_1;
+
+         return $this;
+     }
+
+     public function getA5f2(): ?string
+     {
+         return $this->A5f_2;
+     }
+
+     public function setA5f2(?string $A5f_2): static
+     {
+         $this->A5f_2 = $A5f_2;
+
+         return $this;
+     }
+
+     public function getA5f3(): ?string
+     {
+         return $this->A5f_3;
+     }
+
+     public function setA5f3(?string $A5f_3): static
+     {
+         $this->A5f_3 = $A5f_3;
+
+         return $this;
+     }
+
+     public function getA5f4(): ?string
+     {
+         return $this->A5f_4;
+     }
+
+     public function setA5f4(?string $A5f_4): static
+     {
+         $this->A5f_4 = $A5f_4;
+
+         return $this;
+     }
+
+     public function getA5f5(): ?string
+     {
+         return $this->A5f_5;
+     }
+
+     public function setA5f5(?string $A5f_5): static
+     {
+         $this->A5f_5 = $A5f_5;
+
+         return $this;
+     }
+
+     public function getA5f6(): ?string
+     {
+         return $this->A5f_6;
+     }
+
+     public function setA5f6(?string $A5f_6): static
+     {
+         $this->A5f_6 = $A5f_6;
+
+         return $this;
+     }
+
+     public function getA5f7(): ?string
+     {
+         return $this->A5f_7;
+     }
+
+     public function setA5f7(?string $A5f_7): static
+     {
+         $this->A5f_7 = $A5f_7;
+
+         return $this;
+     }
+
+     public function getA5f8(): ?string
+     {
+         return $this->A5f_8;
+     }
+
+     public function setA5f8(?string $A5f_8): static
+     {
+         $this->A5f_8 = $A5f_8;
+
+         return $this;
+     }
+
+     public function getA5f9(): ?string
+     {
+         return $this->A5f_9;
+     }
+
+     public function setA5f9(?string $A5f_9): static
+     {
+         $this->A5f_9 = $A5f_9;
+
+         return $this;
+     }
+
+     public function getA5f10(): ?string
+     {
+         return $this->A5f_10;
+     }
+
+     public function setA5f10(string $A5f_10): static
+     {
+         $this->A5f_10 = $A5f_10;
+
+         return $this;
+     }
+
+     public function getA5f11(): ?string
+     {
+         return $this->A5f_11;
+     }
+
+     public function setA5f11(?string $A5f_11): static
+     {
+         $this->A5f_11 = $A5f_11;
+
+         return $this;
+     }
+
+     public function getA5f12(): ?string
+     {
+         return $this->A5f_12;
+     }
+
+     public function setA5f12(?string $A5f_12): static
+     {
+         $this->A5f_12 = $A5f_12;
+
+         return $this;
+     }
+
+     public function getA5f13(): ?string
+     {
+         return $this->A5f_13;
+     }
+
+     public function setA5f13(?string $A5f_13): static
+     {
+         $this->A5f_13 = $A5f_13;
+
+         return $this;
+     }
+
+     public function getA5f14(): ?string
+     {
+         return $this->A5f_14;
+     }
+
+     public function setA5f14(?string $A5f_14): static
+     {
+         $this->A5f_14 = $A5f_14;
+
+         return $this;
+     }
+
+     public function getStatutFiche(): ?int
+     {
+         return $this->StatutFiche;
+     }
+
+     public function setStatutFiche(?int $StatutFiche): static
+     {
+         $this->StatutFiche = $StatutFiche;
+
+         return $this;
      }
 }

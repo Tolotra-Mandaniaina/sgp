@@ -537,6 +537,9 @@ class CapitalisationPartI
     #[ORM\Column(name:"L2_41",type: Types::TEXT, nullable: true)]
     private ?string $L2_41 = null;
 
+    #[ORM\Column(nullable: true)]
+    private ?int $StatutFiche = null;
+
     public function getId(): ?int
     {
         return $this->id;
@@ -657,7 +660,16 @@ class CapitalisationPartI
 
     public function getA11(): ?string
     {
-        return $this->A11;
+        $value = $this->A11;
+
+    // Ajouter une condition pour vérifier si la valeur est égale à 6
+    if ($value === '1') { return 'CORE';  }
+    else if ($value === '2' ) { return 'STAR';  }
+    else if ($value === '3' ) { return 'ICCA - GSI';  }
+   
+
+
+    return $value;
     }
 
     public function setA11(?string $A11): static
@@ -669,7 +681,18 @@ class CapitalisationPartI
 
     public function getA12(): ?string
     {
-        return $this->A12;
+    $value = $this->A12;
+
+    // Ajouter une condition pour vérifier si la valeur est égale à 6
+    if ($value === '1') { return 'OP 5';  }
+    else if ($value === '2' ) { return 'OP 6';  }
+    else if ($value === '3' ) { return 'OP 7';  }
+    else if ($value === '4' ) { return 'OP 8';  }
+    else if ($value === '5' ) { return 'OP 9';  }
+    else if ($value === '6' ) { return 'OP 10';  }
+
+
+    return $value;
     }
 
     public function setA12(?string $A12): static
@@ -681,7 +704,18 @@ class CapitalisationPartI
 
     public function getA13(): ?string
     {
-        return $this->A13;
+        $value = $this->A13;
+
+        // Ajouter une condition pour vérifier si la valeur est égale à 6
+        if ($value === '1') { return 'Nord';  }
+        else if ($value === '2' ) { return 'Est';  }
+        else if ($value === '3' ) { return 'Sud-Ouest';  }
+        else if ($value === '4' ) { return 'Centre';  }
+        else if ($value === '5' ) { return 'Potentiel';  }
+       
+    
+    
+        return $value;
     }
 
     public function setA13(?string $A13): static
@@ -690,10 +724,37 @@ class CapitalisationPartI
 
         return $this;
     }
-
+   
     public function getA19(): ?string
     {
-        return $this->A19;
+            // Récupérer la valeur de A19
+        $value = $this->A19;
+
+        // Définir une correspondance entre les nombres et leurs libellés
+        $labelMapping = [
+            '1' =>  'Biodiversité',
+            '2' =>  'Atténuation du changement climatique',
+            '3' =>  'Dégradation des sols',
+            '4' =>  'Gestion durable des forêts',
+            '5' =>  'Eaux internationales',
+            '6' =>  'Produits chimiques et déchets',
+            '7' =>   'Développement des capacités',
+            '8' =>   'Dialogue public société civile',
+            '9' => 'Aire et patrimoine des peuples autochtones'
+        ];
+
+        // Diviser la chaîne en nombres
+        $numbers = explode(' ', $value);
+
+        // Remplacer les nombres par leurs libellés correspondants
+        $labels = array_map(function ($number) use ($labelMapping) {
+            return $labelMapping[$number] ?? $number;
+        }, $numbers);
+
+        // Joindre les libellés avec '/'
+        $result = implode(' / ', $labels);
+
+        return $result;
     }
 
     public function setA19(?string $A19): static
@@ -729,7 +790,11 @@ class CapitalisationPartI
 
     public function getL11(): ?string
     {
-        return $this->L1_1;
+        $value = $this->L1_1;
+
+        if ($value === '1') { return  'Oui'; }
+        if ($value === '2') { return 'Non'; }
+        return $value;
     }
 
     public function setL11(?string $L1_1): static
@@ -801,7 +866,18 @@ class CapitalisationPartI
 
     public function getL17(): ?string
     {
-        return $this->L1_7;
+        $value = $this->L1_7;
+
+        // Ajouter une condition pour vérifier si la valeur est égale à 6
+        if ($value === '1') { return 'Nord';  }
+        else if ($value === '2' ) { return 'Est';  }
+        else if ($value === '3' ) { return 'Sud-Ouest';  }
+        else if ($value === '4' ) { return 'Centre';  }
+        else if ($value === '5' ) { return 'Potentiel';  }
+       
+    
+    
+        return $value;
     }
 
     public function setL17(?string $L1_7): static
@@ -813,7 +889,16 @@ class CapitalisationPartI
 
     public function getL18(): ?string
     {
-        return $this->L1_8;
+        
+        $value = $this->L1_8;
+        if ($value === '1') { return  'Région Amoron\'i Mania'; }
+        if ($value === '2') { return  'Région Analamanga'; }
+        if ($value === '3') { return  'Région Vakinankaratra'; }
+        if ($value === '4') { return  'Région Itasy'; }
+        if ($value === '5') { return  'Région Anosy'; }
+        if ($value === '6') { return  'Région Androy'; }
+        if ($value === '7') { return  'Région Haute Matsiatra'; }		
+        return $value;
     }
 
     public function setL18(?string $L1_8): static
@@ -825,7 +910,14 @@ class CapitalisationPartI
 
     public function getL19(): ?string
     {
-        return $this->L1_9;
+        $value = $this->L1_9;
+        if ($value === '1') { return  'Terrestre'; }	
+        if ($value === '2') { return  'Mangrove'; }	
+        if ($value === '3') { return  'Marin'; }	
+        if ($value === '4') { return  'Mangrove et Marin'; }	
+        if ($value === '77') { return  'Autres à préciser '; }	
+
+        return $value;
     }
 
     public function setL19(?string $L1_9): static
@@ -849,7 +941,13 @@ class CapitalisationPartI
 
     public function getL110(): ?string
     {
-        return $this->L1_10;
+       
+        $value = $this->L1_10;
+        if ($value === '1') { return  'Aire protégée, '; }	
+        if ($value === '2') { return  'Terroir gérée traditionnellement par le Fokonolona, '; }	 
+        if ($value === '3') { return  'Pâturage communautaire '; }	
+        return $value;
+
     }
 
     public function setL110(?string $L1_10): static
@@ -861,7 +959,10 @@ class CapitalisationPartI
 
     public function getL111(): ?string
     {
-        return $this->L1_11;
+        $value = $this->L1_11;
+        if ($value === '1') { return  'Aire protégée '; }	
+        else if ($value === '2') { return  'LMMA '; }	
+        return $value;
     }
 
     public function setL111(?string $L1_11): static
@@ -873,7 +974,11 @@ class CapitalisationPartI
 
     public function getL111a(): ?string
     {
-        return $this->L1_11a;
+        $value = $this->L1_11a;
+
+        if ($value === '1') { return  'Oui'; }
+        if ($value === '2') { return 'Non'; }
+        return $value;
     }
 
     public function setL111a(?string $L1_11a): static
@@ -897,7 +1002,19 @@ class CapitalisationPartI
 
     public function getL113(): ?string
     {
-        return $this->L1_13;
+        $value = $this->L1_13;
+
+        if ($value === '1') { return  'Biodiversité'; }
+        if ($value === '2') { return 'Atténuation du changement climatique'; }
+        if ($value === '3') { return  'Dégradation des sols'; }
+        if ($value === '4') { return  'Gestion durable des forêts'; }
+        if ($value === '5') { return  'Eaux internationales'; }
+        if ($value === '6') { return 'Produits chimiques et déchets'; }
+        if ($value === '7') { return 'Développement des capacités'; }
+        if ($value === '8') { return  'Dialogue public société civile'; }
+        if ($value === '9') { return 'Aire et patrimoine des peuples autochtones'; }
+        return $value;
+       
     }
 
     public function setL113(?string $L1_13): static
@@ -945,7 +1062,11 @@ class CapitalisationPartI
 
     public function getL117(): ?string
     {
-        return $this->L1_17;
+        $value = $this->L1_17;
+
+        if ($value === '1') { return  'Oui'; }
+        if ($value === '2') { return 'Non'; }
+        return $value;
     }
 
     public function setL117(?string $L1_17): static
@@ -957,7 +1078,11 @@ class CapitalisationPartI
 
     public function getL118(): ?string
     {
-        return $this->L1_18;
+        $value = $this->L1_18;
+        if ($value === '1') { return  'Aire protégée terrestre '; }	
+        else if ($value === '2') { return  'Aire protégée marine'; }	
+        return $value;
+ 
     }
 
     public function setL118(?string $L1_18): static
@@ -969,7 +1094,15 @@ class CapitalisationPartI
 
     public function getL119(): ?string
     {
-        return $this->L1_19;
+        $value = $this->L1_19;
+
+        if ($value === '1') { return  'Catégorie 1. Réserve naturelle intégrale / Zone de nature sauvage'; }	
+        if ($value === '2') { return  'Catégorie 2. Parc national.'; }	
+        if ($value === '3') { return  'Catégorie 3. Monument naturel.'; }	
+        if ($value === '4') { return  'Catégorie 4. Aire de gestion des habitats ou des espèces.'; }	
+        if ($value === '5') { return  'Catégorie 5. Paysage terrestre ou marin protégé'; }	
+        if ($value === '6') { return  'Catégorie 6. Zone de gestion de ressources protégées.'; }	
+         return $value;
     }
 
     public function setL119(?string $L1_19): static
@@ -981,7 +1114,11 @@ class CapitalisationPartI
 
     public function getL120(): ?string
     {
-        return $this->L1_20;
+        $value = $this->L1_20;
+
+        if ($value === '1') { return  'Oui'; }
+        if ($value === '2') { return 'Non'; }
+        return $value;
     }
 
     public function setL120(?string $L1_20): static
@@ -993,8 +1130,14 @@ class CapitalisationPartI
 
     public function getL121(): ?string
     {
-        return $this->L1_21;
-    }
+        
+    $value = $this->L1_21;
+    if ($value === '1') { return  'MNP : Madagascar National Parks'; }	
+    if ($value === '2') { return  'WCS'; }	
+    if ($value === '3') { return  'WWF'; }	
+    if ($value === '77') { return  'Autres'; }	
+    return $value;
+        }
 
     public function setL121(?string $L1_21): static
     {
@@ -1017,7 +1160,14 @@ class CapitalisationPartI
 
     public function getL122(): ?string
     {
-        return $this->L1_22;
+        
+        $value = $this->L1_22;
+        if ($value === '1') { return  'forêt humide'; }	
+        if ($value === '2') { return  'forêt sèche'; }	
+        if ($value === '3') { return  'mangrove'; }	
+        if ($value === '4') { return  'steppe'; }	
+        if ($value === '77') { return  'autre'; }	
+        return $value;
     }
 
     public function setL122(?string $L1_22): static
@@ -1041,7 +1191,11 @@ class CapitalisationPartI
 
     public function getL123(): ?string
     {
-        return $this->L1_23;
+        $value = $this->L1_23;
+
+        if ($value === '1') { return  'Oui'; }
+        if ($value === '2') { return 'Non'; }
+        return $value;
     }
 
     public function setL123(?string $L1_23): static
@@ -1050,21 +1204,25 @@ class CapitalisationPartI
 
         return $this;
     }
-    public function getL123a(): ?string
+    public function getL123autre(): ?string
     {
-        return $this->L1_23a;
+        return $this->L1_23_autre;
     }
 
-    public function setL123a(?string $L1_23a): static
+    public function setL123autre(?string $L1_23_autre): static
     {
-        $this->L1_23a = $L1_23a;
+        $this->L1_23_autre = $L1_23_autre;
 
         return $this;
     }
 
     public function getL124(): ?string
     {
-        return $this->L1_24;
+        $value = $this->L1_24;
+
+        if ($value === '1') { return  'Oui'; }
+        if ($value === '2') { return 'Non'; }
+        return $value;
     }
 
     public function setL124(?string $L1_24): static
@@ -1196,7 +1354,11 @@ class CapitalisationPartI
 
     public function getL128(): ?string
     {
-        return $this->L1_28;
+        $value = $this->L1_28;
+
+        if ($value === '1') { return  'Oui'; }
+        if ($value === '2') { return 'Non'; }
+        return $value;
     }
 
     public function setL128(?string $L1_28): static
@@ -1208,7 +1370,12 @@ class CapitalisationPartI
 
     public function getL129(): ?string
     {
-        return $this->L1_29;
+        
+        $value = $this->L1_29;
+        if ($value === '1') { return  'Aire protégée terrestre '; }	
+        if ($value === '2') { return  'Aire protégée marine'; }	
+        return $value;
+ 
     }
 
     public function setL129(?string $L1_29): static
@@ -1220,7 +1387,16 @@ class CapitalisationPartI
 
     public function getL130(): ?string
     {
-        return $this->L1_30;
+        $value = $this->L1_30;
+
+        if ($value === '1') { return  'Catégorie 1. Réserve naturelle intégrale / Zone de nature sauvage'; }	
+        if ($value === '2') { return  'Catégorie 2. Parc national.'; }	
+        if ($value === '3') { return  'Catégorie 3. Monument naturel.'; }	
+        if ($value === '4') { return  'Catégorie 4. Aire de gestion des habitats ou des espèces.'; }	
+        if ($value === '5') { return  'Catégorie 5. Paysage terrestre ou marin protégé'; }	
+        if ($value === '6') { return  'Catégorie 6. Zone de gestion de ressources protégées.'; }	
+         return $value;
+        
     }
 
     public function setL130(?string $L1_30): static
@@ -1232,7 +1408,11 @@ class CapitalisationPartI
 
     public function getL131(): ?string
     {
-        return $this->L1_31;
+        $value = $this->L1_31;
+
+        if ($value === '1') { return  'Oui'; }
+        if ($value === '2') { return 'Non'; }
+        return $value;
     }
 
     public function setL131(?string $L1_31): static
@@ -1256,7 +1436,11 @@ class CapitalisationPartI
 
     public function getL133(): ?string
     {
-        return $this->L1_33;
+        $value = $this->L1_33;
+
+        if ($value === '1') { return  'Oui'; }
+        if ($value === '2') { return 'Non'; }
+        return $value;
     }
 
     public function setL133(?string $L1_33): static
@@ -1268,7 +1452,12 @@ class CapitalisationPartI
 
     public function getL134(): ?string
     {
-        return $this->L1_34;
+        $value = $this->L1_34;
+        if ($value === '1') { return  'champ de culture'; }
+        if ($value === '2') { return  'zone forestière '; }
+        if ($value === '77') { return  'Autre'; }
+        return $value;
+
     }
 
     public function setL134(?string $L1_34): static
@@ -1292,7 +1481,13 @@ class CapitalisationPartI
 
     public function getL136(): ?string
     {
-        return $this->L1_36;
+        
+        $value = $this->L1_36;
+        if ($value === '1') { return  'zone stratégique'; }
+        if ($value === '2') { return  'érosion critique'; }
+        if ($value === '77') { return  'Autre'; }
+        return $value;
+
     }
 
     public function setL136(?string $L1_36): static
@@ -1304,7 +1499,14 @@ class CapitalisationPartI
 
     public function getL137(): ?string
     {
-        return $this->L1_37;
+        $value = $this->L1_37;
+        if ($value === '1') { return  'sol ferralitique'; }
+        if ($value === '2') { return  'sol ferrugineux'; }
+        if ($value === '3') { return  'sol tourbeux'; }
+        if ($value === '77') { return  'Autre'; }
+
+        return $value;
+
     }
 
     public function setL137(?string $L1_37): static
@@ -1316,7 +1518,15 @@ class CapitalisationPartI
 
     public function getL138(): ?string
     {
-        return $this->L1_38;
+        
+
+        $value = $this->L1_38;
+        if ($value === '1') { return  'Erosion hydrique'; }
+        if ($value === '2') { return  'Lavakisation'; }
+        if ($value === '3') { return  'Perte de fertilité'; }
+        if ($value === '77') { return  'Autre'; }
+        return $value;
+
     }
 
     public function setL138(?string $L1_38): static
@@ -1340,7 +1550,11 @@ class CapitalisationPartI
 
     public function getL140(): ?string
     {
-        return $this->L1_40;
+        $value = $this->L1_40;
+
+        if ($value === '1') { return  'Oui'; }
+        if ($value === '2') { return 'Non'; }
+        return $value;
     }
 
     public function setL140(?string $L1_40): static
@@ -1352,7 +1566,10 @@ class CapitalisationPartI
 
     public function getL141(): ?string
     {
-        return $this->L1_41;
+        $value = $this->L1_41;
+        if ($value === '1') { return  'Aire protégée terrestre '; }	
+        if ($value === '2') { return  'Aire protégée marine'; }	
+         return $value;
     }
 
     public function setL141(?string $L1_41): static
@@ -1364,7 +1581,16 @@ class CapitalisationPartI
 
     public function getL142(): ?string
     {
-        return $this->L1_42;
+        $value = $this->L1_42;
+
+        if ($value === '1') { return  'Catégorie 1. Réserve naturelle intégrale / Zone de nature sauvage'; }	
+        if ($value === '2') { return  'Catégorie 2. Parc national.'; }	
+        if ($value === '3') { return  'Catégorie 3. Monument naturel.'; }	
+        if ($value === '4') { return  'Catégorie 4. Aire de gestion des habitats ou des espèces.'; }	
+        if ($value === '5') { return  'Catégorie 5. Paysage terrestre ou marin protégé'; }	
+        if ($value === '6') { return  'Catégorie 6. Zone de gestion de ressources protégées.'; }	
+        return $value;
+
     }
 
     public function setL142(?string $L1_42): static
@@ -1376,7 +1602,11 @@ class CapitalisationPartI
 
     public function getL143(): ?string
     {
-        return $this->L1_43;
+        $value = $this->L1_43;
+
+        if ($value === '1') { return  'Oui'; }
+        if ($value === '2') { return 'Non'; }
+        return $value;
     }
 
     public function setL143(?string $L1_43): static
@@ -1388,7 +1618,11 @@ class CapitalisationPartI
 
     public function getL144(): ?string
     {
-        return $this->L1_44;
+        $value = $this->L1_44;
+
+        if ($value === '1') { return  'Oui'; }
+        if ($value === '2') { return 'Non'; }
+        return $value;
     }
 
     public function setL144(?string $L1_44): static
@@ -1412,7 +1646,11 @@ class CapitalisationPartI
 
     public function getL146(): ?string
     {
-        return $this->L1_46;
+        $value = $this->L1_46;
+
+        if ($value === '1') { return  'Oui'; }
+        if ($value === '2') { return 'Non'; }
+        return $value;
     }
 
     public function setL146(?string $L1_46): static
@@ -1424,7 +1662,11 @@ class CapitalisationPartI
 
     public function getL147(): ?string
     {
-        return $this->L1_47;
+        $value = $this->L1_47;
+
+        if ($value === '1') { return  'Oui'; }
+        if ($value === '2') { return 'Non'; }
+        return $value;
     }
 
     public function setL147(?string $L1_47): static
@@ -1448,7 +1690,15 @@ class CapitalisationPartI
 
     public function getL149(): ?string
     {
-        return $this->L1_49;
+        $value = $this->L1_49;
+
+        if ($value === '1') { return  'Lac'; }
+        if ($value === '2') { return  'Fleuve'; }
+        if ($value === '3') { return  'Rivière'; }
+        if ($value === '4') { return  'Etang'; }
+        if ($value === '5') { return  'Point d’eau'; }
+        if ($value === '77') { return  'Autre'; }
+        return $value;
     }
 
     public function setL149(?string $L1_49): static
@@ -1496,7 +1746,14 @@ class CapitalisationPartI
 
     public function getL152(): ?string
     {
-        return $this->L1_52;
+        $value = $this->L1_52;
+        if ($value === '1') { return  'Zone stratégique'; }
+        if ($value === '2') { return  'Zone de ponte des espèces de faune'; }
+        if ($value === '3') { return  'Zone de prolifération des espèces florales'; }
+        if ($value === '4') { return  'Récifs coralliens'; }
+        if ($value === '77') { return  'Autre'; }
+        return $value;
+
     }
 
     public function setL152(?string $L1_52): static
@@ -1627,7 +1884,15 @@ class CapitalisationPartI
     }
     public function getL185(): ?string
     {
-        return $this->L1_85;
+        $value = $this->L1_85;
+        if ($value === '1') { return  'International '; }
+        if ($value === '2') { return  'National '; }
+        if ($value === '3') { return  'Interrégionaux '; }
+        if ($value === '4') { return  'Une région'; }
+        if ($value === '5') { return  'Interdistricts'; }
+        if ($value === '6') { return  'Un district'; }
+        return $value;
+
     }
 
     public function setL185(?string $L1_85): static
@@ -1683,7 +1948,12 @@ class CapitalisationPartI
     }
     public function getL190(): ?string
     {
-        return $this->L1_90;
+        $value = $this->L1_90;
+        if ($value === '1') { return  'Aire protégée '; }
+        if ($value === '2') { return  'Transfert de gestion des ressources naturelles renouvelables '; }
+        if ($value === '3') { return  'Autres '; }
+        return $value;
+
     }
 
     public function setL190(?string $L1_90): static
@@ -1694,7 +1964,11 @@ class CapitalisationPartI
     }
     public function getL191(): ?string
     {
-        return $this->L1_91;
+        $value = $this->L1_91;
+
+        if ($value === '1') { return  'Oui'; }
+        if ($value === '2') { return 'Non'; }
+        return $value;
     }
 
     public function setL191(?string $L1_91): static
@@ -1716,7 +1990,10 @@ class CapitalisationPartI
     }
     public function getL193(): ?string
     {
-        return $this->L1_93;
+        $value = $this->L1_93;
+        if ($value === '1') { return  'Aire protégée terrestre '; }	
+        if ($value === '2') { return  'Aire protégée marine'; }	
+         return $value;
     }
 
     public function setL193(?string $L1_93): static
@@ -1727,7 +2004,11 @@ class CapitalisationPartI
     }
     public function getL194(): ?string
     {
-        return $this->L1_94;
+        $value = $this->L1_94;
+
+        if ($value === '1') { return  'Oui'; }
+        if ($value === '2') { return 'Non'; }
+        return $value;
     }
 
     public function setL194(?string $L1_94): static
@@ -1844,7 +2125,15 @@ class CapitalisationPartI
 
     public function getL168(): ?string
     {
-        return $this->L1_68;
+        
+        $value = $this->L1_68;
+
+        if ($value === '1') { return  'Eolienne'; }
+        if ($value === '2') { return  'Solaire'; }
+        if ($value === '3') { return  'Hydrographie'; }
+        if ($value === '77') { return  'Autre'; }
+        return $value;
+
     }
 
     public function setL168(?string $L1_68): static
@@ -2024,7 +2313,11 @@ class CapitalisationPartI
 
     public function getL182(): ?string
     {
-        return $this->L1_82;
+        $value = $this->L1_82;
+        if ($value === '1') { return  'Humaine'; }
+        if ($value === '2') { return  'Flore'; }
+        if ($value === '3') { return  'Faune'; }
+        return $value;
     }
 
     public function setL182(?string $L1_82): static
@@ -2070,7 +2363,14 @@ class CapitalisationPartI
     }
     public function getL21(): ?string
     {
-        return $this->L2_1;
+        $value = $this->L2_1;
+        if ($value === '1') { return  'Agriculture : principales spéculations (ex : riz, manioc, …) '; }
+        if ($value === '2') { return  'Elevage : principaux types d’animaux '; }
+        if ($value === '3') { return  'Pêche : pêche maritime, pêche lacustre, pêche sur des petits étangs, ….. '; }
+        if ($value === '4') { return  'Artisanat : à préciser'; }
+        if ($value === '77') { return  'Autres : à préciser'; }
+
+        return $value;
     }
 
     public function setL21(?string $L2_1): static
@@ -2129,7 +2429,16 @@ class CapitalisationPartI
     }
     public function getL216(): ?string
     {
-        return $this->L2_16;
+       
+        $value = $this->L2_16;
+        if ($value === '1') { return  'Fokonolona'; }
+        if ($value === '2') { return  'COBA'; }
+        if ($value === '3') { return  'Association'; }
+        if ($value === '4') { return  'OSC fédérative  ( genre TAFO MIHAAVO) '; }
+        if ($value === '5') { return  'Coopérative '; }
+        if ($value === '6') { return  'Réseaux '; }
+        return $value;
+
     }
 
     public function setL216(?string $L2_16): static
@@ -2196,7 +2505,11 @@ class CapitalisationPartI
     }
     public function getL218(): ?string
     {
-        return $this->L2_18;
+        $value = $this->L2_18;
+
+        if ($value === '1') { return  'Oui'; }
+        if ($value === '2') { return 'Non'; }
+        return $value;
     }
 
     public function setL218(?string $L2_18): static
@@ -2207,7 +2520,11 @@ class CapitalisationPartI
     }
     public function getL219(): ?string
     {
-        return $this->L2_19;
+        $value = $this->L2_19;
+
+        if ($value === '1') { return  'Oui'; }
+        if ($value === '2') { return 'Non'; }
+        return $value;
     }
 
     public function setL219(?string $L2_19): static
@@ -2362,7 +2679,36 @@ class CapitalisationPartI
 
     public function getL222(): ?string
     {
-        return $this->L2_22;
+         // Récupérer la valeur de A19
+         $value = $this->L2_22;
+
+         // Définir une correspondance entre les nombres et leurs libellés
+         $labelMapping = [
+                            
+         '1' =>  'Accès aux ressources : terre, ressources naturelles, moyens financiers , énergie renouvelables', 
+         '2' =>  'Droit et legislation',
+         '3' =>  'Gestion de fonds ',
+         '4' =>  'Gestion des ressources naturelles ',
+         '5' =>  'Empowerment des communautés dans le TGRN, Aire Protégée Communautaire (APC) , autres ….. ',
+         '6' =>  'Développement de fonds communautaires à travers des filières durables ',
+         '7' =>  'Genre',
+         '8' =>  'Inclusion sociale ',
+         '9' =>  'Accès aux marchés viables '
+ 
+         ];
+ 
+         // Diviser la chaîne en nombres
+         $numbers = explode(' ', $value);
+ 
+         // Remplacer les nombres par leurs libellés correspondants
+         $labels = array_map(function ($number) use ($labelMapping) {
+             return $labelMapping[$number] ?? $number;
+         }, $numbers);
+ 
+         // Joindre les libellés avec '/'
+         $result = implode(' / ', $labels);
+ 
+         return $result;
     }
 
     public function setL222(?string $L2_22): static
@@ -2374,7 +2720,13 @@ class CapitalisationPartI
 
     public function getL223(): ?string
     {
-        return $this->L2_23;
+        
+        $value = $this->L2_23;
+        if ($value === '1') { return  'Formation techniques, '; }
+        if ($value === '2') { return  'Amélioration accès aux ressources financières ,'; }
+        if ($value === '3') { return  'Contrôle et amélioration des moyens de subsistance  '; }
+        return $value;
+
     }
 
     public function setL223(?string $L2_23): static
@@ -2494,7 +2846,37 @@ class CapitalisationPartI
 
     public function getL233(): ?string
     {
-        return $this->L2_33;
+        $value = $this->L2_33;
+
+        // Définir une correspondance entre les nombres et leurs libellés
+        $labelMapping = [
+          
+
+				'1' =>  'Législation',
+				'2' =>  'Défense des droits',
+                '3' =>  'Planification territoriale',
+				'4' =>  'Collaboration Fokonolona et OSC',
+				'5' =>  'Infrastructure et connectivité',
+				'6' =>  'Intercommunalité et gestion des ressources communes ',
+				'7' =>  'Accès aux prises de décisions au niveau',
+				'77' =>  'Autres'
+
+
+
+        ];
+
+        // Diviser la chaîne en nombres
+        $numbers = explode(' ', $value);
+
+        // Remplacer les nombres par leurs libellés correspondants
+        $labels = array_map(function ($number) use ($labelMapping) {
+            return $labelMapping[$number] ?? $number;
+        }, $numbers);
+
+        // Joindre les libellés avec '/'
+        $result = implode(' / ', $labels);
+
+        return $result;
     }
 
     public function setL233(?string $L2_33): static
@@ -2506,7 +2888,31 @@ class CapitalisationPartI
 
     public function getL234(): ?string
     {
-        return $this->L2_34;
+        $value = $this->L2_34;
+
+        // Définir une correspondance entre les nombres et leurs libellés
+        $labelMapping = [
+          
+
+				'1' =>  'L’accès aux ressources foncières,',
+				'2' =>  'L’accès aux ressources naturelles, ',
+				'3' =>  'L’accès aux ressources financières, ',
+				'4' =>  'L’accès aux biens communs',
+				'5' =>  'Identité des Fokonolona, '
+        ];
+
+        // Diviser la chaîne en nombres
+        $numbers = explode(' ', $value);
+
+        // Remplacer les nombres par leurs libellés correspondants
+        $labels = array_map(function ($number) use ($labelMapping) {
+            return $labelMapping[$number] ?? $number;
+        }, $numbers);
+
+        // Joindre les libellés avec '/'
+        $result = implode(' / ', $labels);
+
+        return $result;
     }
 
     public function setL234(?string $L2_34): static
@@ -2518,7 +2924,30 @@ class CapitalisationPartI
 
     public function getL235(): ?string
     {
-        return $this->L2_35;
+        $value = $this->L2_35;
+
+        // Définir une correspondance entre les nombres et leurs libellés
+        $labelMapping = [
+					'1' =>  'Humains',
+					'2' =>  'Culturel',
+					'3' =>  'Environnemental',
+					'4' =>  'Socio-économique'
+          
+
+        ];
+
+        // Diviser la chaîne en nombres
+        $numbers = explode(' ', $value);
+
+        // Remplacer les nombres par leurs libellés correspondants
+        $labels = array_map(function ($number) use ($labelMapping) {
+            return $labelMapping[$number] ?? $number;
+        }, $numbers);
+
+        // Joindre les libellés avec '/'
+        $result = implode(' / ', $labels);
+
+        return $result;
     }
 
     public function setL235(?string $L2_35): static
@@ -2530,7 +2959,32 @@ class CapitalisationPartI
 
     public function getL236(): ?string
     {
-        return $this->L2_36;
+        $value = $this->L2_36;
+
+        // Définir une correspondance entre les nombres et leurs libellés
+        $labelMapping = [
+						'1' =>  'National',
+						'2' =>  'Région',
+						'3' =>  'Commune',
+						'4' =>  'Local'
+
+          
+
+        ];
+
+        // Diviser la chaîne en nombres
+        $numbers = explode(' ', $value);
+
+        // Remplacer les nombres par leurs libellés correspondants
+        $labels = array_map(function ($number) use ($labelMapping) {
+            return $labelMapping[$number] ?? $number;
+        }, $numbers);
+
+        // Joindre les libellés avec '/'
+        $result = implode(' / ', $labels);
+
+        return $result;
+
     }
 
     public function setL236(?string $L2_36): static
@@ -2554,7 +3008,31 @@ class CapitalisationPartI
 
     public function getL238(): ?string
     {
-        return $this->L2_38;
+        $value = $this->L2_38;
+
+        // Définir une correspondance entre les nombres et leurs libellés
+        $labelMapping = [
+						'1' =>  'Statut légal des APAC ',
+						'2' =>  'Accès',
+						'3' =>  'Défense des droits '
+
+
+          
+
+        ];
+
+        // Diviser la chaîne en nombres
+        $numbers = explode(' ', $value);
+
+        // Remplacer les nombres par leurs libellés correspondants
+        $labels = array_map(function ($number) use ($labelMapping) {
+            return $labelMapping[$number] ?? $number;
+        }, $numbers);
+
+        // Joindre les libellés avec '/'
+        $result = implode(' / ', $labels);
+
+        return $result;
     }
 
     public function setL238(?string $L2_38): static
@@ -2596,6 +3074,18 @@ class CapitalisationPartI
     public function setL241(?string $L2_41): static
     {
         $this->L2_41 = $L2_41;
+
+        return $this;
+    }
+
+    public function getStatutFiche(): ?int
+    {
+        return $this->StatutFiche;
+    }
+
+    public function setStatutFiche(?int $StatutFiche): static
+    {
+        $this->StatutFiche = $StatutFiche;
 
         return $this;
     }

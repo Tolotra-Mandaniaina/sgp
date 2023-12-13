@@ -4,11 +4,22 @@
 
 {% block body %}
     <h1>Edit CapitalisationPartII</h1>
+    {{ form_start(form) }}
+
+     {% set externalLink = "https://ee-eu.kobotoolbox.org/x/fEe6HUvw" %}
+
+{% if externalLink starts with 'http' %}
+<a href="{{ externalLink }}" class="btn btn-primary" target="_blank">Voir Questionnaire sur kobo</a>
+
+{% endif %}
+<br>
+<br>
 
    
      <div class="container">
 
     <H4>A- IDENTIFICATION</H4>
+
 
 
 <div class="form-group">
@@ -49,180 +60,180 @@
         {{ form_row(form.L1_1, {'attr': {'class': 'form-control'}}) }}
     </div>
     <div class="form-group">
-        {{ form_row(form.L1_13, {'attr': {'class': 'form-control'}}) }}
+        {{ form_row(form.L1_13) }}
     </div>
 
     <H5> DESCRIPTION DE LA BONNE PRATIQUE </H5>
     <div class="form-group">
-        {{ form_row(form.L3_1, {'attr': {'class': 'form-control'}}) }}
+        {{ form_row(form.L3_1) }}
     </div>
     <div class="form-group">
-        {{ form_row(form.L3_2, {'attr': {'class': 'form-control'}}) }}
+        {{ form_row(form.L3_2) }}
     </div>
     <div class="form-group">
-        {{ form_row(form.L3_3, {'attr': {'class': 'form-control'}}) }}
+        {{ form_row(form.L3_3) }}
     </div>
     <div class="form-group">
-        {{ form_row(form.L3_4, {'attr': {'class': 'form-control'}}) }}
+        {{ form_row(form.L3_4) }}
     </div>
     <div class="form-group">
-        {{ form_row(form.L3_5, {'attr': {'class': 'form-control'}}) }}
+        {{ form_row(form.L3_5) }}
     </div>
     <div class="form-group">
-        {{ form_row(form.L3_6, {'attr': {'class': 'form-control'}}) }}
+        {{ form_row(form.L3_6) }}
     </div>
     <div class="form-group">
-        {{ form_row(form.L3_7, {'attr': {'class': 'form-control'}}) }}
+        {{ form_row(form.L3_7) }}
     </div>
     <div class="form-group">
-        {{ form_row(form.L3_8, {'attr': {'class': 'form-control'}}) }}
+        {{ form_row(form.L3_8) }}
     </div>
     <div class="form-group">
-        {{ form_row(form.L3_9, {'attr': {'class': 'form-control'}}) }}
+        {{ form_row(form.L3_9) }}
     </div>
     <div class="form-group">
-        {{ form_row(form.L3_10, {'attr': {'class': 'form-control'}}) }}
+        {{ form_row(form.L3_10) }}
     </div>
     <div class="form-group">
         {{ form_row(form.L3_11, {'attr': {'class': 'form-control'}}) }}
     </div>
     <div class="form-group">
-        {{ form_row(form.L3_11_autre, {'attr': {'class': 'form-control'}}) }}
+        {{ form_row(form.L3_11_autre) }}
     </div>
     <div class="form-group">
         {{ form_row(form.L3_12, {'attr': {'class': 'form-control'}}) }}
     </div>
     <div class="form-group">
-        {{ form_row(form.L3_13, {'attr': {'class': 'form-control'}}) }}
+        {{ form_row(form.L3_13) }}
     </div>
     <div class="form-group">
-        {{ form_row(form.L3_14, {'attr': {'class': 'form-control'}}) }}
+        {{ form_row(form.L3_14) }}
     </div>
     <div class="form-group">
-        {{ form_row(form.L3_15, {'attr': {'class': 'form-control'}}) }}
+        {{ form_row(form.L3_15) }}
     </div>
     <div class="form-group">
-        {{ form_row(form.L3_16, {'attr': {'class': 'form-control'}}) }}
+        {{ form_row(form.L3_16) }}
     </div>
     <div class="form-group">
-        {{ form_row(form.L3_17, {'attr': {'class': 'form-control'}}) }}
+        {{ form_row(form.L3_17) }}
     </div>
     <div class="form-group">
-        {{ form_row(form.L3_18, {'attr': {'class': 'form-control'}}) }}
+        {{ form_row(form.L3_18) }}
     </div>
     <div class="form-group">
-        {{ form_row(form.L3_18_autre, {'attr': {'class': 'form-control'}}) }}
+        {{ form_row(form.L3_18_autre) }}
     </div>
     <div class="form-group">
-        {{ form_row(form.L3_19, {'attr': {'class': 'form-control'}}) }}
+        {{ form_row(form.L3_19) }}
     </div>
     <div class="form-group">
-        {{ form_row(form.L3_20, {'attr': {'class': 'form-control'}}) }}
+        {{ form_row(form.L3_20) }}
     </div>
     <div class="form-group">
-        {{ form_row(form.L3_21, {'attr': {'class': 'form-control'}}) }}
+        {{ form_row(form.L3_21) }}
     </div>
     <div class="form-group">
-        {{ form_row(form.L3_22, {'attr': {'class': 'form-control'}}) }}
+        {{ form_row(form.L3_22) }}
     </div>
     <div class="form-group">
-        {{ form_row(form.L3_22_autre, {'attr': {'class': 'form-control'}}) }}
+        {{ form_row(form.L3_22_autre) }}
     </div>
     <div class="form-group">
-        {{ form_row(form.L3_23, {'attr': {'class': 'form-control'}}) }}
+        {{ form_row(form.L3_23) }}
     </div>
     <div class="form-group">
-        {{ form_row(form.L3_24, {'attr': {'class': 'form-control'}}) }}
+        {{ form_row(form.L3_24) }}
     </div>
     <div class="form-group">
-        {{ form_row(form.L3_25, {'attr': {'class': 'form-control'}}) }}
+        {{ form_row(form.L3_25) }}
     </div>
     <div class="form-group">
-        {{ form_row(form.L3_26, {'attr': {'class': 'form-control'}}) }}
+        {{ form_row(form.L3_26) }}
     </div>
     <div class="form-group">
-        {{ form_row(form.L3_27, {'attr': {'class': 'form-control'}}) }}
+        {{ form_row(form.L3_27) }}
     </div>
     <div class="form-group">
         {{ form_row(form.L3_28, {'attr': {'class': 'form-control'}}) }}
     </div>
     <div class="form-group">
-        {{ form_row(form.L3_28_autre, {'attr': {'class': 'form-control'}}) }}
+        {{ form_row(form.L3_28_autre) }}
     </div>
     <div class="form-group">
-        {{ form_row(form.L3_29, {'attr': {'class': 'form-control'}}) }}
+        {{ form_row(form.L3_29) }}
     </div>
     <div class="form-group">
-        {{ form_row(form.L3_30, {'attr': {'class': 'form-control'}}) }}
+        {{ form_row(form.L3_30) }}
     </div>
     <div class="form-group">
-        {{ form_row(form.L3_31, {'attr': {'class': 'form-control'}}) }}
+        {{ form_row(form.L3_31) }}
     </div>
     <div class="form-group">
-        {{ form_row(form.L3_32, {'attr': {'class': 'form-control'}}) }}
+        {{ form_row(form.L3_32) }}
     </div>
     <div class="form-group">
-        {{ form_row(form.L3_33, {'attr': {'class': 'form-control'}}) }}
+        {{ form_row(form.L3_33) }}
     </div>
     <div class="form-group">
-        {{ form_row(form.L3_34, {'attr': {'class': 'form-control'}}) }}
+        {{ form_row(form.L3_34) }}
     </div>
     <div class="form-group">
-        {{ form_row(form.L3_35, {'attr': {'class': 'form-control'}}) }}
+        {{ form_row(form.L3_35) }}
     </div>
     <div class="form-group">
-        {{ form_row(form.L3_36, {'attr': {'class': 'form-control'}}) }}
+        {{ form_row(form.L3_36) }}
     </div>
     <div class="form-group">
-        {{ form_row(form.L3_37, {'attr': {'class': 'form-control'}}) }}
+        {{ form_row(form.L3_37) }}
     </div>
     <div class="form-group">
-        {{ form_row(form.L3_38, {'attr': {'class': 'form-control'}}) }}
+        {{ form_row(form.L3_38) }}
     </div>
     <div class="form-group">
-        {{ form_row(form.L3_39, {'attr': {'class': 'form-control'}}) }}
+        {{ form_row(form.L3_39) }}
     </div>
     <div class="form-group">
         {{ form_row(form.L3_40, {'attr': {'class': 'form-control'}}) }}
     </div>
     <div class="form-group">
-        {{ form_row(form.L3_41, {'attr': {'class': 'form-control'}}) }}
+        {{ form_row(form.L3_41) }}
     </div>
     <div class="form-group">
-        {{ form_row(form.L3_42, {'attr': {'class': 'form-control'}}) }}
+        {{ form_row(form.L3_42) }}
     </div>
     <div class="form-group">
-        {{ form_row(form.L3_43, {'attr': {'class': 'form-control'}}) }}
+        {{ form_row(form.L3_43) }}
     </div>
     <div class="form-group">
-        {{ form_row(form.L3_44, {'attr': {'class': 'form-control'}}) }}
+        {{ form_row(form.L3_44) }}
     </div>
     <div class="form-group">
         {{ form_row(form.L3_45, {'attr': {'class': 'form-control'}}) }}
     </div>
     <div class="form-group">
-        {{ form_row(form.L3_46, {'attr': {'class': 'form-control'}}) }}
+        {{ form_row(form.L3_46) }}
     </div>
     <div class="form-group">
-        {{ form_row(form.L3_47, {'attr': {'class': 'form-control'}}) }}
+        {{ form_row(form.L3_47) }}
     </div>
     <div class="form-group">
-        {{ form_row(form.L3_48, {'attr': {'class': 'form-control'}}) }}
+        {{ form_row(form.L3_48) }}
     </div>
     <div class="form-group">
-        {{ form_row(form.L3_49, {'attr': {'class': 'form-control'}}) }}
+        {{ form_row(form.L3_49) }}
     </div>
     <div class="form-group">
-        {{ form_row(form.L3_50, {'attr': {'class': 'form-control'}}) }}
+        {{ form_row(form.L3_50) }}
     </div>
     <div class="form-group">
-        {{ form_row(form.L3_51, {'attr': {'class': 'form-control'}}) }}
+        {{ form_row(form.L3_51) }}
     </div>
     <div class="form-group">
-        {{ form_row(form.L3_52, {'attr': {'class': 'form-control'}}) }}
+        {{ form_row(form.L3_52) }}
     </div>
     <div class="form-group">
-        {{ form_row(form.L3_53, {'attr': {'class': 'form-control'}}) }}
+        {{ form_row(form.L3_53) }}
     </div>
     <div class="form-group">
         {{ form_row(form.L3_54, {'attr': {'class': 'form-control'}}) }}
@@ -231,46 +242,46 @@
         {{ form_row(form.L3_55, {'attr': {'class': 'form-control'}}) }}
     </div>
     <div class="form-group">
-        {{ form_row(form.L3_55_autre, {'attr': {'class': 'form-control'}}) }}
+        {{ form_row(form.L3_55_autre) }}
     </div>
     <div class="form-group">
-        {{ form_row(form.L3_56, {'attr': {'class': 'form-control'}}) }}
+        {{ form_row(form.L3_56) }}
     </div>
     <div class="form-group">
-        {{ form_row(form.L3_57, {'attr': {'class': 'form-control'}}) }}
+        {{ form_row(form.L3_57) }}
     </div>
     <div class="form-group">
-        {{ form_row(form.L3_58, {'attr': {'class': 'form-control'}}) }}
+        {{ form_row(form.L3_58) }}
     </div>
     <div class="form-group">
-        {{ form_row(form.L3_58_autre, {'attr': {'class': 'form-control'}}) }}
+        {{ form_row(form.L3_58_autre) }}
     </div>
     <div class="form-group">
-        {{ form_row(form.L3_59, {'attr': {'class': 'form-control'}}) }}
+        {{ form_row(form.L3_59) }}
     </div>
     <div class="form-group">
-        {{ form_row(form.L3_60, {'attr': {'class': 'form-control'}}) }}
+        {{ form_row(form.L3_60) }}
     </div>
     <div class="form-group">
-        {{ form_row(form.L3_61, {'attr': {'class': 'form-control'}}) }}
+        {{ form_row(form.L3_61) }}
     </div>
     <div class="form-group">
-        {{ form_row(form.L3_62, {'attr': {'class': 'form-control'}}) }}
+        {{ form_row(form.L3_62) }}
     </div>
     <div class="form-group">
-        {{ form_row(form.L3_63, {'attr': {'class': 'form-control'}}) }}
+        {{ form_row(form.L3_63) }}
     </div>
     <div class="form-group">
-        {{ form_row(form.L3_64, {'attr': {'class': 'form-control'}}) }}
+        {{ form_row(form.L3_64) }}
     </div>
     <div class="form-group">
-        {{ form_row(form.L3_65, {'attr': {'class': 'form-control'}}) }}
+        {{ form_row(form.L3_65) }}
     </div>
     <div class="form-group">
-        {{ form_row(form.L3_66, {'attr': {'class': 'form-control'}}) }}
+        {{ form_row(form.L3_66) }}
     </div>
     <div class="form-group">
-        {{ form_row(form.L3_67, {'attr': {'class': 'form-control'}}) }}
+        {{ form_row(form.L3_67) }}
     </div>
     <div class="form-group">
         {{ form_row(form.L3_68, {'attr': {'class': 'form-control'}}) }}
@@ -279,22 +290,22 @@
         {{ form_row(form.L3_68_autre, {'attr': {'class': 'form-control'}}) }}
     </div>
     <div class="form-group">
-        {{ form_row(form.L3_69, {'attr': {'class': 'form-control'}}) }}
+        {{ form_row(form.L3_69) }}
     </div>
     <div class="form-group">
-        {{ form_row(form.L3_70, {'attr': {'class': 'form-control'}}) }}
+        {{ form_row(form.L3_70) }}
     </div>
     <div class="form-group">
-        {{ form_row(form.L3_71, {'attr': {'class': 'form-control'}}) }}
+        {{ form_row(form.L3_71) }}
     </div>
     <div class="form-group">
-        {{ form_row(form.L3_72, {'attr': {'class': 'form-control'}}) }}
+        {{ form_row(form.L3_72) }}
     </div>
     <H5>Spécificité  de la thématique pour la partie technique (relatif aux priorités GEF 7)</H5>
 
     <H4> PARTIE : BIODIVERSITE</H4>
     <div class="form-group">
-        {{ form_row(form.L3_73, {'attr': {'class': 'form-control'}}) }}
+        {{ form_row(form.L3_73) }}
     </div>
 
     <H4>PARTIE : CHANGEMENT CLIMATIQUE</H4>
@@ -305,7 +316,7 @@
         {{ form_row(form.L3_75, {'attr': {'class': 'form-control'}}) }}
     </div>
     <div class="form-group">
-        {{ form_row(form.L3_76, {'attr': {'class': 'form-control'}}) }}
+        {{ form_row(form.L3_76) }}
     </div>
 
     <H4>PARTIE : DEGRADATION DES SOLS / GESTION DURABLE DES SOLS</H4>
@@ -318,52 +329,52 @@
         {{ form_row(form.L3_78, {'attr': {'class': 'form-control'}}) }}
     </div>
     <div class="form-group">
-        {{ form_row(form.L3_79, {'attr': {'class': 'form-control'}}) }}
+        {{ form_row(form.L3_79) }}
     </div>
 
     <H4>PARTIE : Développement de capacité</H4>
     <div class="form-group">
-        {{ form_row(form.L3_120, {'attr': {'class': 'form-control'}}) }}
+        {{ form_row(form.L3_120) }}
     </div>
     <div class="form-group">
-        {{ form_row(form.L3_121, {'attr': {'class': 'form-control'}}) }}
+        {{ form_row(form.L3_121) }}
     </div>
      <div class="form-group">
-        {{ form_row(form.L3_122, {'attr': {'class': 'form-control'}}) }}
+        {{ form_row(form.L3_122) }}
     </div>
      <div class="form-group">
-        {{ form_row(form.L3_123, {'attr': {'class': 'form-control'}}) }}
+        {{ form_row(form.L3_123) }}
     </div>
     
     <H4>PARTIE : Dialogue public et société civile </H4>
      <div class="form-group">
-        {{ form_row(form.L3_124, {'attr': {'class': 'form-control'}}) }}
+        {{ form_row(form.L3_124) }}
     </div>
      <div class="form-group">
-        {{ form_row(form.L3_125, {'attr': {'class': 'form-control'}}) }}
+        {{ form_row(form.L3_125) }}
     </div>
      <div class="form-group">
-        {{ form_row(form.L3_126, {'attr': {'class': 'form-control'}}) }}
+        {{ form_row(form.L3_126) }}
     </div>
      <div class="form-group">
-        {{ form_row(form.L3_127, {'attr': {'class': 'form-control'}}) }}
+        {{ form_row(form.L3_127) }}
     </div>
 
     <H4>PARTIE : Aires et Territoires du Patrimoine Autochtones et Communautaires</H4>
       <div class="form-group">
-        {{ form_row(form.L3_128, {'attr': {'class': 'form-control'}}) }}
+        {{ form_row(form.L3_128) }}
     </div>
       <div class="form-group">
-        {{ form_row(form.L3_129, {'attr': {'class': 'form-control'}}) }}
+        {{ form_row(form.L3_129) }}
     </div>
 
     <H5>Acteurs concernés  par la bonne pratique </H5>
 
     <div class="form-group">
-        {{ form_row(form.L3_80, {'attr': {'class': 'form-control'}}) }}
+        {{ form_row(form.L3_80) }}
     </div>
     <div class="form-group">
-        {{ form_row(form.L3_81, {'attr': {'class': 'form-control'}}) }}
+        {{ form_row(form.L3_81) }}
     </div>
     <div class="form-group">
         {{ form_row(form.L3_82, {'attr': {'class': 'form-control'}}) }}
@@ -390,13 +401,13 @@
         {{ form_row(form.L3_89, {'attr': {'class': 'form-control'}}) }}
     </div>
     <div class="form-group">
-        {{ form_row(form.L3_90, {'attr': {'class': 'form-control'}}) }}
+        {{ form_row(form.L3_90) }}
     </div>
     <div class="form-group">
         {{ form_row(form.L3_91, {'attr': {'class': 'form-control'}}) }}
     </div>
     <div class="form-group">
-        {{ form_row(form.L3_92, {'attr': {'class': 'form-control'}}) }}
+        {{ form_row(form.L3_92) }}
     </div>
     <div class="form-group">
         {{ form_row(form.L3_93, {'attr': {'class': 'form-control'}}) }}
@@ -417,7 +428,7 @@
         {{ form_row(form.L3_98, {'attr': {'class': 'form-control'}}) }}
     </div>
     <div class="form-group">
-        {{ form_row(form.L3_99, {'attr': {'class': 'form-control'}}) }}
+        {{ form_row(form.L3_99) }}
     </div>
     <div class="form-group">
         {{ form_row(form.L3_100, {'attr': {'class': 'form-control'}}) }}
@@ -431,10 +442,10 @@
         {{ form_row(form.L3_102, {'attr': {'class': 'form-control'}}) }}
     </div>
     <div class="form-group">
-        {{ form_row(form.L3_103, {'attr': {'class': 'form-control'}}) }}
+        {{ form_row(form.L3_103) }}
     </div>
     <div class="form-group">
-        {{ form_row(form.L3_104, {'attr': {'class': 'form-control'}}) }}
+        {{ form_row(form.L3_104) }}
     </div>
     <div class="form-group">
         {{ form_row(form.L3_105, {'attr': {'class': 'form-control'}}) }}
@@ -443,13 +454,13 @@
         {{ form_row(form.L3_106, {'attr': {'class': 'form-control'}}) }}
     </div>
     <div class="form-group">
-        {{ form_row(form.L3_107, {'attr': {'class': 'form-control'}}) }}
+        {{ form_row(form.L3_107) }}
     </div>
     <div class="form-group">
-        {{ form_row(form.L3_108, {'attr': {'class': 'form-control'}}) }}
+        {{ form_row(form.L3_108) }}
     </div>
     <div class="form-group">
-        {{ form_row(form.L3_109, {'attr': {'class': 'form-control'}}) }}
+        {{ form_row(form.L3_109) }}
     </div>
     <div class="form-group">
         {{ form_row(form.L3_110, {'attr': {'class': 'form-control'}}) }}
@@ -458,13 +469,13 @@
         {{ form_row(form.L3_111, {'attr': {'class': 'form-control'}}) }}
     </div>
     <div class="form-group">
-        {{ form_row(form.L3_112, {'attr': {'class': 'form-control'}}) }}
+        {{ form_row(form.L3_112) }}
     </div>
     <div class="form-group">
-        {{ form_row(form.L3_113, {'attr': {'class': 'form-control'}}) }}
+        {{ form_row(form.L3_113) }}
     </div>
     <div class="form-group">
-        {{ form_row(form.L3_114, {'attr': {'class': 'form-control'}}) }}
+        {{ form_row(form.L3_114) }}
     </div>
     <div class="form-group">
         {{ form_row(form.L3_115, {'attr': {'class': 'form-control'}}) }}
@@ -476,77 +487,77 @@
         {{ form_row(form.L3_117, {'attr': {'class': 'form-control'}}) }}
     </div>
     <div class="form-group">
-        {{ form_row(form.L3_117_autre, {'attr': {'class': 'form-control'}}) }}
+        {{ form_row(form.L3_117_autre) }}
     </div>
     <div class="form-group">
-        {{ form_row(form.L3_130, {'attr': {'class': 'form-control'}}) }}
+        {{ form_row(form.L3_130) }}
     </div>
     <div class="form-group">
-        {{ form_row(form.L3_131, {'attr': {'class': 'form-control'}}) }}
+        {{ form_row(form.L3_131) }}
     </div>
     <div class="form-group">
-        {{ form_row(form.L3_118, {'attr': {'class': 'form-control'}}) }}
+        {{ form_row(form.L3_118) }}
     </div>
 
     <H5>Acteurs impliqués  à la bonne pratique </H5>
     <div class="form-group">
-        {{ form_row(form.L3_119, {'attr': {'class': 'form-control'}}) }}
+        {{ form_row(form.L3_119) }}
     </div>
 
     <H4>4. EFFETS DU OU DES BONNES PRATIQUES </H4>
     <H5>Effets de la bonne pratique sur l’environnement </H5>
     <H5>Sur le plan politique</H5>
      <div class="form-group">
-        {{ form_row(form.L4_26, {'attr': {'class': 'form-control'}}) }}
+        {{ form_row(form.L4_26) }}
     </div>
      <div class="form-group">
-        {{ form_row(form.L4_26a, {'attr': {'class': 'form-control'}}) }}
+        {{ form_row(form.L4_26a) }}
     </div>
      <div class="form-group">
-        {{ form_row(form.L4_27, {'attr': {'class': 'form-control'}}) }}
+        {{ form_row(form.L4_27) }}
     </div>
      <div class="form-group">
-        {{ form_row(form.L4_28, {'attr': {'class': 'form-control'}}) }}
+        {{ form_row(form.L4_28) }}
     </div>
      <div class="form-group">
-        {{ form_row(form.L4_29, {'attr': {'class': 'form-control'}}) }}
+        {{ form_row(form.L4_29) }}
     </div>
      <div class="form-group">
-        {{ form_row(form.L4_30, {'attr': {'class': 'form-control'}}) }}
+        {{ form_row(form.L4_30) }}
     </div>
 
     <H5>Sur le plan économique </H5>
 
     <div class="form-group">
-        {{ form_row(form.L4_1, {'attr': {'class': 'form-control'}}) }}
+        {{ form_row(form.L4_1) }}
     </div>
     <div class="form-group">
-        {{ form_row(form.L4_2, {'attr': {'class': 'form-control'}}) }}
+        {{ form_row(form.L4_2) }}
     </div>
     <div class="form-group">
-        {{ form_row(form.L4_3, {'attr': {'class': 'form-control'}}) }}
+        {{ form_row(form.L4_3) }}
     </div>
     <div class="form-group">
-        {{ form_row(form.L4_4, {'attr': {'class': 'form-control'}}) }}
+        {{ form_row(form.L4_4) }}
     </div>
 
     <H5>Sur la vie communautaire</H5>
     <div class="form-group">
-        {{ form_row(form.L4_5, {'attr': {'class': 'form-control'}}) }}
+        {{ form_row(form.L4_5) }}
     </div>
     <div class="form-group">
-        {{ form_row(form.L4_6, {'attr': {'class': 'form-control'}}) }}
+        {{ form_row(form.L4_6) }}
     </div>
      <div class="form-group">
-        {{ form_row(form.L4_6a, {'attr': {'class': 'form-control'}}) }}
+        {{ form_row(form.L4_6a) }}
     </div>
     <div class="form-group">
-        {{ form_row(form.L4_7, {'attr': {'class': 'form-control'}}) }}
+        {{ form_row(form.L4_7) }}
     </div>
 
     <H5>Sur le plan social</H5>
     <div class="form-group">
-        {{ form_row(form.L4_8, {'attr': {'class': 'form-control'}}) }}
+        {{ form_row(form.L4_8) }}
     </div>
     <div class="form-group">
         {{ form_row(form.L4_9, {'attr': {'class': 'form-control'}}) }}
@@ -555,245 +566,245 @@
         {{ form_row(form.L4_10, {'attr': {'class': 'form-control'}}) }}
     </div>
     <div class="form-group">
-        {{ form_row(form.L4_11, {'attr': {'class': 'form-control'}}) }}
+        {{ form_row(form.L4_11) }}
     </div>
     <div class="form-group">
-        {{ form_row(form.L4_12, {'attr': {'class': 'form-control'}}) }}
+        {{ form_row(form.L4_12) }}
     </div>
     <H5>spécifiques par thématique sur les effets de la bonne pratique sur l’environnement ( selon les indicateurs GEF SGP)</H5>
 
     <H4>PARTIE : BIODIVERSITE</H4>
     <div class="form-group">
-        {{ form_row(form.L4_13, {'attr': {'class': 'form-control'}}) }}
+        {{ form_row(form.L4_13) }}
     </div>
     <div class="form-group">
-        {{ form_row(form.L4_13a, {'attr': {'class': 'form-control'}}) }}
+        {{ form_row(form.L4_13a) }}
     </div>
     <div class="form-group">
-        {{ form_row(form.L4_14, {'attr': {'class': 'form-control'}}) }}
+        {{ form_row(form.L4_14) }}
     </div>
     <div class="form-group">
-        {{ form_row(form.L4_15, {'attr': {'class': 'form-control'}}) }}
+        {{ form_row(form.L4_15) }}
     </div>
 
     <H4>PARTIE : CHANGEMENT CLIMATIQUE</H4>
     <div class="form-group">
-        {{ form_row(form.L4_16, {'attr': {'class': 'form-control'}}) }}
+        {{ form_row(form.L4_16) }}
     </div>
 
     <H4>PARTIE : DEGRADATION DES SOLS / GESTION DURABLE DES SOLS</H4>
     <div class="form-group">
-        {{ form_row(form.L4_17, {'attr': {'class': 'form-control'}}) }}
+        {{ form_row(form.L4_17) }}
     </div>
     <div class="form-group">
-        {{ form_row(form.L4_18, {'attr': {'class': 'form-control'}}) }}
+        {{ form_row(form.L4_18) }}
     </div>
     <div class="form-group">
-        {{ form_row(form.L4_19, {'attr': {'class': 'form-control'}}) }}
+        {{ form_row(form.L4_19) }}
     </div>
     <div class="form-group">
-        {{ form_row(form.L4_20, {'attr': {'class': 'form-control'}}) }}
+        {{ form_row(form.L4_20) }}
     </div>
     <div class="form-group">
-        {{ form_row(form.L4_21, {'attr': {'class': 'form-control'}}) }}
+        {{ form_row(form.L4_21) }}
     </div>
 
     <H4>PARTIE : EAUX INTERNATIONALES</H4>
     <div class="form-group">
-        {{ form_row(form.L4_22, {'attr': {'class': 'form-control'}}) }}
+        {{ form_row(form.L4_22) }}
     </div>
     <div class="form-group">
-        {{ form_row(form.L4_23, {'attr': {'class': 'form-control'}}) }}
+        {{ form_row(form.L4_23) }}
     </div>
 
     <H4>PARTIE : Pollution organiques / PRODUITS CHIMMIQUES ET DECHETS</H4>
     <div class="form-group">
-        {{ form_row(form.L4_24, {'attr': {'class': 'form-control'}}) }}
+        {{ form_row(form.L4_24) }}
     </div>
     <div class="form-group">
-        {{ form_row(form.L4_25, {'attr': {'class': 'form-control'}}) }}
+        {{ form_row(form.L4_25) }}
     </div>
 
     <H4>PARTIE : Développement de capacité</H4>
      <div class="form-group">
-        {{ form_row(form.L4_31, {'attr': {'class': 'form-control'}}) }}
+        {{ form_row(form.L4_31) }}
     </div>
      <div class="form-group">
-        {{ form_row(form.L4_32, {'attr': {'class': 'form-control'}}) }}
+        {{ form_row(form.L4_32) }}
     </div>
 
     <H4>PARTIE : Dialogue public et société civile </H4>
      <div class="form-group">
-        {{ form_row(form.L4_33, {'attr': {'class': 'form-control'}}) }}
+        {{ form_row(form.L4_33) }}
     </div>
      <div class="form-group">
-        {{ form_row(form.L4_34, {'attr': {'class': 'form-control'}}) }}
+        {{ form_row(form.L4_34) }}
     </div>
      <div class="form-group">
-        {{ form_row(form.L4_35, {'attr': {'class': 'form-control'}}) }}
+        {{ form_row(form.L4_35) }}
     </div>
      <div class="form-group">
-        {{ form_row(form.L4_36, {'attr': {'class': 'form-control'}}) }}
+        {{ form_row(form.L4_36) }}
     </div>
      <div class="form-group">
-        {{ form_row(form.L4_37, {'attr': {'class': 'form-control'}}) }}
+        {{ form_row(form.L4_37) }}
     </div>
      <div class="form-group">
-        {{ form_row(form.L4_38, {'attr': {'class': 'form-control'}}) }}
+        {{ form_row(form.L4_38) }}
     </div>
      <div class="form-group">
-        {{ form_row(form.L4_39, {'attr': {'class': 'form-control'}}) }}
+        {{ form_row(form.L4_39) }}
     </div>
      <div class="form-group">
-        {{ form_row(form.L4_40, {'attr': {'class': 'form-control'}}) }}
+        {{ form_row(form.L4_40) }}
     </div>
      <div class="form-group">
-        {{ form_row(form.L4_41, {'attr': {'class': 'form-control'}}) }}
+        {{ form_row(form.L4_41) }}
     </div>
      <div class="form-group">
-        {{ form_row(form.L4_42, {'attr': {'class': 'form-control'}}) }}
+        {{ form_row(form.L4_42) }}
     </div>
      <div class="form-group">
-        {{ form_row(form.L4_43, {'attr': {'class': 'form-control'}}) }}
+        {{ form_row(form.L4_43) }}
     </div>
      <div class="form-group">
-        {{ form_row(form.L4_44, {'attr': {'class': 'form-control'}}) }}
+        {{ form_row(form.L4_44) }}
     </div>
      <div class="form-group">
-        {{ form_row(form.L4_45, {'attr': {'class': 'form-control'}}) }}
+        {{ form_row(form.L4_45) }}
     </div>
      <div class="form-group">
-        {{ form_row(form.L4_46, {'attr': {'class': 'form-control'}}) }}
+        {{ form_row(form.L4_46) }}
     </div>
      <div class="form-group">
-        {{ form_row(form.L4_47, {'attr': {'class': 'form-control'}}) }}
+        {{ form_row(form.L4_47) }}
     </div>
      <div class="form-group">
-        {{ form_row(form.L4_48, {'attr': {'class': 'form-control'}}) }}
+        {{ form_row(form.L4_48) }}
     </div>
      <div class="form-group">
-        {{ form_row(form.L4_49, {'attr': {'class': 'form-control'}}) }}
+        {{ form_row(form.L4_49) }}
     </div>
 
     <H4>PARTIE : Aires et Territoires du Patrimoine Autochtones et Communautaires</H4>
    <div class="form-group">
-        {{ form_row(form.L4_50, {'attr': {'class': 'form-control'}}) }}
+        {{ form_row(form.L4_50) }}
     </div>
     <div class="form-group">
-        {{ form_row(form.L4_51, {'attr': {'class': 'form-control'}}) }}
+        {{ form_row(form.L4_51) }}
     </div>
     <div class="form-group">
-        {{ form_row(form.L4_52, {'attr': {'class': 'form-control'}}) }}
+        {{ form_row(form.L4_52) }}
     </div>
     <div class="form-group">
-        {{ form_row(form.L4_53, {'attr': {'class': 'form-control'}}) }}
+        {{ form_row(form.L4_53) }}
     </div>
 
     <H4>5. IMPACTS DE LA BONNE PRATIQUE </H4>
     <div class="form-group">
-        {{ form_row(form.L5_1, {'attr': {'class': 'form-control'}}) }}
+        {{ form_row(form.L5_1) }}
     </div>
     <div class="form-group">
-        {{ form_row(form.L5_2, {'attr': {'class': 'form-control'}}) }}
+        {{ form_row(form.L5_2) }}
     </div>
     <div class="form-group">
-        {{ form_row(form.L5_2_autre, {'attr': {'class': 'form-control'}}) }}
+        {{ form_row(form.L5_2_autre) }}
     </div>
     <div class="form-group">
-        {{ form_row(form.L5_3, {'attr': {'class': 'form-control'}}) }}
+        {{ form_row(form.L5_3) }}
     </div>
     <div class="form-group">
-        {{ form_row(form.L5_4, {'attr': {'class': 'form-control'}}) }}
+        {{ form_row(form.L5_4) }}
     </div>
     <div class="form-group">
-        {{ form_row(form.L5_5, {'attr': {'class': 'form-control'}}) }}
+        {{ form_row(form.L5_5) }}
     </div>
     <div class="form-group">
-        {{ form_row(form.L5_6, {'attr': {'class': 'form-control'}}) }}
+        {{ form_row(form.L5_6) }}
     </div>
     <div class="form-group">
-        {{ form_row(form.L5_7, {'attr': {'class': 'form-control'}}) }}
+        {{ form_row(form.L5_7) }}
     </div>
     <div class="form-group">
-        {{ form_row(form.L5_8, {'attr': {'class': 'form-control'}}) }}
+        {{ form_row(form.L5_8) }}
     </div>
     <div class="form-group">
-        {{ form_row(form.L5_9, {'attr': {'class': 'form-control'}}) }}
+        {{ form_row(form.L5_9) }}
     </div>
     <div class="form-group">
-        {{ form_row(form.L5_10, {'attr': {'class': 'form-control'}}) }}
+        {{ form_row(form.L5_10) }}
     </div>
 
     <H4>6. THEMATIQUES TRANSVERSALES </H4>
     <H5>Non exclusion </H5>
     <div class="form-group">
-        {{ form_row(form.L6_1, {'attr': {'class': 'form-control'}}) }}
+        {{ form_row(form.L6_1) }}
     </div>
     <div class="form-group">
-        {{ form_row(form.L6_2, {'attr': {'class': 'form-control'}}) }}
+        {{ form_row(form.L6_2) }}
     </div>
     <div class="form-group">
-        {{ form_row(form.L6_3, {'attr': {'class': 'form-control'}}) }}
+        {{ form_row(form.L6_3) }}
     </div>
 
     <H5>Genre </H5>
     <div class="form-group">
-        {{ form_row(form.L6_4, {'attr': {'class': 'form-control'}}) }}
+        {{ form_row(form.L6_4) }}
     </div>
      <div class="form-group">
-        {{ form_row(form.L6_4a, {'attr': {'class': 'form-control'}}) }}
+        {{ form_row(form.L6_4a) }}
     </div>
     <div class="form-group">
-        {{ form_row(form.L6_5, {'attr': {'class': 'form-control'}}) }}
+        {{ form_row(form.L6_5) }}
     </div>
     <div class="form-group">
-        {{ form_row(form.L6_6, {'attr': {'class': 'form-control'}}) }}
+        {{ form_row(form.L6_6) }}
     </div>
 
     <H4>7. LECONS TIREES DU OU DE LA BONNE PRATIQUE</H4>
     <div class="form-group">
-        {{ form_row(form.L7_1, {'attr': {'class': 'form-control'}}) }}
+        {{ form_row(form.L7_1) }}
     </div>
 
     <H4>8. DURABILITE ET DUPLICATION </H4>
     <div class="form-group">
-        {{ form_row(form.L8_1, {'attr': {'class': 'form-control'}}) }}
+        {{ form_row(form.L8_1) }}
     </div>
     <div class="form-group">
-        {{ form_row(form.L8_2, {'attr': {'class': 'form-control'}}) }}
+        {{ form_row(form.L8_2) }}
     </div>
     <div class="form-group">
-        {{ form_row(form.L8_3, {'attr': {'class': 'form-control'}}) }}
+        {{ form_row(form.L8_3) }}
     </div>
 
     <H4>9. PARTAGE DE CONNAISSANCES </H4>
     <div class="form-group">
-        {{ form_row(form.L9_1, {'attr': {'class': 'form-control'}}) }}
+        {{ form_row(form.L9_1) }}
     </div>
     <div class="form-group">
-        {{ form_row(form.L9_2, {'attr': {'class': 'form-control'}}) }}
+        {{ form_row(form.L9_2) }}
     </div>
      <div class="form-group">
         {{ form_row(form.L9_2a, {'attr': {'class': 'form-control'}}) }}
     </div>
     <div class="form-group">
-        {{ form_row(form.L9_3, {'attr': {'class': 'form-control'}}) }}
+        {{ form_row(form.L9_3) }}
     </div>
     <div class="form-group">
-        {{ form_row(form.L9_4, {'attr': {'class': 'form-control'}}) }}
+        {{ form_row(form.L9_4) }}
     </div>
     <div class="form-group">
-        {{ form_row(form.L9_5, {'attr': {'class': 'form-control'}}) }}
+        {{ form_row(form.L9_5) }}
     </div>
     <div class="form-group">
-        {{ form_row(form.L9_6, {'attr': {'class': 'form-control'}}) }}
+        {{ form_row(form.L9_6) }}
     </div>
 
- <button class="btn">{{ button_label|default('Save') }}</button>
+ <button class="btn btn-success" class="btn">{{ button_label|default('Save') }}</button>
 
         {{ form_end(form) }}
 
-    <a href="{{ path('app_capitalisation_part_i_i_index') }}">back to list</a>
+    <a class="btn btn-warning" href="{{ path('app_capitalisation_part_i_i_index') }}">back to list</a>
 
     {{ include('capitalisation_part_ii/_delete_form.html.twig') }}
 {% endblock %}

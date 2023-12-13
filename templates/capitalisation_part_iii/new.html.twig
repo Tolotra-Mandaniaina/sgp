@@ -1,23 +1,27 @@
 {% extends 'base.html.twig' %}
 
+
 {% block title %}New CapitalisationPartIII{% endblock %}
 
 {% block body %}
     <h1>Create new CapitalisationPartIII</h1>
+    {{ form_start(form) }}
+
 
 <div class="container">
 
     <H4>A- IDENTIFICATION</H4>
-
-
-<div class="form-group">
-
-
     <div class="form-group">
         {{ form_row(form.A1, {'attr': {'class': 'form-control'}}) }}
     </div>
+     <div class="form-group">
+        {{ form_row(form.A5, {'attr': {'class': 'form-control'}}) }}
+    </div>
     <div class="form-group">
         {{ form_row(form.A10, {'attr': {'class': 'form-control'}}) }}
+    </div>
+    <div class="form-group">
+        {{ form_row(form.A10a, {'attr': {'class': 'form-control'}}) }}
     </div>
     <div class="form-group">
         {{ form_row(form.A11, {'attr': {'class': 'form-control'}}) }}
@@ -31,14 +35,15 @@
     <div class="form-group">
         {{ form_row(form.A19, {'attr': {'class': 'form-control'}}) }}
     </div>
-    <div class="form-group">
-        {{ form_row(form.A33, {'attr': {'class': 'form-control'}}) }}
-    </div>
+   
     <div class="form-group">
         {{ form_row(form.A34, {'attr': {'class': 'form-control'}}) }}
     </div>
+     <div class="form-group">
+        {{ form_row(form.A35, {'attr': {'class': 'form-control'}}) }}
+    </div>
 
-<H4>PARTIE L: BONNE PRATIQUE</H4>
+    <H4>PARTIE L: BONNE PRATIQUE</H4>
     <div class="form-group">
         {{ form_row(form.L1_1, {'attr': {'class': 'form-control'}}) }}
     </div>
@@ -63,9 +68,10 @@
         {{ form_row(form.L10_6, {'attr': {'class': 'form-control'}}) }}
     </div>
 
-    <button class="btn">{{ button_label|default('Save') }}</button>
+ </div>
 
-        {{ form_end(form) }}
+    <button class="btn">{{ button_label|default('Save') }}</button>
+    {{ form_end(form) }}
 
 
     <a href="{{ path('app_capitalisation_part_i_i_i_index') }}">back to list</a>

@@ -8,28 +8,39 @@
     <table  id="table_id" class="table table-bordered table-hover">
         <thead>
             <tr>
+                <th>Statut</th>
                 <th>Titre du projet</th>
-                <th>Projet No</th>
-                <th>Fonds</th>
+                <th>Région d'intervention</th>
+                <th>Projet No.</th>
+                 <th>Fonds</th>
                 <th>Phases</th>
                 <th>Paysages</th>
                 <th>Domaine d'intervention</th>
-                <th>Année de remplissage de l'outils</th>
-                <th>Numero trimestre</th>
                 <th>actions</th>
             </tr>
         </thead>
         <tbody>
         {% for capitalisation_part_i in capitalisation_part_is %}
             <tr>
+                <td>
+                    {% if capitalisation_part_i.StatutFiche == '' %}
+                    <button type="button" class="btn btn-warning">En cours</button>
+                    {% elseif capitalisation_part_i.StatutFiche == 1 %}
+                     <button type="button" class="btn btn-danger">A vérifier</button>
+
+                    {% elseif capitalisation_part_i.StatutFiche == 2 %}
+                     <button type="button" class="btn btn-success">Valider</button>
+                    {% else %}
+                        Autre cas (optionnel)
+                    {% endif %}
+                    </td>
                 <td>{{ capitalisation_part_i.A1 }}</td>
+                <td>{{ capitalisation_part_i.A5 }}</td>
                 <td>{{ capitalisation_part_i.A10 }}</td>
                 <td>{{ capitalisation_part_i.A11 }}</td>
                 <td>{{ capitalisation_part_i.A12 }}</td>
                 <td>{{ capitalisation_part_i.A13 }}</td>
                 <td>{{ capitalisation_part_i.A19 }}</td>
-                <td>{{ capitalisation_part_i.A33 }}</td>
-                <td>{{ capitalisation_part_i.A34 }}</td>
                 <td>
                 {# <a href="{{ path('app_capitalisation_part_i_show', {'id': capitalisation_part_i.id}) }}">show</a> #}
                     <a href="{{ path('app_capitalisation_part_i_edit', {'id': capitalisation_part_i.id}) }}"  class="btn btn-sm btn-success"

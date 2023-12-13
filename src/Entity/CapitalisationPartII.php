@@ -748,6 +748,9 @@ class CapitalisationPartII
     #[ORM\Column(name:"L9_6", type: Types::TEXT, nullable: true)]
     private ?string $L9_6 = null;
 
+    #[ORM\Column(nullable: true)]
+    private ?int $StatutFiche = null;
+
 
     public function getId(): ?int
     {
@@ -868,8 +871,18 @@ class CapitalisationPartII
 
     public function getA11(): ?string
     {
-        return $this->A11;
+        $value = $this->A11;
+
+    // Ajouter une condition pour vérifier si la valeur est égale à 6
+    if ($value === '1') { return 'CORE';  }
+    else if ($value === '2' ) { return 'STAR';  }
+    else if ($value === '3' ) { return 'ICCA - GSI';  }
+   
+
+
+    return $value;
     }
+
 
     public function setA11(?string $A11): static
     {
@@ -880,7 +893,18 @@ class CapitalisationPartII
 
     public function getA12(): ?string
     {
-        return $this->A12;
+    $value = $this->A12;
+
+    // Ajouter une condition pour vérifier si la valeur est égale à 6
+    if ($value === '1') { return 'OP 5';  }
+    else if ($value === '2' ) { return 'OP 6';  }
+    else if ($value === '3' ) { return 'OP 7';  }
+    else if ($value === '4' ) { return 'OP 8';  }
+    else if ($value === '5' ) { return 'OP 9';  }
+    else if ($value === '6' ) { return 'OP 10';  }
+
+
+    return $value;
     }
 
     public function setA12(?string $A12): static
@@ -892,7 +916,18 @@ class CapitalisationPartII
 
     public function getA13(): ?string
     {
-        return $this->A13;
+        $value = $this->A13;
+
+        // Ajouter une condition pour vérifier si la valeur est égale à 6
+        if ($value === '1') { return 'Nord';  }
+        else if ($value === '2' ) { return 'Est';  }
+        else if ($value === '3' ) { return 'Sud-Ouest';  }
+        else if ($value === '4' ) { return 'Centre';  }
+        else if ($value === '5' ) { return 'Potentiel';  }
+       
+    
+    
+        return $value;
     }
 
     public function setA13(?string $A13): static
@@ -904,7 +939,34 @@ class CapitalisationPartII
 
     public function getA19(): ?string
     {
-        return $this->A19;
+            // Récupérer la valeur de A19
+        $value = $this->A19;
+
+        // Définir une correspondance entre les nombres et leurs libellés
+        $labelMapping = [
+            '1' =>  'Biodiversité',
+            '2' =>  'Atténuation du changement climatique',
+            '3' =>  'Dégradation des sols',
+            '4' =>  'Gestion durable des forêts',
+            '5' =>  'Eaux internationales',
+            '6' =>  'Produits chimiques et déchets',
+            '7' =>   'Développement des capacités',
+            '8' =>   'Dialogue public société civile',
+            '9' => 'Aire et patrimoine des peuples autochtones'
+        ];
+
+        // Diviser la chaîne en nombres
+        $numbers = explode(' ', $value);
+
+        // Remplacer les nombres par leurs libellés correspondants
+        $labels = array_map(function ($number) use ($labelMapping) {
+            return $labelMapping[$number] ?? $number;
+        }, $numbers);
+
+        // Joindre les libellés avec '/'
+        $result = implode(' / ', $labels);
+
+        return $result;
     }
 
     public function setA19(?string $A19): static
@@ -940,7 +1002,12 @@ class CapitalisationPartII
 
     public function getL11(): ?string
     {
-        return $this->L1_1;
+        $value = $this->L1_1;
+
+        // Ajouter une condition pour vérifier si la valeur est égale à 6
+        if ($value === '1') { return 'Oui';  }
+        else if ($value === '2' ) { return 'Non';  }
+        return $value;
     }
 
     public function setL11(?string $L1_1): static
@@ -952,7 +1019,19 @@ class CapitalisationPartII
 
     public function getL113(): ?string
     {
-        return $this->L1_13;
+        $value = $this->L1_13;
+
+        if ($value === '1') { return  'Biodiversité'; }
+        if ($value === '2') { return 'Atténuation du changement climatique'; }
+        if ($value === '3') { return  'Dégradation des sols'; }
+        if ($value === '4') { return  'Gestion durable des forêts'; }
+        if ($value === '5') { return  'Eaux internationales'; }
+        if ($value === '6') { return 'Produits chimiques et déchets'; }
+        if ($value === '7') { return 'Développement des capacités'; }
+        if ($value === '8') { return  'Dialogue public société civile'; }
+        if ($value === '9') { return 'Aire et patrimoine des peuples autochtones'; }
+            return $value;
+
     }
 
     public function setL113(?string $L1_13): static
@@ -1084,7 +1163,16 @@ class CapitalisationPartII
 
     public function getL311(): ?string
     {
-        return $this->L3_11;
+        
+    $value = $this->L3_11;
+
+    if ($value === '1') { return  'Technique'; }
+    if ($value === '2') { return 'Gestion '; }
+    if ($value === '3') { return  'Gouvernance'; }
+    if ($value === '4') { return  'Communication'; }
+    if ($value === '5') { return  'NTIC'; }
+    if ($value === '77') { return 'Autres'; }
+    return $value;
     }
 
     public function setL311(?string $L3_11): static
@@ -1120,7 +1208,12 @@ class CapitalisationPartII
 
     public function getL313(): ?string
     {
-        return $this->L3_13;
+        $value = $this->L3_13;
+
+        // Ajouter une condition pour vérifier si la valeur est égale à 6
+        if ($value === '1') { return 'Oui';  }
+        else if ($value === '2' ) { return 'Non';  }
+        return $value;
     }
 
     public function setL313(?string $L3_13): static
@@ -1180,7 +1273,29 @@ class CapitalisationPartII
 
     public function getL318(): ?string
     {
-        return $this->L3_18;
+        $value = $this->L3_18;
+
+        // Définir une correspondance entre les nombres et leurs libellés
+        $labelMapping = [
+           				'1' =>  'Humains',
+						'2' =>  'Matériels',
+						'3' =>  'Fournitures',
+						'4' =>  'Financier',
+						'77' =>  'Autres'
+        ];
+
+        // Diviser la chaîne en nombres
+        $numbers = explode(' ', $value);
+
+        // Remplacer les nombres par leurs libellés correspondants
+        $labels = array_map(function ($number) use ($labelMapping) {
+            return $labelMapping[$number] ?? $number;
+        }, $numbers);
+
+        // Joindre les libellés avec '/'
+        $result = implode(' / ', $labels);
+
+        return $result;
     }
 
     public function setL318(?string $L3_18): static
@@ -1240,7 +1355,11 @@ class CapitalisationPartII
 
     public function getL322(): ?string
     {
-        return $this->L3_22;
+        $value = $this->L3_22;
+        if ($value === '1') { return  'Avantages sur le plan coût '; }
+        if ($value === '2') { return 'Sur le plan moyens humains '; }
+        if ($value === '77') { return  'Autres'; }
+        return $value;
     }
 
     public function setL322(?string $L3_22): static
@@ -1324,7 +1443,14 @@ class CapitalisationPartII
 
     public function getL328(): ?string
     {
-        return $this->L3_28;
+        $value = $this->L3_28;
+        if ($value === '1') { return  'Humains '; }
+        if ($value === '2') { return 'Matériels '; }
+        if ($value === '3') { return  'Fournitures '; }
+        if ($value === '4') { return  'Financier '; }
+        if ($value === '77') { return  'Autres '; }
+        return $value;
+        
     }
 
     public function setL328(?string $L3_28): static
@@ -1480,7 +1606,12 @@ class CapitalisationPartII
 
     public function getL340(): ?string
     {
-        return $this->L3_40;
+        $value = $this->L3_40;
+
+        // Ajouter une condition pour vérifier si la valeur est égale à 6
+        if ($value === '1') { return 'Oui';  }
+        else if ($value === '2' ) { return 'Non';  }
+        return $value;
     }
 
     public function setL340(?string $L3_40): static
@@ -1540,7 +1671,12 @@ class CapitalisationPartII
 
     public function getL345(): ?string
     {
-        return $this->L3_45;
+        $value = $this->L3_45;
+
+        // Ajouter une condition pour vérifier si la valeur est égale à 6
+        if ($value === '1') { return 'Oui';  }
+        else if ($value === '2' ) { return 'Non';  }
+        return $value;
     }
 
     public function setL345(?string $L3_45): static
@@ -1660,7 +1796,17 @@ class CapitalisationPartII
 
     public function getL355(): ?string
     {
-        return $this->L3_55;
+
+        $value = $this->L3_55;
+        if ($value === '1') { return  'Verbal'; }
+        if ($value === '2') { return 'Ecrite'; }
+        if ($value === '3') { return  'Audio-visuelle'; }
+        if ($value === '4') { return  'Evènementiel'; }
+        if ($value === '5') { return  'A travers des us et coutume'; }
+        if ($value === '77') { return  'Autres'; }
+        return $value;
+        
+        
     }
 
     public function setL355(?string $L3_55): static
@@ -1708,7 +1854,13 @@ class CapitalisationPartII
 
     public function getL358(): ?string
     {
-        return $this->L3_58;
+        $value = $this->L3_58;
+        if ($value === '1') { return  'Marché'; }
+        if ($value === '2') { return 'Lieu public'; }
+        if ($value === '3') { return  'Réunion communautaire'; }
+        if ($value === '4') { return  'Pratique de culte traditionnel'; }
+        if ($value === '77') { return  'Autres'; }
+        return $value;
     }
 
     public function setL358(?string $L3_58): static
@@ -1840,7 +1992,13 @@ class CapitalisationPartII
 
     public function getL368(): ?string
     {
-        return $this->L3_68;
+        $value = $this->L3_68;
+        if ($value === '1') { return  'Humains '; }
+        if ($value === '2') { return 'Matériels '; }
+        if ($value === '3') { return  'Fournitures '; }
+        if ($value === '4') { return  'Financier '; }
+        if ($value === '77') { return  'Autres '; }
+        return $value;
     }
 
     public function setL368(?string $L3_68): static
@@ -1924,7 +2082,12 @@ class CapitalisationPartII
 
     public function getL374(): ?string
     {
-        return $this->L3_74;
+        $value = $this->L3_74;
+
+        // Ajouter une condition pour vérifier si la valeur est égale à 6
+        if ($value === '1') { return 'Oui';  }
+        else if ($value === '2' ) { return 'Non';  }
+        return $value;
     }
 
     public function setL374(?string $L3_74): static
@@ -1936,7 +2099,12 @@ class CapitalisationPartII
 
     public function getL375(): ?string
     {
-        return $this->L3_75;
+        $value = $this->L3_75;
+
+        // Ajouter une condition pour vérifier si la valeur est égale à 6
+        if ($value === '1') { return 'Oui';  }
+        else if ($value === '2' ) { return 'Non';  }
+        return $value;
     }
 
     public function setL375(?string $L3_75): static
@@ -1948,7 +2116,12 @@ class CapitalisationPartII
 
     public function getL376(): ?string
     {
-        return $this->L3_76;
+        $value = $this->L3_76;
+
+        // Ajouter une condition pour vérifier si la valeur est égale à 6
+        if ($value === '1') { return 'Oui';  }
+        else if ($value === '2' ) { return 'Non';  }
+        return $value;
     }
 
     public function setL376(?string $L3_76): static
@@ -1960,7 +2133,12 @@ class CapitalisationPartII
 
     public function getL377(): ?string
     {
-        return $this->L3_77;
+        $value = $this->L3_77;
+
+        // Ajouter une condition pour vérifier si la valeur est égale à 6
+        if ($value === '1') { return 'Oui';  }
+        else if ($value === '2' ) { return 'Non';  }
+        return $value;
     }
 
     public function setL377(?string $L3_77): static
@@ -1972,7 +2150,12 @@ class CapitalisationPartII
 
     public function getL378(): ?string
     {
-        return $this->L3_78;
+        $value = $this->L3_78;
+
+        // Ajouter une condition pour vérifier si la valeur est égale à 6
+        if ($value === '1') { return 'Oui';  }
+        else if ($value === '2' ) { return 'Non';  }
+        return $value;
     }
 
     public function setL378(?string $L3_78): static
@@ -1997,7 +2180,15 @@ class CapitalisationPartII
 
     public function getL3120(): ?string
     {
-        return $this->L3_120;
+        
+            $value = $this->L3_120;
+            if ($value === '1') { return  'Renforcement de capacité des communautés dans le transfert de gestion des ressources naturelles (TGRN, Aires Protégées Communautaires ou APC) '; }
+            if ($value === '2') { return 'Développement de fonds communautaires à travers des filières durables '; }
+            if ($value === '3') { return  'Renforcement de capacité des femmes '; }
+            return $value;
+ 
+ 
+ 
     }
 
     public function setL3120(?string $L3_120): static
@@ -2009,7 +2200,16 @@ class CapitalisationPartII
 
     public function getL3121(): ?string
     {
-        return $this->L3_121;
+        
+        $value = $this->L3_121;
+        if ($value === '1') { return  'Formation technique'; }
+        if ($value === '2') { return 'Amélioration d’accès aux ressources financières '; } 
+        if ($value === '3') { return  'Amélioration de capacité pour des suivis '; }
+        if ($value === '4') { return  'Amélioration de capacité pour le contrôle '; } 
+        if ($value === '5') { return  'Amélioration des moyens de subsistance durable '; }
+        if ($value === '77') { return  'Autres '; }
+        return $value;
+ 
     }
 
     public function setL3121(?string $L3_121): static
@@ -2044,7 +2244,15 @@ class CapitalisationPartII
 
     public function getL3124(): ?string
     {
-        return $this->L3_124;
+        
+
+        $value = $this->L3_124;
+
+        if ($value === '1') { return  'Coalitions locales axés sur les problématiques environnementales'; }
+        if ($value === '2') { return 'Dialogue sur les politiques et planification entre les OSC, gouvernement et secteur privé '; }
+        if ($value === '3') { return  'Genre '; }
+        return $value;
+        
     }
 
     public function setL3124(?string $L3_124): static
@@ -2056,7 +2264,15 @@ class CapitalisationPartII
 
     public function getL3125(): ?string
     {
-        return $this->L3_125;
+        $value = $this->L3_125;
+
+        if ($value === '1') { return  'Egalité entre homme et femme sur l’accès et  contrôle des ressources naturelles'; } 
+        if ($value === '2') { return 'Participation à la prise de décision '; }
+        if ($value === '3') { return  'Accès égal aux avantages '; }
+        if ($value === '77') { return  'Autres'; }
+        
+        return $value;
+        
     }
 
     public function setL3125(?string $L3_125): static
@@ -2092,7 +2308,14 @@ class CapitalisationPartII
 
     public function getL3128(): ?string
     {
-        return $this->L3_128;
+        $value = $this->L3_128;
+
+        if ($value === '1') { return  'Renforcement des Fokonolona quelle que soit la thématique '; }
+        if ($value === '2') { return 'Accès aux financements communautaires '; }
+        if ($value === '3') { return  'Mise en place de fonds communautaires '; }
+        return $value;
+        
+        
     }
 
     public function setL3128(?string $L3_128): static
@@ -2118,7 +2341,35 @@ class CapitalisationPartII
 
     public function getL380(): ?string
     {
-        return $this->L3_80;
+        $value = $this->L3_80;
+
+        // Définir une correspondance entre les nombres et leurs libellés
+        $labelMapping = [
+           			
+						'1' =>  'Fokonolona',
+						'2' =>  'COBA',
+						'3' =>  'Coopérative',
+						'4' =>  'OSC',
+						'5' =>  'OSC Fédératives',
+						'6' =>  'STD',
+						'7' =>  'CTD',
+						'8' =>  'LMMA',
+						'9' =>  'Secteur privé',
+						'77' =>  'Autres à préciser'
+        ];
+
+        // Diviser la chaîne en nombres
+        $numbers = explode(' ', $value);
+
+        // Remplacer les nombres par leurs libellés correspondants
+        $labels = array_map(function ($number) use ($labelMapping) {
+            return $labelMapping[$number] ?? $number;
+        }, $numbers);
+
+        // Joindre les libellés avec '/'
+        $result = implode(' / ', $labels);
+
+        return $result;
     }
 
     public function setL380(?string $L3_80): static
@@ -2562,7 +2813,29 @@ class CapitalisationPartII
 
     public function getL3117(): ?string
     {
-        return $this->L3_117;
+        $value = $this->L3_117;
+
+        // Définir une correspondance entre les nombres et leurs libellés
+        $labelMapping = [
+           				'1' =>  'Gouvernorat',
+						'2' =>  'Bureau exécutif',
+						'3' =>  'Conseil communal',
+						'77' =>  'Autres à préciser'
+
+        ];
+
+        // Diviser la chaîne en nombres
+        $numbers = explode(' ', $value);
+
+        // Remplacer les nombres par leurs libellés correspondants
+        $labels = array_map(function ($number) use ($labelMapping) {
+            return $labelMapping[$number] ?? $number;
+        }, $numbers);
+
+        // Joindre les libellés avec '/'
+        $result = implode(' / ', $labels);
+
+        return $result;
     }
 
     public function setL3117(?string $L3_117): static
@@ -2648,7 +2921,12 @@ class CapitalisationPartII
 
     public function getL426a(): ?string
     {
-        return $this->L4_26a;
+        $value = $this->L4_26a;
+
+        // Ajouter une condition pour vérifier si la valeur est égale à 6
+        if ($value === '1') { return 'Oui';  }
+        else if ($value === '2' ) { return 'Non';  }
+        return $value;
     }
 
     public function setL426a(?string $L4_26a): static
@@ -2684,7 +2962,12 @@ class CapitalisationPartII
 
     public function getL429(): ?string
     {
-        return $this->L4_29;
+        $value = $this->L4_29;
+
+        // Ajouter une condition pour vérifier si la valeur est égale à 6
+        if ($value === '1') { return 'Oui';  }
+        else if ($value === '2' ) { return 'Non';  }
+        return $value;
     }
 
     public function setL429(?string $L4_29): static
@@ -2722,7 +3005,12 @@ class CapitalisationPartII
 
     public function getL42(): ?string
     {
-        return $this->L4_2;
+        $value = $this->L4_2;
+
+        // Ajouter une condition pour vérifier si la valeur est égale à 6
+        if ($value === '1') { return 'Oui';  }
+        else if ($value === '2' ) { return 'Non';  }
+        return $value;
     }
 
     public function setL42(?string $L4_2): static
@@ -2782,7 +3070,12 @@ class CapitalisationPartII
 
     public function getL46a(): ?string
     {
-        return $this->L4_6a;
+        $value = $this->L4_6a;
+
+        // Ajouter une condition pour vérifier si la valeur est égale à 6
+        if ($value === '1') { return 'Oui';  }
+        else if ($value === '2' ) { return 'Non';  }
+        return $value;
     }
 
     public function setL46a(?string $L4_6a): static
@@ -2818,7 +3111,12 @@ class CapitalisationPartII
 
     public function getL49(): ?string
     {
-        return $this->L4_9;
+        $value = $this->L4_9;
+
+        // Ajouter une condition pour vérifier si la valeur est égale à 6
+        if ($value === '1') { return 'Oui';  }
+        else if ($value === '2' ) { return 'Non';  }
+        return $value;
     }
 
     public function setL49(?string $L4_9): static
@@ -3321,7 +3619,33 @@ class CapitalisationPartII
 
     public function getL52(): ?string
     {
-        return $this->L5_2;
+        $value = $this->L5_2;
+
+        // Définir une correspondance entre les nombres et leurs libellés
+        $labelMapping = [
+           				
+				'1' =>  'Nouvel attitude',
+				'2' =>  'Nouveaux comportements',
+				'3' =>  'Nouvelles modalités de travail',
+				'4' =>  'Nouvelles organisations',
+				'5' =>  'Nouvelles méthodes adoptées',
+				'6' =>  'Nouvel texte',
+				'77' =>  'Autres'
+
+        ];
+
+        // Diviser la chaîne en nombres
+        $numbers = explode(' ', $value);
+
+        // Remplacer les nombres par leurs libellés correspondants
+        $labels = array_map(function ($number) use ($labelMapping) {
+            return $labelMapping[$number] ?? $number;
+        }, $numbers);
+
+        // Joindre les libellés avec '/'
+        $result = implode(' / ', $labels);
+
+        return $result;
     }
 
     public function setL52(?string $L5_2): static
@@ -3441,7 +3765,12 @@ class CapitalisationPartII
 
     public function getL61(): ?string
     {
-        return $this->L6_1;
+        $value = $this->L6_1;
+
+        // Ajouter une condition pour vérifier si la valeur est égale à 6
+        if ($value === '1') { return 'Oui';  }
+        else if ($value === '2' ) { return 'Non';  }
+        return $value;
     }
 
     public function setL61(?string $L6_1): static
@@ -3465,7 +3794,12 @@ class CapitalisationPartII
 
     public function getL63(): ?string
     {
-        return $this->L6_3;
+        $value = $this->L6_3;
+
+        // Ajouter une condition pour vérifier si la valeur est égale à 6
+        if ($value === '1') { return 'Oui';  }
+        else if ($value === '2' ) { return 'Non';  }
+        return $value;
     }
 
     public function setL63(?string $L6_3): static
@@ -3585,7 +3919,34 @@ class CapitalisationPartII
 
     public function getL92(): ?string
     {
-        return $this->L9_2;
+        $value = $this->L9_2;
+
+        // Définir une correspondance entre les nombres et leurs libellés
+        $labelMapping = [
+           				
+				'1' =>  'Sous forme écrite',
+				'2' =>  'Audio-visuelle',
+				'3' =>  'Démonstration',
+				'4' =>  'Formation',
+				'5' =>  'Communication',
+				'6' =>  'Rituelle',
+				'77' =>  'Autres'
+
+        ];
+
+        // Diviser la chaîne en nombres
+        $numbers = explode(' ', $value);
+
+        // Remplacer les nombres par leurs libellés correspondants
+        $labels = array_map(function ($number) use ($labelMapping) {
+            return $labelMapping[$number] ?? $number;
+        }, $numbers);
+
+        // Joindre les libellés avec '/'
+        $result = implode(' / ', $labels);
+
+        return $result;
+
     }
 
     public function setL92(?string $L9_2): static
@@ -3651,6 +4012,18 @@ class CapitalisationPartII
     public function setL96(?string $L9_6): static
     {
         $this->L9_6 = $L9_6;
+
+        return $this;
+    }
+
+    public function getStatutFiche(): ?int
+    {
+        return $this->StatutFiche;
+    }
+
+    public function setStatutFiche(?int $StatutFiche): static
+    {
+        $this->StatutFiche = $StatutFiche;
 
         return $this;
     }

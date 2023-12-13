@@ -6,6 +6,7 @@ use App\Entity\CapitalisationPartI;
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolver;
+use Symfony\Component\Form\Extension\Core\Type\ChoiceType;
 
 class CapitalisationPartIType extends AbstractType
 {
@@ -49,7 +50,7 @@ class CapitalisationPartIType extends AbstractType
             ->add('L1_22' , null, ['label' => 'L1_22-Donner la caractéristique de la zone protégée?',])
             ->add('L1_22_autre' , null, ['label' => 'L1_22_autre-Si autre',])
             ->add('L1_23' , null, ['label' => 'L1_23-Est-ce que la bonne pratique touche une ou des espèces endémiques spécifiques, lesquels ?',])
-            ->add('L1_23a' , null, ['label' => 'L1_23a -Lesquels  ?',])
+            ->add('L1_23_autre' , null, ['label' => 'L1_23a -Lesquels  ?',])
             ->add('L1_24' , null, ['label' => 'L1_24-Est-ce que ce sont des espèces figurées dans la liste rouge d’UICN ?',])
             ->add('L1_25a' , null, ['label' => 'L1_25a-relief',])
             ->add('L1_25b' , null, ['label' => 'L1_25b-climat',])
@@ -188,6 +189,16 @@ class CapitalisationPartIType extends AbstractType
             ->add('L2_39' , null, ['label' => 'L2_39- Si accès, précisez?',])
             ->add('L2_40' , null, ['label' => 'L2_40- Si défense des droits, précisez?',])
             ->add('L2_41' , null, ['label' => 'L2_41- Donner un aperçu général des problèmes et des interrelations qui bloquent les communautés?',])
+            ->add('StatutFiche', ChoiceType::class, [
+                'label' => 'StatutFiche',
+                'choices' => [
+                    'A Vérifier' => '1', 
+                    'Valider' => '2',
+                    
+                ],
+                'placeholder' => 'Sélectionnez une option', 
+                'required' => true, 
+            ]) 
         ;
     }
 
