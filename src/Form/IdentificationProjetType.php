@@ -129,9 +129,9 @@ class IdentificationProjetType extends AbstractType
             ->add('A11', ChoiceType::class, [
                 'label' => 'A11- Fonds',
                 'choices' => [
-                    'CORE' => 'CORE', 
-                    'STAR' => 'STAR',
-                    'ICCA - GSI' => 'ICCA - GSI',
+                    'CORE' => '1', 
+                    'STAR' => '2',
+                    'ICCA - GSI' => '3',
                 ],
                 'placeholder' => 'Sélectionnez une option', 
                 'required' => true, 
@@ -140,30 +140,30 @@ class IdentificationProjetType extends AbstractType
             ->add('A13', ChoiceType::class, [
                 'label' => 'A13- Paysages',
                 'choices' => [
-                    'Nord' => 'Nord', 
-                    'Est' => 'Est',
-                    'Sud-Ouest' => 'Sud-Ouest',
-                    'Centre' => 'Centre',
-                    'Potentiel' => 'Potentiel',
+                    'Nord' => '1', 
+                    'Est' => '2',
+                    'Sud-Ouest' => '3',
+                    'Centre' => '4',
+                    'Potentiel' => '5',
                 ],
                 'placeholder' => 'Sélectionnez une option', 
                 'required' => true, 
             ])
 
             ->add('A13a', null, ['label' => 'A13a- Si paysage potentiel, dans quels régions?',])
-            ->add('A14', null, ['label' => 'A14- Sous-paysage',])
+          
 
             ->add('A14', ChoiceType::class, [
-                'label' => 'A13- Paysages',
+                'label' => 'A14- Sous Paysages',
                 'choices' => [
-                    'Ambaro' => 'Ambaro', 
-                    'Comatsa' => 'Comatsa',
-                    'Mamabay' => 'Mamabay',
-                    'Caz' => 'Caz',
-                    'Cofam' => 'Cofam',
-                    'Mahafaly' => 'Mahafaly',
-                    'Mikea' => 'Mikea',
-                    'Autres' => 'Autres',
+                    'Ambaro' => '1', 
+                    'Comatsa' => '2',
+                    'Mamabay' => '3',
+                    'Caz' => '4',
+                    'Cofam' => '5',
+                    'Mahafaly' => '6',
+                    'Mikea' => '7',
+                    'Autres' => '77',
                 ],
                 'placeholder' => 'Sélectionnez une option', 
                 'required' => true, 
@@ -174,11 +174,11 @@ class IdentificationProjetType extends AbstractType
             ->add('A16', ChoiceType::class, [
                 'label' => 'A16- Statut du projet',
                 'choices' => [
-                    'Project activities completed' => 'Project activities completed', 
-                    'Final reports pending' => 'Final reports pending',
-                    'Project Terminated Before Completion' => 'Project Terminated Before Completion',
-                    'Satisfactorily Completed' => 'Satisfactorily Completed',
-                    'Autres' => 'Autres',
+                    'Project activities completed' => '1', 
+                    'Final reports pending' => '2',
+                    'Project Terminated Before Completion' => '3',
+                    'Satisfactorily Completed' => '4',
+                    'Autres' => '77',
                 ],
                 'placeholder' => 'Sélectionnez une option', 
                 'required' => true, 
@@ -247,12 +247,12 @@ class IdentificationProjetType extends AbstractType
             ->add('A21', ChoiceType::class, [
                 'label' => 'A21- Coordonateur du projet : Homme ou femme?*',
                 'choices' => [
-                    'Homme' => 'Homme', 
-                    'Femme' => 'Femme',
+                    'Homme' => '1', 
+                    'Femme' => '2',
                    
                 ],
                 'placeholder' => 'Sélectionnez une option', 
-                'required' => true, 
+                
             ])
             ->add('A22', null, ['label' => 'A22- Problématique à résoudre?',])
             ->add('A23', null, ['label' => 'A23- Nom de l’organisation',]) 

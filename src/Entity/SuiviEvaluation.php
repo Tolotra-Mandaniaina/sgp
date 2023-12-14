@@ -859,7 +859,7 @@ class SuiviEvaluation
 
     public function getB8(): ?string
     {
-        return $this->B8 == 1 ? "oui" : "non";
+        return $this->B8;
     }
 
     public function setB8(?string $B8): static
@@ -895,7 +895,7 @@ class SuiviEvaluation
 
     public function getB11(): ?string
     {
-        return $this->B11 == 1 ? "oui" : "non";
+        return $this->B11;
     }
 
     public function setB11(?string $B11): static
@@ -919,7 +919,7 @@ class SuiviEvaluation
 
     public function getB13(): ?string
     {
-        return $this->B13 == 1 ? "oui" : "non";
+        return $this->B13;
     }
 
     public function setB13(?string $B13): static
@@ -943,7 +943,7 @@ class SuiviEvaluation
 
     public function getB15(): ?string
     {
-        return $this->B15 == 1 ? "oui" : "non";
+        return $this->B15;
     }
 
     public function setB15(?string $B15): static
@@ -1462,13 +1462,7 @@ class SuiviEvaluation
     public function getH8(): ?string
     {
         
-        $value = $this->H8;
-        if ($value === '1') { return  'Note 0 (Nul) '; }
-        if ($value === '2') { return  'Note 1 '; }
-        if ($value === '3') { return  'Note 2 (Moyen) '; }
-        if ($value === '4') { return  'Note 3 '; }
-        if ($value === '5') { return  'Note 4 (Haut) '; }
-        return $value;
+        return $this->H8;
 
     }
 
@@ -1506,13 +1500,8 @@ class SuiviEvaluation
     public function getH11(): ?string
     {
         
-        $value = $this->H11;
-        if ($value === '1') { return  'Note 0 (Nul) '; }
-        if ($value === '2') { return  'Note 1 '; }
-        if ($value === '3') { return  'Note 2 (Moyen) '; }
-        if ($value === '4') { return  'Note 3 '; }
-        if ($value === '5') { return  'Note 4 (Haut) '; }
-        return $value;
+        return $this->H11;
+       
 
     }
 
@@ -1550,14 +1539,8 @@ class SuiviEvaluation
     public function getH14(): ?string
     {
         
-        $value = $this->H8;
-        if ($value === '1') { return  'Note 0 (Nul) '; }
-        if ($value === '2') { return  'Note 1 '; }
-        if ($value === '3') { return  'Note 2 (Moyen) '; }
-        if ($value === '4') { return  'Note 3 '; }
-        if ($value === '5') { return  'Note 4 (Haut) '; }
-        return $value;
-
+        return $this->H14;
+       
     }
 
     public function setH14(?string $H14): static
@@ -1665,7 +1648,7 @@ class SuiviEvaluation
 
     public function getH23(): ?string
     {
-        return $this->H23 == 1 ? "oui" : "non";
+        return $this->H23;
     }
 
     public function setH23(?string $H23): static
@@ -1677,7 +1660,7 @@ class SuiviEvaluation
 
     public function getH24(): ?string
     {
-        return $this->H24 == 1 ? "oui" : "non";
+        return $this->H24;
     }
 
     public function setH24(?string $H24): static
@@ -1689,7 +1672,7 @@ class SuiviEvaluation
 
     public function getH25(): ?string
     {
-        return $this->H25 == 1 ? "oui" : "non";
+        return $this->H25;
     }
 
     public function setH25(?string $H25): static
@@ -1701,7 +1684,7 @@ class SuiviEvaluation
 
     public function getH26(): ?string
     {
-        return $this->H26 == 1 ? "oui" : "non";
+        return $this->H26;
     }
 
     public function setH26(?string $H26): static
@@ -1713,7 +1696,7 @@ class SuiviEvaluation
 
     public function getH27(): ?string
     {
-        return $this->H27 == 1 ? "oui" : "non";
+        return $this->H27;
     }
 
     public function setH27(?string $H27): static
@@ -1725,7 +1708,7 @@ class SuiviEvaluation
 
     public function getH28(): ?string
     {
-        return $this->H28 == 1 ? "oui" : "non";
+        return $this->H28;
     }
 
     public function setH28(?string $H28): static
@@ -2355,7 +2338,7 @@ class SuiviEvaluation
 
     public function getK16(): ?string
     {
-        return $this->K16 == 1 ? "oui" : "non";
+        return $this->K16;
     }
 
     public function setK16(?string $K16): static
@@ -2415,7 +2398,7 @@ class SuiviEvaluation
 
     public function getK21(): ?string
     {
-        return $this->K21 == 1 ? "oui" : "non";
+        return $this->K21;
     }
 
     public function setK21(?string $K21): static
@@ -2451,7 +2434,7 @@ class SuiviEvaluation
 
     public function getK24(): ?string
     {
-        return $this->K24 == 1 ? "oui" : "non";
+        return $this->K24;
     }
 
     public function setK24(?string $K24): static
@@ -2475,7 +2458,7 @@ class SuiviEvaluation
 
     public function getK26(): ?string
     {
-        return $this->K26 == 1 ? "oui" : "non";
+        return $this->K26;
     }
 
     public function setK26(?string $K26): static

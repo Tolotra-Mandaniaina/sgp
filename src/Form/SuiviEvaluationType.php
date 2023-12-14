@@ -30,15 +30,45 @@ class SuiviEvaluationType extends AbstractType
             ->add('B4', null, ['label' => 'B4- Hectares d\'écosystèmes importants avec le statut de conservation améliorée?',])
             ->add('B5', null, ['label' => 'B5- Hectares de zones de production terrestres appliquant des pratiques d\'utilisation durable? ',])
             ->add('B6', null, ['label' => 'B6- Hectares de zones de production marines appliquant des pratiques d\'utilisation durable ',])
-          
-            ->add('B8', null, ['label' => 'B8- Le paysage terrestre et marin est-il composé de divers écosystèmes naturels (terrestres et aquatiques) et d\'utilisations du sol - par exemple des parcelles de forêt, des jardins familiaux, des champs cultivés et des vergers… ?  ',])
+            //->add('B8', null, ['label' => 'B8- test',])
+
+
+            ->add('B8', ChoiceType::class, [
+                'label' => 'B8- Le paysage terrestre et marin est-il composé de divers écosystèmes naturels (terrestres et aquatiques) et d\'utilisations du sol - par exemple des parcelles de forêt, des jardins familiaux, des champs cultivés et des vergers… ?',
+                'choices' => [
+                    'Oui' =>  '1',
+                    'Non' => '2',
+                ],
+                'placeholder' => 'Sélectionnez une option', 
+            ])
             ->add('B9', null, ['label' => 'B9- Combien sont-ils ?',])
             ->add('B10', null, ['label' => 'B10- Leurs Superficies (ha) ?',])
-            ->add('B11', null, ['label' => 'B11- Existe-t-il des zones dans le paysage terrestre ou marin où les écosystèmes sont protégés par des formes formelles ou informelles de protection et inclure des formes traditionnelles de protection telles que les lieux sacrés ? ',])
+            ->add('B11', ChoiceType::class, [
+                'label' => 'B11- Existe-t-il des zones dans le paysage terrestre ou marin où les écosystèmes sont protégés par des formes formelles ou informelles de protection et inclure des formes traditionnelles de protection telles que les lieux sacrés ?',
+                'choices' => [
+                    'Oui' => '1',
+                    'Non' => '2',
+                ],
+                'multiple' => false, // Utilisez cette option si vous voulez permettre le choix multiple
+            ])
             ->add('B12', null, ['label' => 'B12- Leurs Superficies (ha) ?',])
-            ->add('B13', null, ['label' => 'B13- Les interactions écologiques entre les différentes composantes du paysage terrestre ou marin sont-elles prises en compte dans la gestion durable des richesses naturelles - par exemple les parcelles d\'écosystème conservées pour les pollinisateurs, la lutte contre les ravageurs, le cycle des nutriments, la recharge des nappes phréatiques et la lutte contre l\'érosion des sols ?',])
+            ->add('B13', ChoiceType::class, [
+                'label' => 'B13- Les interactions écologiques entre les différentes composantes du paysage terrestre ou marin sont-elles prises en compte dans la gestion durable des richesses naturelles - par exemple les parcelles d\'écosystème conservées pour les pollinisateurs, la lutte contre les ravageurs, le cycle des nutriments, la recharge des nappes phréatiques et la lutte contre l\'érosion des sols ?',
+                'choices' => [
+                    'Oui' => '1',
+                    'Non' => '2',
+                ],
+                                'multiple' => false, // Utilisez cette option si vous voulez permettre le choix multiple
+            ])
             ->add('B14', null, ['label' => 'B14- Expliquez? (100 mots)',])
-            ->add('B15', null, ['label' => 'B15- Le paysage terrestre ou marin a-t-il la capacité de se rétablir et de se régénérer après des chocs environnementaux extrêmes et au changement climatique, par exemple les ravageurs et les maladies, les phénomènes météorologiques extrêmes, les inondations et les sécheresses ? ',])
+            ->add('B15', ChoiceType::class, [
+                'label' => 'B15- Le paysage terrestre ou marin a-t-il la capacité de se rétablir et de se régénérer après des chocs environnementaux extrêmes et au changement climatique, par exemple les ravageurs et les maladies, les phénomènes météorologiques extrêmes, les inondations et les sécheresses ?',
+                'choices' => [
+                    'Oui' => '1',
+                    'Non' => '2',
+                ],
+                                'multiple' => false, // Utilisez cette option si vous voulez permettre le choix multiple
+            ])
             ->add('B16', null, ['label' => 'B16- Superficies régénérées naturellement (ha) ?',])
             ->add('B17', null, ['label' => 'B17- La communauté consomme-t-elle une diversité d\'aliments traditionnels et produits localement, par exemple des céréales, des légumes, des fruits, des noix, des plantes sauvages, des champignons, des baies, des poissons et des animaux ? ',])
             ->add('B18', null, ['label' => 'B18- Noms des produits ?',])
@@ -82,13 +112,47 @@ class SuiviEvaluationType extends AbstractType
             ->add('H5', null, ['label' => 'H5- Nommer l’innovation ou la technologie (50mots)? ',])
             ->add('H6', null, ['label' => 'H6- Nombre de politiques nationales influencées? ',])
             ->add('H7', null, ['label' => 'H7- Donner les spécifications (50mots) ? ',])
-            ->add('H8', null, ['label' => 'H8- Niveau d’influence ',])
+            ->add('H8', ChoiceType::class, [
+                'label' => 'H8- Niveau d’influence',
+                'choices' => [
+                    'Note 0 (Nul)' => '1',
+                    'Note 1' => '2',
+                    'Note 2 (Moyen)' => '3',
+                    'Note 3' => '4',
+                    'Note 4 (Haut)' => '5',
+                ],
+                'placeholder' => 'Sélectionnez une option',
+            ])
+            
             ->add('H9', null, ['label' => 'H9- Nombre de politiques régionales influencées? ',])
             ->add('H10', null, ['label' => 'H10- Donner les spécifications (50mots) ? ',])
-            ->add('H11', null, ['label' => 'H11- Niveau d’influence',])
+           
+
+            ->add('H11', ChoiceType::class, [
+                'label' => 'H8- Niveau d’influence',
+                'choices' => [
+                    'Note 0 (Nul)' => '1',
+                    'Note 1' => '2',
+                    'Note 2 (Moyen)' => '3',
+                    'Note 3' => '4',
+                    'Note 4 (Haut)' => '5',
+                ],
+                'placeholder' => 'Sélectionnez une option',
+            ])
             ->add('H12', null, ['label' => 'H12- Nombre de politiques locales influencées? ',])
             ->add('H13', null, ['label' => 'H13- Donner les spécifications (50 mots) ? ',])
-            ->add('H14', null, ['label' => 'H14- Niveau d’influence ',])
+            ->add('H14', ChoiceType::class, [
+                'label' => 'H8- Niveau d’influence',
+                'choices' => [
+                    'Note 0 (Nul)' => '1',
+                    'Note 1' => '2',
+                    'Note 2 (Moyen)' => '3',
+                    'Note 3' => '4',
+                    'Note 4 (Haut)' => '5',
+                ],
+                'placeholder' => 'Sélectionnez une option',
+            ])
+            
             ->add('H15', null, ['label' => 'H15- Nombre d\'ONG / OCB formées ou légalisées ? ',])
             ->add('H16', null, ['label' => 'H16- Nombre de personnes des peuples autochtones directement prises en charge ? ',])
             ->add('H17', null, ['label' => 'H17- Nombre de projets dirigés par les femmes directement pris en charge ? ',])
@@ -97,19 +161,72 @@ class SuiviEvaluationType extends AbstractType
             ->add('H20', null, ['label' => 'H20- Evolution de la capacité de gestion organisationnelle, administrative et financière de l’organisation communautaire (spécifier et détailler)? ',])
             ->add('H21', null, ['label' => 'H21- Evolution de la capacité de gouvernance environnementale des organisations communautaires (spécifier et détailler)? ',])
             ->add('H22', null, ['label' => 'H22- Nombre d’emplois créés ou renforcés? ',])
-            ->add('H23', null, ['label' => 'H23- Connaissons-nous les aspects que le système SE devrait couvrir, et les informations à fournir qui devraient être collectées ? ',])
-            ->add('H24', null, ['label' => 'H24- Sait-on clairement qui collectera, communiquera, utilisera et analysera les informations générées par le système SE ? ',])
-            ->add('H25', null, ['label' => 'H25- Existe-t-il des hypothèses de cause à effet définies entre les actions, les résultats/extrants, les effets et les impacts?  ',])
-            ->add('H26', null, ['label' => 'H26- La fréquence de la collecte des données est-elle claire ? ',])
-            ->add('H27', null, ['label' => 'H27- Les outils de collecte de données à utiliser sont-ils disponibles ? ',])
-            ->add('H28', null, ['label' => 'H28- Savez-vous à quelle fréquence vous réfléchirez aux résultats du SE&KC ? ',])
+            ->add('H23', ChoiceType::class, [
+                'label' => 'H23- Connaissons-nous les aspects que le système SE devrait couvrir, et les informations à fournir qui devraient être collectées ?',
+                'choices' => [
+                    'Oui' => '1',
+                    'Non' => '2',
+                ],
+                                'multiple' => false, // Utilisez cette option si vous voulez permettre le choix multiple
+            ])
+            ->add('H24', ChoiceType::class, [
+                'label' => 'H24- Sait-on clairement qui collectera, communiquera, utilisera et analysera les informations générées par le système SE ?',
+                'choices' => [
+                    'Oui' => '1',
+                    'Non' => '2',
+                ],
+                                'multiple' => false,
+            ])
+            
+            ->add('H25', ChoiceType::class, [
+                'label' => 'H25- Existe-t-il des hypothèses de cause à effet définies entre les actions, les résultats/extrants, les effets et les impacts?',
+                'choices' => [
+                    'Oui' => '1',
+                    'Non' => '2',
+                ],
+                                'multiple' => false,
+            ])
+            
+            ->add('H26', ChoiceType::class, [
+                'label' => 'H26- La fréquence de la collecte des données est-elle claire ?',
+                'choices' => [
+                    'Oui' => '1',
+                    'Non' => '2',
+                ],
+                                'multiple' => false,
+            ])
+            
+            ->add('H27', ChoiceType::class, [
+                'label' => 'H27- Les outils de collecte de données à utiliser sont-ils disponibles ?',
+                'choices' => [
+                    'Oui' => '1',
+                    'Non' => '2',
+                ],
+                                'multiple' => false,
+            ])
+            
+            ->add('H28', ChoiceType::class, [
+                'label' => 'H28- Savez-vous à quelle fréquence vous réfléchirez aux résultats du SE&KC ?',
+                'choices' => [
+                    'Oui' => '1',
+                    'Non' => '2',
+                ],
+                                'multiple' => false,
+            ])
             ->add('I1', null, ['label' => 'I1- La communauté a-t-elle des droits coutumiers et/ou formellement reconnus sur les terres, les pâturages, l\'eau et les richesses naturelles ?  ',])
             ->add('I2', null, ['label' => 'I2- Superficies des utilisations de sols sous droits coutumiers (ha)? ',])
             ->add('I3', null, ['label' => 'I3- Nombre de reconnaissances ? ',])
             ->add('I4', null, ['label' => 'I4- Existe-t-il une plate-forme ou une institution multipartite pour le paysage ou le paysage marin capable de planifier et de gérer efficacement les richesses du paysage ? ',])
             ->add('I5', null, ['label' => 'I5- Comment ? (100mots) ',])
             ->add('I6', null, ['label' => 'I6- Nombre de plans ? ',])
-            ->add('I7', null, ['label' => 'I7- Existe-t-il des liens, une coordination et une coopération au sein des communautés et entre elles pour la gestion des richesses naturelles – par exemple une analyse, un suivi-évaluation, une formation, une capitalisation, une documentation, un partenariat, un réseautage ?  ',])
+            ->add('I7', ChoiceType::class, [
+                'label' => 'I7- Existe-t-il des liens, une coordination et une coopération au sein des communautés et entre elles pour la gestion des richesses naturelles – par exemple une analyse, un suivi-évaluation, une formation, une capitalisation, une documentation, un partenariat, un réseautage ?',
+                'choices' => [
+                    'Oui' => '1',
+                    'Non' => '2',
+                ],
+                                'multiple' => false, // Utilisez cette option si vous voulez permettre le choix multiple
+            ])
             ->add('I8', null, ['label' => 'I8- L\'accès aux opportunités et aux richesses est-il juste et équitable pour tous les membres de la communauté, y compris les femmes, au niveau des ménages, de la communauté et du paysage ? ',])
             ->add('I9', null, ['label' => 'I9- La terre, l\'eau et les autres richesses sont-elles gérées efficacement par des institutions communautaires ? ',])
             ->add('I10', null, ['label' => 'I10- Comment ? (100mots) ',])
@@ -144,7 +261,14 @@ class SuiviEvaluationType extends AbstractType
             ->add('K4', null, ['label' => 'K4- Nombre de personnes handicapés bénéficiaires directs? ',])
             ->add('K5', null, ['label' => 'K5- Nombre des OSC bénéficiaires du projet? ',])
             ->add('K6', null, ['label' => 'K6- Nombre des organisations communautaire bénéficiaires du projet? ',])
-            ->add('K7', null, ['label' => 'K7- Le projet est-il achevé? ',])
+            ->add('K7', ChoiceType::class, [
+                'label' => 'K7- Le projet est-il achevé?',
+                'choices' => [
+                    'Oui' => '1',
+                    'Non' => '2',
+                ],
+                                'multiple' => false, // Utilisez cette option si vous voulez permettre le choix multiple
+            ])
             ->add('K8', null, ['label' => 'K8- Nombre total de membres de la communauté participants aux activités du projet ? ',])
             ->add('K8a', null, ['label' => 'K8a- Nombre homme? ',])
             ->add('K8b', null, ['label' => 'K8b- Nombre femme? ',])
@@ -155,17 +279,47 @@ class SuiviEvaluationType extends AbstractType
             ->add('K13', null, ['label' => 'K13- Expliquez? (100 mots) ',])
             ->add('K14', null, ['label' => 'K14- Les membres de la communauté ont-ils accès aux soins de santé ?  ',])
             ->add('K15', null, ['label' => 'K15- Les méthodes de guérison traditionnelles et la médecine moderne sont-elles présentes ? ',])
-            ->add('K16', null, ['label' => 'K16- Les ménages de la communauté sont-ils impliqués dans une variété de moyens de subsistance et de qualité de vie– par exemple un meilleur accès aux activités durables génératrices de revenus, aux marchés, au financement, à l’éducation, à la sécurité alimentaire? ',])
+            ->add('K16', ChoiceType::class, [
+                'label' => 'K16- Les ménages de la communauté sont-ils impliqués dans une variété de moyens de subsistance et de qualité de vie – par exemple un meilleur accès aux activités durables génératrices de revenus, aux marchés, au financement, à l’éducation, à la sécurité alimentaire?',
+                'choices' => [
+                    'Oui' => '1',
+                    'Non' => '2',
+                ],
+                                'multiple' => false, // Utilisez cette option si vous voulez permettre le choix multiple
+            ])
             ->add('K17', null, ['label' => 'K17- Nombre des moyens de qualité de vie ? ',])
             ->add('K18', null, ['label' => 'K18- Noms des moyens de qualité de vie ? ',])
             ->add('K19', null, ['label' => 'K19- Les ménages et les communautés ont-ils la possibilité de se déplacer entre les différentes activités de production et les différents lieux du paysage ? ',])
             ->add('K20', null, ['label' => 'K20- Comment ? (100mots) ',])
-            ->add('K21', null, ['label' => 'K21- Existe-t-il une augmentation des jours de scolarisation pour les élèves allant à l’école? ',])
+            ->add('K21', ChoiceType::class, [
+                'label' => 'K21- Existe-t-il une augmentation des jours de scolarisation pour les élèves allant à l’école?',
+                'choices' => [
+                    'Oui' => '1',
+                    'Non' => '2',
+                ],
+                                'multiple' => false,
+            ])
+            
             ->add('K22', null, ['label' => 'K22- Nombre de jours augmenté? ',])
             ->add('K23', null, ['label' => 'K23- Nombre de ménages ayant accédé à l\'eau potable grâce au projet? ',])
-            ->add('K24', null, ['label' => 'K24- Existe-t-il une augmentation du pouvoir d\'achat par la réduction des dépenses? ',])
+
+            ->add('K24', ChoiceType::class, [
+                'label' => 'K24- Existe-t-il une augmentation du pouvoir d\'achat par la réduction des dépenses?',
+                'choices' => [
+                    'Oui' => '1',
+                    'Non' => '2',
+                ],
+                                'multiple' => false,
+            ])
             ->add('K25', null, ['label' => 'K25- Cette augmentation est équivalent à combien? ',])
-            ->add('K26', null, ['label' => 'K26- Existe-t-il une augmentation des revenus et / ou d\autres moyens ? ',])
+            ->add('K26', ChoiceType::class, [
+                'label' => 'K26- Existe-t-il une augmentation des revenus et / ou d\'autres moyens?',
+                'choices' => [
+                    'Oui' => '1',
+                    'Non' => '2',
+                ],
+                                'multiple' => false,
+            ])
             ->add('K27', null, ['label' => 'K27- Cet augmentation est équivalent à combien? ',])
             ->add('StatutFiche', ChoiceType::class, [
                 'label' => 'StatutFiche',
@@ -175,8 +329,7 @@ class SuiviEvaluationType extends AbstractType
                     
                 ],
                 'placeholder' => 'Sélectionnez une option', 
-                'required' => true, 
-            ]) 
+                            ]) 
             
         ;
     }

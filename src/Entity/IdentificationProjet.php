@@ -159,7 +159,7 @@ class IdentificationProjet
     #[ORM\Column(name:"A18",length: 255, nullable: true)]
     private ?string $A18 = null;
 
-    #[ORM\Column(name:"A19",length: 255, nullable: true, type:"simple_array",)]
+    #[ORM\Column(name:"A19",length: 1000, nullable: true, type:"simple_array",)]
     private ?array $A19 = null;
 
 
@@ -193,7 +193,7 @@ class IdentificationProjet
     #[ORM\Column(name:"A19i", nullable: true)]
     private ?int $A19i = null;
 
-    #[ORM\Column(name:"A20",length: 255, nullable: true, type:"simple_array")]
+    #[ORM\Column(name:"A20",length: 1000, nullable: true, type:"simple_array")]
     private ?array $A20 = null;
 
     #[ORM\Column(name:"A21",length: 255, nullable: true)]
@@ -898,16 +898,8 @@ class IdentificationProjet
 
     public function getA11(): ?string
     {
-        $value = $this->A11;
+        return $this->A11;
 
-    // Ajouter une condition pour vérifier si la valeur est égale à 6
-    if ($value === '1') { return 'CORE';  }
-    else if ($value === '2' ) { return 'STAR';  }
-    else if ($value === '3' ) { return 'ICCA - GSI';  }
-   
-
-
-     return $value;
     }
 
     public function setA11(?string $A11): static
@@ -919,26 +911,8 @@ class IdentificationProjet
 
     public function getA12(): ?string
     {
-        //$this->A12= $A12;
         
-
-
-        //return $this;
-        
-    $value = $this->A12;
-
-     //Ajouter une condition pour vérifier si la valeur est égale à 6
-    if ($value === '1') { return 'OP 1';  }
-    else if ($value === '2' ) { return 'OP 2';  }
-    else if ($value === '3' ) { return 'OP 3';  }
-    else if ($value === '4' ) { return 'OP 4';  }
-    else if ($value === '5' ) { return 'OP 5';  }
-    else if ($value === '6' ) { return 'OP 6';  }
-    else if ($value === '7' ) { return 'OP 7';  }
-
-
-    return $value;
-
+    return  $this->A12;
     }
 
     public function setA12(?string $A12): static
@@ -950,18 +924,8 @@ class IdentificationProjet
 
     public function getA13(): ?string
     {
-        $value = $this->A13;
+        return $this->A13;
 
-        // Ajouter une condition pour vérifier si la valeur est égale à 6
-        if ($value === '1') { return 'Nord';  }
-        else if ($value === '2' ) { return 'Est';  }
-        else if ($value === '3' ) { return 'Sud-Ouest';  }
-        else if ($value === '4' ) { return 'Centre';  }
-        else if ($value === '5' ) { return 'Potentiel';  }
-       
-    
-    
-        return $value;
     }
 
     public function setA13(?string $A13): static
@@ -973,19 +937,8 @@ class IdentificationProjet
 
     public function getA13a(): ?string
     {   
-     $value = $this->A13a;
+     return $this->A13a;
 
-    // Ajouter une condition pour vérifier si la valeur est égale à 6
-    if ($value === '1') { return 'Région Amoron\'i Mania';  }
-    else if ($value === '2' ) { return 'Région Analamanga';  }
-    else if ($value === '3' ) { return 'Région Vakinankaratra';  }
-    else if ($value === '4' ) { return 'Région Itasy';  }
-    else if ($value === '5' ) { return 'Région Anosy';  }
-    else if ($value === '6' ) { return 'Région Androy';  }
-    else if ($value === '6' ) { return 'Région Haute Matsiatra';  }
-
-
-    return $value;
     }
 
     public function setA13a(?string $A13a): static
@@ -997,21 +950,8 @@ class IdentificationProjet
 
     public function getA14(): ?string
     {
-        $value = $this->A14;
+        return $this->A14;
 
-        // Ajouter une condition pour vérifier si la valeur est égale à 6
-        if ($value === '1') { return 'Ambaro';  }
-        else if ($value === '2' ) { return 'Comatsa';  }
-        else if ($value === '3' ) { return 'Mamabay';  }
-        else if ($value === '4' ) { return 'Caz';  }
-        else if ($value === '5' ) { return 'Cofam';  }
-        else if ($value === '6' ) { return 'Mahafaly';  }
-        else if ($value === '7' ) { return 'Mikea';  }
-        else if ($value === '77' ) { return 'Autres';  }
-
-    
-    
-        return $value;
     }
 
     public function setA14(?string $A14): static
@@ -1047,17 +987,7 @@ class IdentificationProjet
     public function getA16(): ?string
     {
 
-        $value = $this->A16;
-
-        // Ajouter une condition pour vérifier si la valeur est égale à 6
-        if ($value === '1') { return 'Project activities completed';  }
-        else if ($value === '2' ) { return 'Final reports pending';  }
-        else if ($value === '3' ) { return 'Project Terminated Before Completion';  }
-        else if ($value === '4' ) { return 'Satisfactorily Completed';  }
-        else if ($value === '77' ) { return 'Autre';  }
-     
-    
-        return $value;
+        return $this->A16;
     }
 
     public function setA16(?string $A16): static
@@ -1103,46 +1033,6 @@ class IdentificationProjet
         return $this;
     }
    
-     /*
-    public function getA19(): ?array
-    {
-            // Récupérer la valeur de A19
-        $value = $this->A19;
-
-        // Définir une correspondance entre les nombres et leurs libellés
-        $labelMapping = [
-            '1' =>  'Biodiversité',
-            '2' =>  'Atténuation_du_changement_climatique',
-            '3' =>  'Dégradation_des_sols',
-            '4' =>  'Gestion_durable_des_forêts',
-            '5' =>  'Eaux_internationales',
-            '6' =>  'Produits_chimiques_et_déchets',
-            '7' =>  'Développement_des_capacités',
-            '8' =>  'Dialogue_public_société_civile',
-            '9' =>   'Aire_et_patrimoine_des_peuples_autochtones'
-        ];
-
-        // Si $value est un tableau, convertissez-le en chaîne
-       if (is_array($value)) {
-       $value = implode(' ', $value);
-       }
-
-        // Diviser la chaîne en nombres
-        $numbers = explode(' ', $value);
-
-        // Remplacer les nombres par leurs libellés correspondants
-        $labels = array_map(function ($number) use ($labelMapping) {
-            return $labelMapping[$number] ?? $number;
-        }, $numbers);
-
-        // Joindre les libellés avec '/'
-        $result = implode(',', $labels);
-
-        return $result;
-    }
-    
-  */
-    
     public function getA19(): ?array
     {
         return $this->A19;
@@ -1269,16 +1159,9 @@ class IdentificationProjet
 
     public function getA21(): ?string
     {
-        
-        $value = $this->A21;
+      return $this->A21;
 
-        // Ajouter une condition pour vérifier si la valeur est égale à 6
-        if ($value === '1') { return 'Homme';  }
-        else if ($value === '2' ) { return 'Femme';  }
-       
-     
     
-        return $value;
     }
 
     public function setA21(?string $A21): static
